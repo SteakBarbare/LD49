@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprAdvanced_tutorial",
-    "path": "sprites/sprAdvanced_tutorial/sprAdvanced_tutorial.yy",
+    "name": "sprEscInput",
+    "path": "sprites/sprEscInput/sprEscInput.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,18 +21,20 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":10,"eventType":6,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":11,"eventType":6,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "startMenu",
-    "path": "folders/Objets/UI-UX/startMenu.yy",
+    "name": "UI-UX",
+    "path": "folders/Objets/UI-UX.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objTutorialScreen",
+  "name": "objEscTuto",
   "tags": [],
   "resourceType": "GMObject",
 }

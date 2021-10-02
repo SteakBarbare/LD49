@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"advanced_tutorial","path":"sprites/advanced_tutorial/advanced_tutorial.yy",},"order":3,},
+    {"id":{"name":"sprAdvanced_tutorial","path":"sprites/sprAdvanced_tutorial/sprAdvanced_tutorial.yy",},"order":3,},
     {"id":{"name":"objSpaceKeboard","path":"objects/objSpaceKeboard/objSpaceKeboard.yy",},"order":6,},
     {"id":{"name":"objParrentButtonStartMenu","path":"objects/objParrentButtonStartMenu/objParrentButtonStartMenu.yy",},"order":2,},
     {"id":{"name":"sprAdvancedTutorial","path":"sprites/sprAdvancedTutorial/sprAdvancedTutorial.yy",},"order":0,},
@@ -81,7 +81,7 @@
     {"id":{"name":"objEKeboard","path":"objects/objEKeboard/objEKeboard.yy",},"order":5,},
     {"id":{"name":"startMenu","path":"rooms/startMenu/startMenu.yy",},"order":1,},
     {"id":{"name":"objKeybind","path":"objects/objKeybind/objKeybind.yy",},"order":2,},
-    {"id":{"name":"sprA","path":"sprites/sprA/sprA.yy",},"order":1,},
+    {"id":{"name":"sprA","path":"sprites/sprA/sprA.yy",},"order":0,},
     {"id":{"name":"sprQuickTuto","path":"sprites/sprQuickTuto/sprQuickTuto.yy",},"order":2,},
     {"id":{"name":"sprQuickTutorial","path":"sprites/sprQuickTutorial/sprQuickTutorial.yy",},"order":3,},
     {"id":{"name":"sprWalkBack","path":"sprites/sprWalkBack/sprWalkBack.yy",},"order":2,},
@@ -91,6 +91,8 @@
     {"id":{"name":"objAcid","path":"objects/objAcid/objAcid.yy",},"order":0,},
     {"id":{"name":"sprBloodiedFootPrints","path":"sprites/sprBloodiedFootPrints/sprBloodiedFootPrints.yy",},"order":9,},
     {"id":{"name":"sprSpace","path":"sprites/sprSpace/sprSpace.yy",},"order":5,},
+    {"id":{"name":"sprEscInput","path":"sprites/sprEscInput/sprEscInput.yy",},"order":6,},
+    {"id":{"name":"objEscTuto","path":"objects/objEscTuto/objEscTuto.yy",},"order":2,},
     {"id":{"name":"objQuickTuto","path":"objects/objQuickTuto/objQuickTuto.yy",},"order":4,},
     {"id":{"name":"tileSetAuPif","path":"tilesets/tileSetAuPif/tileSetAuPif.yy",},"order":0,},
     {"id":{"name":"Sprite31","path":"sprites/Sprite31/Sprite31.yy",},"order":15,},
@@ -114,7 +116,7 @@
     {"id":{"name":"Sprite33","path":"sprites/Sprite33/Sprite33.yy",},"order":16,},
     {"id":{"name":"objAKeboard","path":"objects/objAKeboard/objAKeboard.yy",},"order":3,},
     {"id":{"name":"objSKeboard","path":"objects/objSKeboard/objSKeboard.yy",},"order":1,},
-    {"id":{"name":"sprE","path":"sprites/sprE/sprE.yy",},"order":3,},
+    {"id":{"name":"sprE","path":"sprites/sprE/sprE.yy",},"order":2,},
     {"id":{"name":"sprStartNewGame","path":"sprites/sprStartNewGame/sprStartNewGame.yy",},"order":2,},
     {"id":{"name":"objTutorialScreen","path":"objects/objTutorialScreen/objTutorialScreen.yy",},"order":7,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
@@ -180,7 +182,7 @@
     {"folderPath":"folders/Objets/UI-UX.yy","order":5,"resourceVersion":"1.0","name":"UI-UX","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objets/UI-UX/startMenu.yy","order":1,"resourceVersion":"1.0","name":"startMenu","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objets/UI-UX/startMenu/Buttons.yy","order":5,"resourceVersion":"1.0","name":"Buttons","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Sprites/startMenu/triggeredButton.yy","order":4,"resourceVersion":"1.0","name":"triggeredButton","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/startMenu/buttonTuto.yy","order":4,"resourceVersion":"1.0","name":"buttonTuto","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objets/UI-UX/startMenu/buttonTriggered.yy","order":8,"resourceVersion":"1.0","name":"buttonTriggered","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [

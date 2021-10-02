@@ -73,8 +73,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "triggeredButton",
-    "path": "folders/Sprites/startMenu/triggeredButton.yy",
+    "name": "buttonTuto",
+    "path": "folders/Sprites/startMenu/buttonTuto.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprD",
