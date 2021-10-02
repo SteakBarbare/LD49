@@ -15,10 +15,16 @@ enum etatId
 {
 	IDLE = 0,
 	WALK = 1,
-	KICK = 2
+	KICK = 2,
+	BUMP = 3
 }
 
+bumpStart = false;
+
 dir = directionId.FRONT;
+superBump = false;
+bumpStrength = 0;
+
 etat = etatId.IDLE;
 hSpeed = 3;
 vSpeed = 3;
