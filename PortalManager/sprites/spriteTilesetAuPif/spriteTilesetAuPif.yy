@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 815,
+  "bbox_right": 543,
   "bbox_top": 0,
-  "bbox_bottom": 1007,
+  "bbox_bottom": 671,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 816,
-  "height": 1104,
+  "width": 544,
+  "height": 736,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"23359a75-f268-48aa-98f8-3182f4329570","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"23359a75-f268-48aa-98f8-3182f4329570","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"LayerId":{"name":"3d1a825c-98f2-4cda-83a2-563beb63f67a","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spriteTilesetAuPif","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"resourceVersion":"1.0","name":"23359a75-f268-48aa-98f8-3182f4329570","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a6333d60-5347-4f74-b659-fa68aab6b7ea","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a6333d60-5347-4f74-b659-fa68aab6b7ea","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"LayerId":{"name":"4df89b5c-2d58-4131-882e-7a46478a42a7","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spriteTilesetAuPif","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"resourceVersion":"1.0","name":"a6333d60-5347-4f74-b659-fa68aab6b7ea","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spriteTilesetAuPif","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4ec2fe8c-461f-4575-81fe-4c95abb00679","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"23359a75-f268-48aa-98f8-3182f4329570","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f18bea87-f77e-400e-a652-35db1a98ca36","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a6333d60-5347-4f74-b659-fa68aab6b7ea","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,12 +65,12 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3d1a825c-98f2-4cda-83a2-563beb63f67a","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4df89b5c-2d58-4131-882e-7a46478a42a7","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "gratuitDuCul",
+    "path": "folders/Sprites/gratuitDuCul.yy",
   },
   "resourceVersion": "1.0",
   "name": "spriteTilesetAuPif",

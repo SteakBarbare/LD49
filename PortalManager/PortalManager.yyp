@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"sprIdleBack","path":"sprites/sprIdleBack/sprIdleBack.yy",},"order":2,},
+    {"id":{"name":"objShakeEffect","path":"objects/objShakeEffect/objShakeEffect.yy",},"order":8,},
     {"id":{"name":"srcPartAmbient","path":"scripts/srcPartAmbient/srcPartAmbient.yy",},"order":1,},
     {"id":{"name":"sprBloodSplatFx","path":"sprites/sprBloodSplatFx/sprBloodSplatFx.yy",},"order":8,},
     {"id":{"name":"srcPartBloodSplash","path":"scripts/srcPartBloodSplash/srcPartBloodSplash.yy",},"order":3,},
@@ -24,9 +25,9 @@
     {"id":{"name":"sprKickSideHitbox","path":"sprites/sprKickSideHitbox/sprKickSideHitbox.yy",},"order":3,},
     {"id":{"name":"objPotteryShard","path":"objects/objPotteryShard/objPotteryShard.yy",},"order":2,},
     {"id":{"name":"objBloodSplatFx","path":"objects/objBloodSplatFx/objBloodSplatFx.yy",},"order":5,},
-    {"id":{"name":"sprBookshelf","path":"sprites/sprBookshelf/sprBookshelf.yy",},"order":2,},
+    {"id":{"name":"sprBookshelf","path":"sprites/sprBookshelf/sprBookshelf.yy",},"order":0,},
     {"id":{"name":"objBloodSplatTemplate","path":"objects/objBloodSplatTemplate/objBloodSplatTemplate.yy",},"order":3,},
-    {"id":{"name":"spriteTilesetAuPif","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"order":0,},
+    {"id":{"name":"spriteTilesetAuPif","path":"sprites/spriteTilesetAuPif/spriteTilesetAuPif.yy",},"order":1,},
     {"id":{"name":"srcCollision","path":"scripts/srcCollision/srcCollision.yy",},"order":0,},
     {"id":{"name":"sprBlood2","path":"sprites/sprBlood2/sprBlood2.yy",},"order":5,},
     {"id":{"name":"sprIdleSide","path":"sprites/sprIdleSide/sprIdleSide.yy",},"order":0,},

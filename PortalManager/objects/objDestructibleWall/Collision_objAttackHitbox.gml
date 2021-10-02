@@ -1,4 +1,16 @@
 life--;
+if(life == 1)
+{
+	objShakeEffect.shake = true;
+	objShakeEffect.range = 2;
+	objShakeEffect.alarm[0] = room_speed/4;
+}
+else
+{
+	objShakeEffect.shake = true;
+	objShakeEffect.range = 10;
+	objShakeEffect.alarm[0] = room_speed/4;
+}
 
 part_particles_create(global.particlesSys, x + irandom_range(-10, 10), y + irandom_range(-10, 10), global.destructionSmoke, 1);
 part_particles_create(global.particlesSys, x + irandom_range(-10, 10), y + irandom_range(-10, 10), global.destructionSmokeTiny, irandom_range(7, 15));
