@@ -19,5 +19,7 @@ enum etatId
 
 dir = directionId.FRONT;
 etat = etatId.IDLE;
-hSpeed = 5;
-vSpeed = 5;
+hSpeed = 3;
+vSpeed = 3;
+
+collisionSpeed = hSpeed + 2;

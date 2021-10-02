@@ -1,23 +1,40 @@
-
+depth = -bbox_bottom;
 var isMoving, isMovingV, isMovingS, vMove, hMove;
 isMoving = false;
 isMovingV = false;
 isMovingS = false;
 if(objKeybind.keyLeft xor objKeybind.keyRight)
 {
-	isMoving = true;
-	isMovingS = true;
-	if(objKeybind.keyLeft) hMove = directionId.LEFT;
-	else hMove = directionId.RIGHT;
+	
+	if(objKeybind.keyLeft && place_free(x - collisionSpeed, y))
+	{
+		hMove = directionId.LEFT;
+		isMoving = true;
+		isMovingS = true;
+	}
+	else if(objKeybind.keyRight && place_free(x + collisionSpeed, y)) 
+	{
+		hMove = directionId.RIGHT;
+		isMoving = true;
+		isMovingS = true;
+	}
 }
 
 
 if(objKeybind.keyUp xor objKeybind.keyDown)
 {
-	isMoving = true;
-	isMovingV = true;
-	if(objKeybind.keyUp) vMove = directionId.BACK;
-	else vMove = directionId.FRONT;
+	if(objKeybind.keyUp && place_free(x, y - collisionSpeed))
+	{
+		vMove = directionId.BACK;
+		isMoving = true;
+		isMovingV = true;
+	}
+	else if(objKeybind.keyDown && place_free(x, y + collisionSpeed))
+	{
+		vMove = directionId.FRONT;
+		isMoving = true;
+		isMovingV = true;
+	}
 }
 
 if(isMoving)
@@ -113,8 +130,7 @@ else
 	vspeed = 0;
 }
 
-show_debug_message("Dir = " + string(dir) + " etat = " + string(etat))
-show_debug_message("hspeed = " + string(hspeed) + " vspeed = " + string(vspeed))
+
 if(dir == directionId.FRONT)
 {
 	if(etat == etatId.IDLE)
@@ -204,5 +220,3 @@ if(dir >= directionId.RIGHT)
 		}
 	}
 }
-
-
