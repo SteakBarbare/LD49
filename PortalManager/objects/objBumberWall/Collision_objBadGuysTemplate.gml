@@ -1,5 +1,6 @@
 var collideInstance = instance_nearest(x, y, objBadGuysTemplate)
 
+var isAligned = collideInstance.etat == etatId.BUMP || ((dir == 0 && collideInstance.y >= y) || (dir == 1 && collideInstance.y <= y) || (dir == 2 && collideInstance.x <= x) || (dir == 3 && collideInstance.x >= x))
 
 
 collideInstance.etat = etatId.BUMP;
