@@ -114,7 +114,7 @@
   "nineSlice": null,
   "parent": {
     "name": "idle",
-    "path": "folders/Sprites/gratuitDuCul/pj/idle.yy",
+    "path": "folders/Sprites/pj/idle.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprIdleSide",

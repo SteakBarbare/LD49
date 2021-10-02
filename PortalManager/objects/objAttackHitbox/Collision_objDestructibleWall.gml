@@ -1,0 +1,1 @@
+objDestructibleWall.life--;

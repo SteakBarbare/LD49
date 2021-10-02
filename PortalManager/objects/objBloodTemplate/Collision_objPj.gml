@@ -1,0 +1,1 @@
+objPj.bloodiedPrints = 1;

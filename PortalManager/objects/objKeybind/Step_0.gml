@@ -20,10 +20,10 @@ if(keyboard_check(vk_f10)){
 }
 
 if(isGamepad){
-	keyUp = ((keyboard_check(ord("W"))) || (keyboard_check(vk_up)) || round(gamepad_axis_value(0, gp_axislv)) == -1 );
+	keyUp = ((keyboard_check(ord("Z"))) || (keyboard_check(vk_up)) || round(gamepad_axis_value(0, gp_axislv)) == -1 );
 	keyRight = ((keyboard_check(ord("D"))) || (keyboard_check(vk_right)) || round(gamepad_axis_value(0, gp_axislh)) == 1 );
 	keyDown = ((keyboard_check(ord("S"))) || (keyboard_check(vk_down)) || round(gamepad_axis_value(0, gp_axislv)) == 1 );
-	keyLeft = ((keyboard_check(ord("A"))) || (keyboard_check(vk_left)) || round(gamepad_axis_value(0, gp_axislh)) == -1 );
+	keyLeft = ((keyboard_check(ord("Q"))) || (keyboard_check(vk_left)) || round(gamepad_axis_value(0, gp_axislh)) == -1 );
 	eKey = (keyboard_check(ord("E")) || abs(round(gamepad_axis_value(0, gp_axisrh))) == 1 || abs(round(gamepad_axis_value(0, gp_axisrv))) == 1);
 	fKey = (keyboard_check(ord("F")) || gamepad_button_check(0, gp_face1));
 	fKeyReleased = (keyboard_check_released(ord("F")) || gamepad_button_check_released(0, gp_face1));
@@ -51,8 +51,8 @@ if(isGamepad){
 }else{
 		ini_open("config");	
 		
-		keyUp = (keyboard_check(ord(ini_read_string("Keybind", "Keybind0", "W"))) || (keyboard_check(vk_up)) );
-		keyLeft = (keyboard_check(ord(ini_read_string("Keybind", "Keybind1", "A"))) || (keyboard_check(vk_left)) );
+		keyUp = (keyboard_check(ord(ini_read_string("Keybind", "Keybind0", "Z"))) || (keyboard_check(vk_up)) );
+		keyLeft = (keyboard_check(ord(ini_read_string("Keybind", "Keybind1", "Q"))) || (keyboard_check(vk_left)) );
 		keyDown = (keyboard_check(ord(ini_read_string("Keybind", "Keybind2", "S"))) || (keyboard_check(vk_down)) );
 		keyRight = (keyboard_check(ord(ini_read_string("Keybind", "Keybind3", "D"))) || (keyboard_check(vk_right)) );
 		keyShift = keyboard_check(asset_get_index(ini_read_string("Keybind", "Keybind4", "vk_shift")));

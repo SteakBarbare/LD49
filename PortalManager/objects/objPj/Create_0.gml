@@ -14,7 +14,8 @@ enum directionId
 enum etatId
 {
 	IDLE = 0,
-	WALK = 1
+	WALK = 1,
+	KICK = 2
 }
 
 dir = directionId.FRONT;
@@ -24,3 +25,11 @@ vSpeed = 3;
 
 collisionSpeed = hSpeed + 2;
 collisionDir = -1;
+
+inputPrevent = -1;
+
+dirBeforeKick = -1;
+hit = 1;
+
+bloodiedPrints = 0;
+
