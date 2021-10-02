@@ -231,7 +231,7 @@ if(!place_free(x + collisionSpeed, y) && dir >= directionId.RIGHT)
 {
 	hspeed = 0;
 }
-if(!place_free(x + collisionSpeed, y) && dir >= directionId.LEFT && dir < directionId.RIGHT)
+if(!place_free(x - collisionSpeed, y) && dir >= directionId.LEFT && dir < directionId.RIGHT)
 {
 	hspeed = 0;
 }
