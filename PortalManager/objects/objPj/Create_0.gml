@@ -23,3 +23,4 @@ hSpeed = 3;
 vSpeed = 3;
 
 collisionSpeed = hSpeed + 2;
+collisionDir = -1;

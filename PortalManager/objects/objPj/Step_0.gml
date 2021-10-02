@@ -3,20 +3,43 @@ var isMoving, isMovingV, isMovingS, vMove, hMove;
 isMoving = false;
 isMovingV = false;
 isMovingS = false;
+vMove = directionId.FRONT;
+hMove = directionId.RIGHT;
+collisionDir = -1;
 if(objKeybind.keyLeft xor objKeybind.keyRight)
 {
 	
-	if(objKeybind.keyLeft && place_free(x - collisionSpeed, y))
+	if(objKeybind.keyLeft)
 	{
+		if(place_free(x - collisionSpeed, y))
+		{
+			isMoving = true;
+		}
+		else
+		{
+			while(place_free(x - 1, y))
+			{
+				x -= 1;
+			}
+		}
 		hMove = directionId.LEFT;
-		isMoving = true;
 		isMovingS = true;
 	}
-	else if(objKeybind.keyRight && place_free(x + collisionSpeed, y)) 
+	else if(objKeybind.keyRight) 
 	{
 		hMove = directionId.RIGHT;
-		isMoving = true;
 		isMovingS = true;
+		if(place_free(x + collisionSpeed, y))
+		{
+			isMoving = true;
+		}
+		else
+		{
+			while(place_free(x + 1, y))
+			{
+				x += 1;
+			}
+		}
 	}
 }
 
@@ -26,14 +49,34 @@ if(objKeybind.keyUp xor objKeybind.keyDown)
 	if(objKeybind.keyUp && place_free(x, y - collisionSpeed))
 	{
 		vMove = directionId.BACK;
-		isMoving = true;
 		isMovingV = true;
+		if(place_free(x, y - collisionSpeed))
+		{
+			isMoving = true;
+		}
+		else
+		{
+			while(place_free(x, y + 1))
+			{
+				y += 1;
+			}
+		}
 	}
 	else if(objKeybind.keyDown && place_free(x, y + collisionSpeed))
 	{
 		vMove = directionId.FRONT;
-		isMoving = true;
 		isMovingV = true;
+		if(place_free(x, y + collisionSpeed))
+		{
+			isMoving = true;
+		}
+		else
+		{
+			while(place_free(x, y - 1))
+			{
+				y -= 1;
+			}
+		}
 	}
 }
 
@@ -125,6 +168,8 @@ if(isMoving)
 }
 else
 {
+	if(isMovingS) dir = hMove;
+	if(isMovingV) dir = vMove;
 	etat = etatId.IDLE
 	hspeed = 0;
 	vspeed = 0;
