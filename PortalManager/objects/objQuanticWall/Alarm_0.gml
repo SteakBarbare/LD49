@@ -26,8 +26,6 @@ lastPoint = newPoint;
 x = newPoint.x;
 y = newPoint.y;
 
-show_debug_message("x = " + string(x) + " y = " + string(y));
-
 part_particles_create(global.particlesSys, x, y, global.quanticParticle, 1);
 part_particles_create(global.particlesSys, x, y, global.quanticParticle, irandom_range(7, 15));
 part_particles_create(global.particlesSys, x, y, global.quanticParticle, irandom_range(3, 8));
