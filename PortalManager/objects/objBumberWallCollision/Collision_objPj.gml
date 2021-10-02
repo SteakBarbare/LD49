@@ -1,4 +1,4 @@
-var isAligned = objPj.etat == etatId.BUMP || ((dir == 0 && objPj.y >= y) || (dir == 1 && objPj.y <= y) || (dir == 2 && objPj.x <= x) || (dir == 3 && objPj.x >= x))
+var isAligned = objPj.etat == etatId.BUMP || ((dir == 0 && objPj.y > y) || (dir == 1 && objPj.y < y) || (dir == 2 && objPj.x < x) || (dir == 3 && objPj.x > x))
 if(isAligned)
 {
 	objPj.etat = etatId.BUMP;
