@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "button_go_to_rrom",
-    "path": "folders/Sprites/startMenu/button_go_to_rrom.yy",
+    "name": "buttonGoTorrom",
+    "path": "folders/Sprites/startMenu/buttonGoTorrom.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprHighScoreBoard",
