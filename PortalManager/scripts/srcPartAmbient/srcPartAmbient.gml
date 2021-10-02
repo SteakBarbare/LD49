@@ -23,6 +23,22 @@ function srcPartAmbient() {
 	part_type_life(global.fogParticle, 400, 600);
 #endregion
 
+#region Quantic Particles
+	global.quanticParticle = part_type_create();
+
+	part_type_shape(global.quanticParticle, pt_shape_smoke);
+	part_type_size(global.quanticParticle, 0.2, 1, 0.02, 0);
+	part_type_orientation(global.quanticParticle, 0, 359, 0, 0, 0);
+	part_type_speed(global.quanticParticle,-0.1,0.1,0,0);
+	part_type_direction(global.quanticParticle,0,359,0,0);
+	
+	part_type_blend(global.quanticParticle, 1);
+	part_type_alpha3(global.quanticParticle, 0.025, 0.030, 0.035);
+	part_type_color3(global.quanticParticle, c_blue, c_blue, c_purple);
+
+	part_type_life(global.quanticParticle, 50, 100);
+#endregion
+
 #region Spore Fog Particles
 	global.sporeFogParticle = part_type_create();
 
