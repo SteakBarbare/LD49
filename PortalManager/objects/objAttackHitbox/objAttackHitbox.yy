@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprKickHitbox",
-    "path": "sprites/sprKickHitbox/sprKickHitbox.yy",
+    "name": "sprKickSideHitbox",
+    "path": "sprites/sprKickSideHitbox/sprKickSideHitbox.yy",
   },
   "solid": false,
   "visible": true,

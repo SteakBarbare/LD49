@@ -269,9 +269,9 @@ if(dir == directionId.FRONT)
 	else if(etat == etatId.KICK)
 	{
 		if(image_xscale < 0) image_xscale = abs(image_xscale);
-		if(sprite_index != sprWalkFront)
+		if(sprite_index != sprKickFront)
 		{
-			sprite_index = sprWalkFront;
+			sprite_index = sprKickFront;
 			image_index = 0;
 		}
 	}
@@ -299,9 +299,9 @@ if(dir == directionId.BACK)
 	}
 	else if(etat == etatId.KICK)
 	{
-		if(sprite_index != sprWalkFront)
+		if(sprite_index != sprKickBack)
 		{
-			sprite_index = sprWalkFront;
+			sprite_index = sprKickBack;
 			image_index = 0;
 		}
 	}
@@ -329,9 +329,9 @@ if(dir >= directionId.LEFT && dir < directionId.RIGHT)
 	}
 	else if(etat == etatId.KICK)
 	{
-		if(sprite_index != sprWalkFront  || image_xscale >= 0)
+		if(sprite_index != sprKickSide  || image_xscale >= 0)
 		{
-			sprite_index = sprWalkFront;
+			sprite_index = sprKickSide;
 			image_index = 0;
 			image_xscale = -abs(image_xscale);
 		}
@@ -360,9 +360,9 @@ if(dir >= directionId.RIGHT)
 	}
 	else if(etat == etatId.KICK)
 	{
-		if(sprite_index != sprWalkFront || image_xscale < 0)
+		if(sprite_index != sprKickSide || image_xscale < 0)
 		{
-			sprite_index = sprWalkFront;
+			sprite_index = sprKickSide;
 			image_index = 0;
 			image_xscale = abs(image_xscale);	
 		}
@@ -371,13 +371,13 @@ if(dir >= directionId.RIGHT)
 
 if(etat == etatId.KICK)
 {
-	if(image_index >= 7 && image_index <=9 && hit == 1)
+	if(image_index >= 5 && image_index <=8 && hit == 1)
 	{
 		hit = 0;
 		var kickHitbox = instance_create_depth(x, y, 1, objAttackHitbox);
 		kickHitbox.image_xscale = image_xscale;
 	}
-	else if (image_index >= 11)
+	else if (image_index >= 9)
 	{
 		etat = etatId.IDLE;
 		hit = 1;
