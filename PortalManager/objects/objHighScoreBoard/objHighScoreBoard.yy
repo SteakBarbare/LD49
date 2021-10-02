@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "startMenu",
-    "path": "folders/Objets/UI-UX/startMenu.yy",
+    "name": "Buttons",
+    "path": "folders/Objets/UI-UX/startMenu/Buttons.yy",
   },
   "resourceVersion": "1.0",
   "name": "objHighScoreBoard",
