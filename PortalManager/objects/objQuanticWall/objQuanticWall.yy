@@ -3,7 +3,7 @@
     "name": "sprHorloge",
     "path": "sprites/sprHorloge/sprHorloge.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

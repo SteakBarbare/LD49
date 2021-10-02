@@ -10,7 +10,7 @@ while(signe == 0)
 	signe = irandom(2) - 1;
 }
 var newPoint = {x : lastPoint.x + ((irandom(range) + range)*signe)/2, y: lastPoint.y + ((irandom(range) + range)*signe)/2};
-while(!place_free(newPoint.x, newPoint.y) || (
+while(place_meeting(newPoint.x, newPoint.y, objSolidTemplate) || (
 newPoint.x <= 0 + sprite_width/2 || newPoint.x >= 960 - sprite_width/2 ||
 newPoint.y <= 0 + sprite_height/2|| newPoint.y >= 540 - sprite_height/2))
 {

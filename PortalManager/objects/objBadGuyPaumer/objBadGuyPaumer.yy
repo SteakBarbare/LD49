@@ -3,7 +3,7 @@
     "name": "sprMobRandomDir",
     "path": "sprites/sprMobRandomDir/sprMobRandomDir.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

@@ -3,7 +3,7 @@
     "name": "sprBookshelf",
     "path": "sprites/sprBookshelf/sprBookshelf.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

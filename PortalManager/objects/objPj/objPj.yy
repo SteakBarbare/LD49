@@ -3,7 +3,7 @@
     "name": "sprIdleFront",
     "path": "sprites/sprIdleFront/sprIdleFront.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": {
     "name": "sprCollision",

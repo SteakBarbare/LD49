@@ -56,13 +56,13 @@ if(etat != etatId.BUMP)
 	
 		if(objKeybind.keyLeft)
 		{
-			if(place_free(x - collisionSpeed, y))
+			if(!place_meeting(x - collisionSpeed, y, objSolidTemplate))
 			{
 				isMoving = true;
 			}
 			else
 			{
-				while(place_free(x - 1, y))
+				while(!place_meeting(x - 1, y, objSolidTemplate))
 				{
 					x -= 1;
 				}
@@ -75,13 +75,13 @@ if(etat != etatId.BUMP)
 		{
 			hMove = directionId.RIGHT;
 			isMovingS = true;
-			if(place_free(x + collisionSpeed, y))
+			if(!place_meeting(x + collisionSpeed, y, objSolidTemplate))
 			{
 				isMoving = true;
 			}
 			else
 			{
-				while(place_free(x + 1, y))
+				while(!place_meeting(x + 1, y, objSolidTemplate))
 				{
 					x += 1;
 				}
@@ -91,34 +91,34 @@ if(etat != etatId.BUMP)
 	}
 	if(objKeybind.keyUp xor objKeybind.keyDown)
 	{
-		if(objKeybind.keyUp && place_free(x, y - collisionSpeed))
+		if(objKeybind.keyUp && !place_meeting(x, y - collisionSpeed, objSolidTemplate))
 		{
 			vMove = directionId.BACK;
 			isMovingV = true;
-			if(place_free(x, y - collisionSpeed))
+			if(!place_meeting(x, y - collisionSpeed, objSolidTemplate))
 			{
 				isMoving = true;
 			}
 			else
 			{
-				while(place_free(x, y + 1))
+				while(!place_meeting(x, y + 1, objSolidTemplate))
 				{
 					y += 1;
 				}
 				vspeed = 0;
 			}
 		}
-		else if(objKeybind.keyDown && place_free(x, y + collisionSpeed))
+		else if(objKeybind.keyDown && !place_meeting(x, y + collisionSpeed, objSolidTemplate))
 		{
 			vMove = directionId.FRONT;
 			isMovingV = true;
-			if(place_free(x, y + collisionSpeed))
+			if(!place_meeting(x, y + collisionSpeed, objSolidTemplate))
 			{
 				isMoving = true;
 			}
 			else
 			{
-				while(place_free(x, y - 1))
+				while(!place_meeting(x, y - 1, objSolidTemplate))
 				{
 					y -= 1;
 				}
@@ -261,19 +261,19 @@ else
 			break;	
 	}
 }
-if(!place_free(x + collisionSpeed, y) && dir >= directionId.RIGHT)
+if(place_meeting(x + collisionSpeed, y, objSolidTemplate) && dir >= directionId.RIGHT)
 {
 	hspeed = 0;
 }
-if(!place_free(x - collisionSpeed, y) && dir >= directionId.LEFT && dir < directionId.RIGHT)
+if(place_meeting(x - collisionSpeed, y, objSolidTemplate) && dir >= directionId.LEFT && dir < directionId.RIGHT)
 {
 	hspeed = 0;
 }
-if(!place_free(x, y + collisionSpeed) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
+if(place_meeting(x, y + collisionSpeed, objSolidTemplate) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
 {
 	vspeed = 0;
 }
-if(!place_free(x, y - collisionSpeed) && (dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT))
+if(place_meeting(x, y - collisionSpeed, objSolidTemplate) && (dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT))
 {
 	vspeed = 0;
 }
