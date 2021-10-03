@@ -25,49 +25,50 @@ else
 			dY = 0;
 			if(d >= directionId.RIGHT)
 			{
-				dX = -1;
+				dX = 1;
 			}
 			else if(d >= directionId.LEFT)
 			{
-				dX = 1;
+				dX = -1;
 			}	
 			else if(d == directionId.FRONT)
 			{
-				dY = -1;
+				dY = 1;
 			}
 			else if(d == directionId.FRONT_LEFT)
 			{
-				dX = 1;
-				dY = -1;
+				dX = -1;
+				dY = 1;
 			}
 			else if(d == directionId.FRONT_RIGHT)
 			{
-				dX = -1;
-				dY = -1;
-			}
-			else if(d == directionId.BACK)
-			{
-				dY = 1;
-			}
-			else if(d == directionId.BACK_LEFT)
-			{
 				dX = 1;
 				dY = 1;
 			}
-			else if(d == directionId.BACK_RIGHT)
+			else if(d == directionId.BACK)
+			{
+				dY = -1;
+			}
+			else if(d == directionId.BACK_LEFT)
 			{
 				dX = -1;
-				dY = 1;
+				dY = -1;
+			}
+			else if(d == directionId.BACK_RIGHT)
+			{
+				dX = 1;
+				dY = -1;
 			}
 			if(dX != 0 && dY != 0)
 			{
 				dX = dX * sqrt(abs(dX));
 				dY = dY * sqrt(abs(dY));
 			}
-			while(place_meeting(x-dX, y-dY, objSolidTemplate))
+			while(place_meeting(x+dX, y+dY, objSolidTemplate))
 			{
-				x = x+dX;
-				y = y+dY;
+				
+				x = x-dX;
+				y = y-dY;
 			}
 				
 			arrived = true;

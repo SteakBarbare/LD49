@@ -22,9 +22,10 @@ if(!isSet)
 	time = 0
 
 	dir = irandom(7);
+	instance.dir = dir;
 	destination = {x : x, y:y}
 	start = destination;
-	strength = {x : 100, y : 50}
+	strength = {x : 150, y : 100}
 	time = 0;
 	switch(dir)
 	{
@@ -57,8 +58,6 @@ if(!isSet)
 			destination.y -= strength.y;
 			break;;
 	}
-
-
 	hasArrived = false;
 }
 if(!instance_exists(instance))
@@ -71,7 +70,7 @@ else
 	var arrived = false;
 	var d = dir;
 	var dest = destination;
-	var s = start;
+	var destroyed = false;
 	with(instance)
 	{
 		x = lerp(x, dest.x, 0.03);
@@ -126,15 +125,20 @@ else
 				dX = dX * sqrt(abs(dX));
 				dY = dY * sqrt(abs(dY));
 			}
+			var nb = 250;
 			while(place_meeting(x-dX, y-dY, objSolidTemplate))
 			{
 				x = x+dX;
 				y = y+dY;
+				nb--;
+				if(nb < 0)
+				{
+					destroyed = true;
+					instance_destroy();
+					break;
+				}
 			}
-				
 			arrived = true;
-			
-			
 		}
 		if(point_distance(x, y, dest.x, dest.y) < 5)
 		{
@@ -146,9 +150,13 @@ else
 	
 	
 	
-	if(hasArrived)
+	if(hasArrived && !destroyed)
 	{
 		instance.isMoving = false;
+		instance_destroy();
+	}
+	else if(destroyed)
+	{
 		instance_destroy();
 	}
 

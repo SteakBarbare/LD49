@@ -10,6 +10,7 @@
     {"id":{"name":"srcPartAmbient","path":"scripts/srcPartAmbient/srcPartAmbient.yy",},"order":1,},
     {"id":{"name":"sprMobRandomDir","path":"sprites/sprMobRandomDir/sprMobRandomDir.yy",},"order":1,},
     {"id":{"name":"objBadGuysTemplate","path":"objects/objBadGuysTemplate/objBadGuysTemplate.yy",},"order":6,},
+    {"id":{"name":"objBaveur","path":"objects/objBaveur/objBaveur.yy",},"order":3,},
     {"id":{"name":"sprWallPlaceholder","path":"sprites/sprWallPlaceholder/sprWallPlaceholder.yy",},"order":8,},
     {"id":{"name":"objSpawnerFlaques","path":"objects/objSpawnerFlaques/objSpawnerFlaques.yy",},"order":4,},
     {"id":{"name":"sprBloodSplatFx","path":"sprites/sprBloodSplatFx/sprBloodSplatFx.yy",},"order":8,},

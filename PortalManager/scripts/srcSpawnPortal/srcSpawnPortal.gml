@@ -38,14 +38,14 @@ function srcSpawnPortal()
 			break;
 	}
 	portal = instance_create_depth(0, 0, 1, pType);
-	portal.x = mx + irandom(room_width/2);
-	portal.y = my + irandom(room_height/2);
+	portal.x = irandom_range(0, room_width)
+	portal.y = irandom_range(0, room_height)
 	with(portal)
 	{
-		while(place_meeting(x, y, objSolidTemplate))
+		while(place_meeting(x, y, objSolidTemplate) || distance_to_object(objPj) < 800 || distance_to_object(instance_nearest(x, y, objPortalTemplate)) < 800)
 		{
-			x = mx + irandom(room_width/2);
-			y = my + irandom(room_height/2);
+			portal.x = irandom_range(0, room_width)
+			portal.y = irandom_range(0, room_height)
 		}
 	}
 }

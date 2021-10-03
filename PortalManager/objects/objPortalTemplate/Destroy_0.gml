@@ -16,5 +16,20 @@ else if(partType == "Debuff")
 	part_particles_create(global.particlesSys, x, y, global.debuffPortal, irandom_range(7, 15));
 	part_particles_create(global.particlesSys, x, y, global.debuffPortal, irandom_range(3, 8));
 }
-
-objCore.alarm[0] += room_speed * 15;
+if(!isActivated)
+{
+	
+	var delta;
+	if(objCore.nbPortal < 10)
+	{
+		delta = objCore.nbPortal/10 
+	}
+	else
+	{
+		delta = 1 - (objCore.nbPortal/10 - 1)
+	}
+	
+	if(delta < 0.3) delta = 0.3;
+	objCore.alarm[0] += room_speed * 15 * delta;
+	objCore.nbPortal++;
+}
