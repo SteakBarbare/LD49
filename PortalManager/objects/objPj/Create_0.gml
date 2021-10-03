@@ -29,6 +29,8 @@ etat = etatId.IDLE;
 hSpeed = 3;
 vSpeed = 3;
 
+effectsActive = [];
+
 collisionSpeed = hSpeed + 2;
 collisionDir = -1;
 

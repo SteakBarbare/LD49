@@ -418,3 +418,9 @@ if(etat == etatId.KICK)
 
 
 if(inputPrevent >= 0) inputPrevent--;
+
+// Boucling on the tableau of effects
+	for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
+		srcHandleEffects(effectsActive[currentEffect]);
+	}
+	effectsActive = [];
