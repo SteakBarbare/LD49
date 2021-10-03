@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "objSolidTemplate",
-    "path": "objects/objSolidTemplate/objSolidTemplate.yy",
+    "name": "objShitTemplate",
+    "path": "objects/objShitTemplate/objShitTemplate.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
