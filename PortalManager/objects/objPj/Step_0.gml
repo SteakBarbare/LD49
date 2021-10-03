@@ -10,6 +10,7 @@ collisionDir = -1;
 #region Déplacement
 if(etat != etatId.BUMP) // SI pas een bump
 {
+	#region Kick Starter
 	if(objKeybind.clickLeft && inputPrevent <= 0 && etat != etatId.KICK) 
 	{
 		inputPrevent = room_speed / 4;
@@ -53,6 +54,8 @@ if(etat != etatId.BUMP) // SI pas een bump
 		hspeed *= 0.6;
 		vspeed *= 0.6;
 	}
+	#endregion
+	#region Moving Toward X Axis
 	if(objKeybind.keyLeft xor objKeybind.keyRight) // On regarde si le joueur bouge de côté
 	{
 		if(objKeybind.keyLeft)
@@ -68,6 +71,8 @@ if(etat != etatId.BUMP) // SI pas een bump
 			isMoving = true;
 		}
 	}
+	#endregion
+	#region Moving Toward Y Axis
 	if(objKeybind.keyUp xor objKeybind.keyDown) // On regarde si le joueur bouge verticalement
 	{
 		if(objKeybind.keyUp)
@@ -83,6 +88,9 @@ if(etat != etatId.BUMP) // SI pas een bump
 			isMoving = true;
 		}
 	}
+	#endregion
+	
+	#region SpeedHandler
 	if(etat != etatId.KICK)
 	{
 		if(isMoving)
@@ -185,9 +193,11 @@ if(etat != etatId.BUMP) // SI pas een bump
 			vspeed = 0;
 		}
 	}
+	#endregion
 }
 else
 {
+	#region Bumb Handler
 	if(!bumpStart)
 	{
 		bumpStart = true;
@@ -215,6 +225,7 @@ else
 			vspeed = 0;
 			break;	
 	}
+	#endregion
 }
 #endregion
 
