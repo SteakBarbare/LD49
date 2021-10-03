@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sprPuke",
+    "path": "sprites/sprPuke/sprPuke.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

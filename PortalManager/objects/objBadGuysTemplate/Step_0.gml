@@ -1,6 +1,5 @@
 depth = -bbox_bottom;
-
-if(life == 0)
+if(life <= 0 && alarm[8] < 0)
 {
 	alarm[8] = room_speed * 0.1;
 }

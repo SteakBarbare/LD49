@@ -5,6 +5,8 @@ isMovingV = false;
 isMovingS = false;
 vMove = directionId.FRONT;
 hMove = directionId.RIGHT;
+isSlowed = false;
+isSpeeded = false;
 
 collisionDir = -1;
 #region Déplacement
@@ -15,44 +17,7 @@ if(etat != etatId.BUMP) // SI pas een bump
 	{
 		inputPrevent = room_speed / 4;
 		etat = etatId.KICK;
-		dirBeforeKick = dir;
-		switch(dir)
-		{
-			case directionId.FRONT:
-				hspeed = 0;
-				vspeed = vSpeed;
-				break;
-			case directionId.BACK:
-				hspeed = 0;
-				vspeed = -vSpeed;
-				break;
-			case directionId.LEFT:
-				hspeed = -hSpeed;
-				vspeed = 0;
-				break;
-			case directionId.BACK_LEFT:
-				hspeed = -hSpeed;
-				vspeed = -vSpeed;
-				break;
-			case directionId.FRONT_LEFT:
-				hspeed = -hSpeed;
-				vspeed = vSpeed;
-				break;
-			case directionId.RIGHT:
-				hspeed = hSpeed;
-				vspeed = 0;
-				break;
-			case directionId.FRONT_RIGHT:
-				hspeed = hSpeed;
-				vspeed = vSpeed;
-				break;
-			case directionId.BACK_RIGHT:
-				hspeed = hSpeed;
-				vspeed = -vSpeed;
-				break;
-		}
-		hspeed *= 0.6;
-		vspeed *= 0.6;
+		image_index = 0;
 	}
 	#endregion
 	#region Moving Toward X Axis
@@ -60,139 +25,182 @@ if(etat != etatId.BUMP) // SI pas een bump
 	{
 		if(objKeybind.keyLeft)
 		{
-			isMoving = true;
-			hMove = directionId.LEFT;
-			isMovingS = true;
+			if(invertedControl)
+			{
+				hMove = directionId.RIGHT;
+				isMovingS = true;
+				isMoving = true;
+			}
+			else
+			{
+				isMoving = true;
+				hMove = directionId.LEFT;
+				isMovingS = true;
+			}
 		}
 		else if(objKeybind.keyRight) 
 		{
-			hMove = directionId.RIGHT;
-			isMovingS = true;
-			isMoving = true;
+			if(invertedControl)
+			{
+				isMoving = true;
+				hMove = directionId.LEFT;
+				isMovingS = true;
+			}
+			else
+			{
+				hMove = directionId.RIGHT;
+				isMovingS = true;
+				isMoving = true;
+			}
 		}
 	}
 	#endregion
 	#region Moving Toward Y Axis
 	if(objKeybind.keyUp xor objKeybind.keyDown) // On regarde si le joueur bouge verticalement
 	{
-		if(objKeybind.keyUp)
+		if((objKeybind.keyUp))
 		{
-			vMove = directionId.BACK;
-			isMovingV = true;
-			isMoving  = true;
+			if(invertedControl)
+			{
+				vMove = directionId.FRONT;
+				isMovingV = true;
+				isMoving = true;
+			}
+			else
+			{
+				vMove = directionId.BACK;
+				isMovingV = true;
+				isMoving  = true;
+			}
 		}
-		else if(objKeybind.keyDown)
+		else if((objKeybind.keyDown) || (objKeybind.keyUp && invertedControl))
 		{
-			vMove = directionId.FRONT;
-			isMovingV = true;
-			isMoving = true;
+			if(invertedControl)
+			{
+				vMove = directionId.BACK;
+				isMovingV = true;
+				isMoving  = true;
+			}
+			else
+			{
+				vMove = directionId.FRONT;
+				isMovingV = true;
+				isMoving = true;
+			}
 		}
 	}
 	#endregion
 	
 	#region SpeedHandler
-	if(etat != etatId.KICK)
+	
+	if(isMoving && !isStun)
 	{
-		if(isMoving)
+		if(etat != etatId.PUSH && etat != etatId.KICK)
 		{
-			if(etat != etatId.PUSH)
-			{
-				etat = etatId.WALK;
-			}
-			if(isMovingV && isMovingS)
-			{
-				if(vMove == directionId.FRONT)
-				{
-					switch(hMove)
-					{
-						case directionId.LEFT:
-							dir = directionId.FRONT_LEFT;
-							hspeed = -hSpeed;
-							vspeed = vSpeed;
-							break;
-				
-						case directionId.RIGHT:
-							dir = directionId.FRONT_RIGHT;
-							hspeed = hSpeed;
-							vspeed = vSpeed;
-							break;
-				
-						default:
-							dir = directionId.FRONT;
-							hspeed = 0;
-							vspeed = vSpeed;
-							break
-					}
-				}
-				else if (vMove == directionId.BACK)
-				{
-					switch(hMove)
-					{
-						case directionId.LEFT:
-							dir = directionId.BACK_LEFT;
-							hspeed = -hSpeed;
-							vspeed = -vSpeed;
-							break;
-				
-						case directionId.RIGHT:
-							dir = directionId.BACK_RIGHT;
-							hspeed = hSpeed;
-							vspeed = -vSpeed;
-							break;
-				
-						default:
-							dir = directionId.BACK;
-							hspeed = 0;
-							vspeed = -vSpeed;
-							break
-					}
-				}
-		
-			}
-			else if(isMovingS)
+			etat = etatId.WALK;
+		}
+		if(isMovingV && isMovingS)
+		{
+			if(vMove == directionId.FRONT)
 			{
 				switch(hMove)
 				{
 					case directionId.LEFT:
-						dir = directionId.LEFT;
+						dir = directionId.FRONT_LEFT;
 						hspeed = -hSpeed;
-						vspeed = 0;
+						vspeed = vSpeed;
 						break;
-					default:
-						dir = directionId.RIGHT;
+				
+					case directionId.RIGHT:
+						dir = directionId.FRONT_RIGHT;
 						hspeed = hSpeed;
-						vspeed = 0;
+						vspeed = vSpeed;
 						break;
-				}
-		
-			}
-			else
-			{
-				switch(vMove)
-				{
-					case directionId.FRONT:
+				
+					default:
 						dir = directionId.FRONT;
 						hspeed = 0;
 						vspeed = vSpeed;
+						break
+				}
+			}
+			else if (vMove == directionId.BACK)
+			{
+				switch(hMove)
+				{
+					case directionId.LEFT:
+						dir = directionId.BACK_LEFT;
+						hspeed = -hSpeed;
+						vspeed = -vSpeed;
 						break;
+				
+					case directionId.RIGHT:
+						dir = directionId.BACK_RIGHT;
+						hspeed = hSpeed;
+						vspeed = -vSpeed;
+						break;
+				
 					default:
 						dir = directionId.BACK;
 						hspeed = 0;
 						vspeed = -vSpeed;
-						break;
+						break
 				}
 			}
+		
 		}
-		else 
+		else if(isMovingS)
 		{
-			if(isMovingS) dir = hMove;
-			if(isMovingV) dir = vMove;
-	
-			etat = etatId.IDLE
-			hspeed = 0;
-			vspeed = 0;
+			switch(hMove)
+			{
+				case directionId.LEFT:
+					dir = directionId.LEFT;
+					hspeed = -hSpeed;
+					vspeed = 0;
+					break;
+				default:
+					dir = directionId.RIGHT;
+					hspeed = hSpeed;
+					vspeed = 0;
+					break;
+			}
+		
+		}
+		else
+		{
+			switch(vMove)
+			{
+				case directionId.FRONT:
+					dir = directionId.FRONT;
+					hspeed = 0;
+					vspeed = vSpeed;
+					break;
+				default:
+					dir = directionId.BACK;
+					hspeed = 0;
+					vspeed = -vSpeed;
+					break;
+			}
+		}
+		if(etat == etatId.KICK)
+		{
+			hspeed *=0.5;
+			vspeed *=0.5;
 		}
 	}
+	else 
+	{
+		if(isMovingS) dir = hMove;
+		if(isMovingV) dir = vMove;
+		
+		if(etat != etatId.KICK)
+		{
+			etat = etatId.IDLE
+		}
+		hspeed = 0;
+		vspeed = 0;
+	}
+	
 	#endregion
 }
 else
@@ -228,6 +236,11 @@ else
 	#endregion
 }
 #endregion
+
+if(iceCooldown) {
+	hspeed = newHspeed;
+	vspeed = newVspeed;
+}
 
 var csX = abs(hspeed) + 1;
 var csY = abs(vspeed) + 1;
@@ -369,7 +382,6 @@ if(dir == directionId.FRONT)
 		if(sprite_index != sprKickFront)
 		{
 			sprite_index = sprKickFront;
-			image_index = 0;
 		}
 	}
 }
@@ -407,7 +419,6 @@ if(dir == directionId.BACK)
 		if(sprite_index != sprKickBack)
 		{
 			sprite_index = sprKickBack;
-			image_index = 0;
 		}
 	}
 }
@@ -445,7 +456,6 @@ if(dir >= directionId.LEFT && dir < directionId.RIGHT)
 		if(sprite_index != sprKickSide  || image_xscale >= 0)
 		{
 			sprite_index = sprKickSide;
-			image_index = 0;
 			image_xscale = -abs(image_xscale);
 		}
 	}
@@ -494,27 +504,12 @@ if(dir >= directionId.RIGHT)
 #region Kick Manager
 if(etat == etatId.KICK)
 {
-	if(image_index == 0)
-	{
-		image_speed = 2;
-		
-	}
-	
 	if(image_index >= 5 && image_index <=8 && hit == 1)
 	{
-		if(hspeed != 0)
-		{
-			hspeed *= 3;
-		}
-		if(vspeed != 0)
-		{
-			vspeed *= 3;
-		}
-		hit = 0;
 		var kickHitbox = instance_create_depth(x, y, 1, objAttackHitbox);
 		if(dir == directionId.FRONT) kickHitbox.sprite_index = sprKickFrontHitbox;
+		else if(dir == directionId.BACK) kickHitbox.sprite_index = sprKickBackHitbox;
 		kickHitbox.image_xscale = image_xscale;
-		
 	}
 	else if (image_index >= 9)
 	{

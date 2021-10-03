@@ -7,13 +7,21 @@ function srcHandleEffects() {
 	var nearestTrashInstance;
 	switch(effect) {
 		case "slow":
-			hspeed *= 0.25;
-			vspeed *= 0.25;
+			if(!isSlowed)
+			{
+				isSlowed = true;
+				hspeed *= 0.25;
+				vspeed *= 0.25;
+			}
 			break;
 			
 		case "speedUp":
-			hspeed *= 5;
-			vspeed *= 5;
+			if(!isSpeeded)
+			{
+				hspeed *= 1.5;
+				vspeed *= 1.5;
+				isSpeeded = true
+			}
 			break;
 			
 		case "stun":
@@ -37,23 +45,18 @@ function srcHandleEffects() {
 				
 				if(vspeed != 0) {
 					vspeed = 0;	
-				}	
+				}
+				etat = etatId.IDLE;
 			}
 			
 			break;
 			
 		case "disoriented":
 			// Invert moving
-			if(hspeed > 0) {
-				hspeed = -hspeed;
-			} else {
-				hspeed = abs(hspeed);
-			}
-			
-			if(vspeed > 0) {
-				vspeed = -vspeed;
-			} else {
-				vspeed = abs(vspeed);
+			objPj.invertedControl = true;
+			if(objPj.alarm[4] == -1)
+			{
+				objPj.alarm[4] = room_speed * 5;
 			}
 			break;
 			
@@ -79,5 +82,11 @@ function srcHandleEffects() {
 		case "valCall":
 			instance_create_depth(0, 0, -1, objVal);
 			break;
+			
+			if(!iceCooldown) {
+				iceCooldown = true;
+				objPj.newHspeed = hspeed;
+				objPj.newVspeed = vspeed;
+			}
 	}
 }

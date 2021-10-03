@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objets",
-    "path": "folders/Objets.yy",
+    "name": "Utils",
+    "path": "folders/Objets/Utils.yy",
   },
   "resourceVersion": "1.0",
   "name": "objKeybind",

@@ -39,6 +39,54 @@ function srcPartAmbient() {
 	part_type_life(global.quanticParticle, 50, 100);
 #endregion
 
+#region Obstacle Portal
+	global.obstaclePortal = part_type_create();
+
+	part_type_shape(global.obstaclePortal, pt_shape_smoke);
+	part_type_size(global.obstaclePortal, 0.5, 1.5, 0.02, 0);
+	part_type_orientation(global.obstaclePortal, 0, 359, 0, 0, 0);
+	part_type_speed(global.obstaclePortal,-0.1,0.1,0,0);
+	part_type_direction(global.obstaclePortal,0,359,0,0);
+	
+	part_type_blend(global.obstaclePortal, 1);
+	part_type_alpha3(global.obstaclePortal, 0.04, 0.035, 0.030);
+	part_type_color3(global.obstaclePortal, c_white, c_blue, c_purple);
+
+	part_type_life(global.obstaclePortal, 50, 100);
+#endregion
+
+#region Obstacle Portal
+	global.monsterPortal = part_type_create();
+
+	part_type_shape(global.monsterPortal, pt_shape_smoke);
+	part_type_size(global.monsterPortal, 0.5, 1.5, 0.02, 0);
+	part_type_orientation(global.monsterPortal, 0, 359, 0, 0, 0);
+	part_type_speed(global.monsterPortal,-0.1,0.1,0,0);
+	part_type_direction(global.monsterPortal,0,359,0,0);
+	
+	part_type_blend(global.monsterPortal, 1);
+	part_type_alpha3(global.monsterPortal, 0.04, 0.035, 0.030);
+	part_type_color3(global.monsterPortal, c_white, c_orange, c_red);
+
+	part_type_life(global.monsterPortal, 50, 100);
+#endregion
+
+#region Debuff Portal
+	global.debuffPortal = part_type_create();
+
+	part_type_shape(global.debuffPortal, pt_shape_smoke);
+	part_type_size(global.debuffPortal, 0.5, 1.5, 0.02, 0);
+	part_type_orientation(global.debuffPortal, 0, 359, 0, 0, 0);
+	part_type_speed(global.debuffPortal,-0.1,0.1,0,0);
+	part_type_direction(global.debuffPortal,0,359,0,0);
+	
+	part_type_blend(global.debuffPortal, 1);
+	part_type_alpha3(global.debuffPortal, 0.04, 0.035, 0.030);
+	part_type_color3(global.debuffPortal, c_white, c_green, c_lime);
+
+	part_type_life(global.debuffPortal, 50, 100);
+#endregion
+
 #region Spore Fog Particles
 	global.sporeFogParticle = part_type_create();
 

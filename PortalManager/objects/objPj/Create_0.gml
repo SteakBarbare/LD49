@@ -20,8 +20,9 @@ enum etatId
 	PUSH = 4
 }
 
-thSpeed = -1;
-tvSpeed = -1;
+isSlowed = false;
+isSpeeded = false;
+
 bumpStart = false;
 
 dir = directionId.FRONT;
@@ -32,8 +33,15 @@ etat = etatId.IDLE;
 hSpeed = 3;
 vSpeed = 3;
 
+// Variables for Effects script
 isStun = false;
 stunCooldown = false;
+iceCooldown = false;
+newHspeed = 0;
+newVspeed = 0;
+
+invertedControl = false;
+
 
 effectsActive = [];
 

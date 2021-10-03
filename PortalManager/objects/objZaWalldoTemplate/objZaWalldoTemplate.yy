@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite31",
-    "path": "sprites/Sprite31/Sprite31.yy",
+    "name": "sprWallPlaceholder",
+    "path": "sprites/sprWallPlaceholder/sprWallPlaceholder.yy",
   },
   "solid": false,
   "visible": false,
