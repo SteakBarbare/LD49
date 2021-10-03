@@ -20,6 +20,9 @@ enum etatId
 	PUSH = 4
 }
 
+isSlowed = false;
+isSpeeded = false;
+
 bumpStart = false;
 
 dir = directionId.FRONT;

@@ -6,8 +6,6 @@ if(distance_to_object(objPj) < 100 && (etat == etatId.WALK || etat == etatId.KIC
 
 if(life == 0 && death)
 {
-	hspeed = 0;
-	vspeed = 0;
 	death = false;
 	alarm[0] = room_speed * 0.1;
 }

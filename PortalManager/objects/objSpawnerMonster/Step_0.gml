@@ -15,6 +15,10 @@ if(!isSet)
 		case 2:
 			mob = objBadGuyPaumer;
 			break;
+		
+		case 3:
+			mob = objBaveur;
+			break;
 	}
 	
 	instance = instance_create_depth(x, y, 1, mob);

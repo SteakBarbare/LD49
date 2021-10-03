@@ -8,13 +8,21 @@ function srcHandleEffects() {
 	switch(effect) 
 	{
 		case "slow":
-			hspeed *= 0.25;
-			vspeed *= 0.25;
+			if(!isSlowed)
+			{
+				isSlowed = true;
+				hspeed *= 0.25;
+				vspeed *= 0.25;
+			}
 			break;
 			
 		case "speedUp":
-			hspeed *= 1.2;
-			vspeed *= 1.2;
+			if(!isSpeeded)
+			{
+				hspeed *= 1.5;
+				vspeed *= 1.5;
+				isSpeeded = true
+			}
 			break;
 			
 		case "stun":

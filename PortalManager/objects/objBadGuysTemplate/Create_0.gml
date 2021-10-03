@@ -1,6 +1,7 @@
 event_inherited()
 
 life = 2;
+invulnerable = false;
 
 etat = etatId.IDLE;
 dir = directionId.FRONT;

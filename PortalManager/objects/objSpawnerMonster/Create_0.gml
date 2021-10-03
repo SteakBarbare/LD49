@@ -1,2 +1,2 @@
-ev = irandom(2);
+ev = irandom(3);
 isSet = false;

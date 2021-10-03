@@ -5,6 +5,8 @@ isMovingV = false;
 isMovingS = false;
 vMove = directionId.FRONT;
 hMove = directionId.RIGHT;
+isSlowed = false;
+isSpeeded = false;
 
 collisionDir = -1;
 #region Déplacement
