@@ -74,7 +74,6 @@ function srcHandleEffects() {
 			break;
 			
 		case "laser":
-			show_debug_message("lel");
 			break;
 			
 		case "valCall":

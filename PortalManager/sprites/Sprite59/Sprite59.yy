@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a4cbb958-c248-4802-95f6-783d418b6ba0","path":"sprites/sprBonusLaser/sprBonusLaser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a4cbb958-c248-4802-95f6-783d418b6ba0","path":"sprites/sprBonusLaser/sprBonusLaser.yy",},"LayerId":{"name":"34e4d188-99a9-44b4-8da0-f4f146689b9e","path":"sprites/sprBonusLaser/sprBonusLaser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprBonusLaser","path":"sprites/sprBonusLaser/sprBonusLaser.yy",},"resourceVersion":"1.0","name":"a4cbb958-c248-4802-95f6-783d418b6ba0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4fbb0ec0-070f-400b-ba6d-3082227cc669","path":"sprites/Sprite59/Sprite59.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4fbb0ec0-070f-400b-ba6d-3082227cc669","path":"sprites/Sprite59/Sprite59.yy",},"LayerId":{"name":"5bb6d3ce-3d44-4b55-a4e6-65d6e00e6e5c","path":"sprites/Sprite59/Sprite59.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"Sprite59","path":"sprites/Sprite59/Sprite59.yy",},"resourceVersion":"1.0","name":"4fbb0ec0-070f-400b-ba6d-3082227cc669","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprBonusLaser","path":"sprites/sprBonusLaser/sprBonusLaser.yy",},
+    "spriteId": {"name":"Sprite59","path":"sprites/Sprite59/Sprite59.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5484cce2-00c1-4227-814c-c86fa8a4db10","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a4cbb958-c248-4802-95f6-783d418b6ba0","path":"sprites/sprBonusLaser/sprBonusLaser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d3f3774f-9d18-434a-971e-53507f238813","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4fbb0ec0-070f-400b-ba6d-3082227cc669","path":"sprites/Sprite59/Sprite59.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprBonusLaser","path":"sprites/sprBonusLaser/sprBonusLaser.yy",},
+    "parent": {"name":"Sprite59","path":"sprites/Sprite59/Sprite59.yy",},
     "resourceVersion": "1.3",
-    "name": "sprBonusLaser",
+    "name": "Sprite59",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"34e4d188-99a9-44b4-8da0-f4f146689b9e","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5bb6d3ce-3d44-4b55-a4e6-65d6e00e6e5c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Bonus_Malus/Bonus.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprBonusLaser",
+  "name": "Sprite59",
   "tags": [],
   "resourceType": "GMSprite",
 }

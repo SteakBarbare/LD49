@@ -1,1 +1,1 @@
-instance_destroy();
+isFinished = true;
