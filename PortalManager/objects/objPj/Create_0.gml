@@ -37,6 +37,8 @@ iceCooldown = false;
 newHspeed = 0;
 newVspeed = 0;
 
+invertedControl = false;
+
 
 effectsActive = [];
 

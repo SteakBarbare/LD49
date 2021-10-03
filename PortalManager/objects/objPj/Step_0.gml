@@ -23,39 +23,75 @@ if(etat != etatId.BUMP) // SI pas een bump
 	{
 		if(objKeybind.keyLeft)
 		{
-			isMoving = true;
-			hMove = directionId.LEFT;
-			isMovingS = true;
+			if(invertedControl)
+			{
+				hMove = directionId.RIGHT;
+				isMovingS = true;
+				isMoving = true;
+			}
+			else
+			{
+				isMoving = true;
+				hMove = directionId.LEFT;
+				isMovingS = true;
+			}
 		}
 		else if(objKeybind.keyRight) 
 		{
-			hMove = directionId.RIGHT;
-			isMovingS = true;
-			isMoving = true;
+			if(invertedControl)
+			{
+				isMoving = true;
+				hMove = directionId.LEFT;
+				isMovingS = true;
+			}
+			else
+			{
+				hMove = directionId.RIGHT;
+				isMovingS = true;
+				isMoving = true;
+			}
 		}
 	}
 	#endregion
 	#region Moving Toward Y Axis
 	if(objKeybind.keyUp xor objKeybind.keyDown) // On regarde si le joueur bouge verticalement
 	{
-		if(objKeybind.keyUp)
+		if((objKeybind.keyUp))
 		{
-			vMove = directionId.BACK;
-			isMovingV = true;
-			isMoving  = true;
+			if(invertedControl)
+			{
+				vMove = directionId.FRONT;
+				isMovingV = true;
+				isMoving = true;
+			}
+			else
+			{
+				vMove = directionId.BACK;
+				isMovingV = true;
+				isMoving  = true;
+			}
 		}
-		else if(objKeybind.keyDown)
+		else if((objKeybind.keyDown) || (objKeybind.keyUp && invertedControl))
 		{
-			vMove = directionId.FRONT;
-			isMovingV = true;
-			isMoving = true;
+			if(invertedControl)
+			{
+				vMove = directionId.BACK;
+				isMovingV = true;
+				isMoving  = true;
+			}
+			else
+			{
+				vMove = directionId.FRONT;
+				isMovingV = true;
+				isMoving = true;
+			}
 		}
 	}
 	#endregion
 	
 	#region SpeedHandler
 	
-	if(isMoving)
+	if(isMoving && !isStun)
 	{
 		if(etat != etatId.PUSH && etat != etatId.KICK)
 		{

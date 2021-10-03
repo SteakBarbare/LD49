@@ -5,15 +5,16 @@ function srcHandleEffects() {
 	
 	var effect = argument[0];
 	
-	switch(effect) {
+	switch(effect) 
+	{
 		case "slow":
 			hspeed *= 0.25;
 			vspeed *= 0.25;
 			break;
 			
 		case "speedUp":
-			hspeed *= 5;
-			vspeed *= 5;
+			hspeed *= 1.2;
+			vspeed *= 1.2;
 			break;
 			
 		case "stun":
@@ -37,23 +38,18 @@ function srcHandleEffects() {
 				
 				if(vspeed != 0) {
 					vspeed = 0;	
-				}	
+				}
+				etat = etatId.IDLE;
 			}
 			
 			break;
 			
 		case "disoriented":
 			// Invert moving
-			if(hspeed > 0) {
-				hspeed = -hspeed;
-			} else {
-				hspeed = abs(hspeed);
-			}
-			
-			if(vspeed > 0) {
-				vspeed = -vspeed;
-			} else {
-				vspeed = abs(vspeed);
+			objPj.invertedControl = true;
+			if(objPj.alarm[4] == -1)
+			{
+				objPj.alarm[4] = room_speed * 5;
 			}
 			break;
 			
