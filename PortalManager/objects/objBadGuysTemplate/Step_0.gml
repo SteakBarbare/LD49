@@ -87,15 +87,15 @@ else
 	}
 }
 
-if(place_meeting(x + collisionSpeed, y, objSolidTemplate) && dir >= directionId.RIGHT)
+
+if(place_meeting(x + collisionSpeed, y, objSolidTemplate)&& dir >= directionId.RIGHT)
 {
 	if(dir == directionId.RIGHT) dir = directionId.LEFT;
 	else if(dir == directionId.BACK_RIGHT) dir = directionId.BACK_LEFT;
 	else if(dir == directionId.FRONT_RIGHT) dir = directionId.FRONT_LEFT;
-	hspeed = -hSpeed;
 	actualDir = dir;
 }
-if(place_meeting(x - collisionSpeed, y, objSolidTemplate) && dir >= directionId.LEFT && dir < directionId.RIGHT)
+if(place_meeting(x - collisionSpeed, y, objSolidTemplate)&& dir >= directionId.LEFT && dir < directionId.RIGHT)
 {
 	if(dir == directionId.LEFT) dir = directionId.RIGHT;
 	else if(dir == directionId.BACK_LEFT) dir = directionId.BACK_RIGHT;
@@ -104,8 +104,9 @@ if(place_meeting(x - collisionSpeed, y, objSolidTemplate) && dir >= directionId.
 	actualDir = dir;
 }
 
-if(place_meeting(x, y + collisionSpeed, objSolidTemplate) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
+if(place_meeting(x, y + collisionSpeed, objSolidTemplate)&& (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
 {
+	
 	if(dir == directionId.FRONT) dir = directionId.BACK;
 	else if(dir == directionId.FRONT_LEFT) dir = directionId.BACK_RIGHT;
 	else if(dir == directionId.FRONT_RIGHT) dir = directionId.BACK_LEFT;

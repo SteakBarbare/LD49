@@ -1,2 +1,3 @@
 event_inherited();
-buffEffect = [[undefined, 0]];
+buffEffect = [["star", room_speed * 3]];
+

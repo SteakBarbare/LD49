@@ -92,6 +92,21 @@ function srcHandleEffects() {
 			}
 			break;
 			
+		case "star":
+			objStarHitbox.isActive = true;
+			if(objStarHitbox.alarm[0] == -1)
+			{
+				objStarHitbox.alarm[0] = room_speed * 8;
+			}
+			
+		case "repulsif":
+			objRepulsifHitbox.isActive = true;
+			if(objRepulsifHitbox.alarm[0] == -1)
+			{
+				objRepulsifHitbox.alarm[0] = room_speed * 8;
+			}
+			
+			
 		case "laser":
 			break;
 			

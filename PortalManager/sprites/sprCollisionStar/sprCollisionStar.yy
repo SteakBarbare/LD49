@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 57,
-  "bbox_right": 72,
-  "bbox_top": 74,
-  "bbox_bottom": 93,
+  "bbox_left": 45,
+  "bbox_right": 77,
+  "bbox_top": 44,
+  "bbox_bottom": 100,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6e982b95-79ec-4c48-9e53-b0ee77f5cccd","path":"sprites/sprCollision/sprCollision.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6e982b95-79ec-4c48-9e53-b0ee77f5cccd","path":"sprites/sprCollision/sprCollision.yy",},"LayerId":{"name":"284e2c23-ba5e-4fd9-a15f-ee54433ff235","path":"sprites/sprCollision/sprCollision.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprCollision","path":"sprites/sprCollision/sprCollision.yy",},"resourceVersion":"1.0","name":"6e982b95-79ec-4c48-9e53-b0ee77f5cccd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6e982b95-79ec-4c48-9e53-b0ee77f5cccd","path":"sprites/sprCollisionStar/sprCollisionStar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6e982b95-79ec-4c48-9e53-b0ee77f5cccd","path":"sprites/sprCollisionStar/sprCollisionStar.yy",},"LayerId":{"name":"284e2c23-ba5e-4fd9-a15f-ee54433ff235","path":"sprites/sprCollisionStar/sprCollisionStar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprCollisionStar","path":"sprites/sprCollisionStar/sprCollisionStar.yy",},"resourceVersion":"1.0","name":"6e982b95-79ec-4c48-9e53-b0ee77f5cccd","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprCollision","path":"sprites/sprCollision/sprCollision.yy",},
+    "spriteId": {"name":"sprCollisionStar","path":"sprites/sprCollisionStar/sprCollisionStar.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 16.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"fd72e236-3117-4341-ab90-973edb745bb2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6e982b95-79ec-4c48-9e53-b0ee77f5cccd","path":"sprites/sprCollision/sprCollision.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bc7efda1-3d1e-4c24-9328-3340ea7b4917","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6e982b95-79ec-4c48-9e53-b0ee77f5cccd","path":"sprites/sprCollisionStar/sprCollisionStar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprCollision","path":"sprites/sprCollision/sprCollision.yy",},
+    "parent": {"name":"sprCollisionStar","path":"sprites/sprCollisionStar/sprCollisionStar.yy",},
     "resourceVersion": "1.3",
-    "name": "sprCollision",
+    "name": "sprCollisionStar",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprCollision",
+  "name": "sprCollisionStar",
   "tags": [],
   "resourceType": "GMSprite",
 }

@@ -19,7 +19,6 @@ switch(dir)
 	case directionId.RIGHT:
 		hspeed = hSpeed;
 		break;
-
 }
 
 hspeed *= 10;
