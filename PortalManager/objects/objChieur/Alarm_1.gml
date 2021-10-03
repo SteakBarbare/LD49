@@ -6,6 +6,6 @@ if(!place_meeting(x, y, objSolidTemplate))
 	show_debug_message(e)
 	if(e < 5)
 	{
-		instance_create_depth(x, y, 1, objSpawner);
+		instance_create_depth(x, y, 1, objSpawnerObstacle);
 	}
 }

@@ -28,11 +28,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Mobs",
-    "path": "folders/Objets/Mobs.yy",
+    "name": "Utils",
+    "path": "folders/Objets/Utils.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objSpawner",
+  "name": "objSpawnerMonster",
   "tags": [],
   "resourceType": "GMObject",
 }
