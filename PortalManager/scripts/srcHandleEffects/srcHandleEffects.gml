@@ -63,6 +63,8 @@ function srcHandleEffects() {
 			
 		case "iceEffect":
 			if(!iceCooldown) {
+				array_push(objMusic.puddleSounds, ["snd_ice", 1]);
+				show_debug_message(objMusic.puddleSounds);
 				iceCooldown = true;
 				objPj.newHspeed = hspeed;
 				objPj.newVspeed = vspeed;
