@@ -32,8 +32,13 @@ etat = etatId.IDLE;
 hSpeed = 3;
 vSpeed = 3;
 
+// Variables for Effects script
 isStun = false;
-effectCooldown = false;
+stunCooldown = false;
+iceCooldown = false;
+newHspeed = 0;
+newVspeed = 0;
+
 
 effectsActive = [];
 

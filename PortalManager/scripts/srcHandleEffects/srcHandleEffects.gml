@@ -17,9 +17,9 @@ function srcHandleEffects() {
 			break;
 			
 		case "stun":
-			if(!effectCooldown) {
+			if(!stunCooldown) {
 				isStun = true;
-				effectCooldown = true;
+				stunCooldown = true;
 				alarm[3] = 1.5 * room_speed;
 				alarm[2] = 4 * room_speed;
 				
@@ -58,10 +58,10 @@ function srcHandleEffects() {
 			break;
 			
 		case "iceEffect":
-			if(!effectCooldown) {
-				effectCooldown = true;
-				
-				alarm[2] = 4 * room_speed;
+			if(!iceCooldown) {
+				iceCooldown = true;
+				objPj.newHspeed = hspeed;
+				objPj.newVspeed = vspeed;
 			}
 	}
 }

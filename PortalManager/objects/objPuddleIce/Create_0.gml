@@ -1,3 +1,3 @@
 event_inherited();
 
-puddleEffect = [["iceEffect", room_speed]];
+puddleEffect = [["iceEffect", 1]];
