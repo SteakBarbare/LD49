@@ -1,16 +1,16 @@
-ev = irandom(3)
-
-var mur = objDestructibleWall;
+ev = irandom(4);
+ev = 1
+var mur;
 switch(ev)
 {
 	case 0:
-		mur = objDestructibleWall;
+		mur = objQuanticWall;
 		break;
 		
 	case 1:
-		mur = objQuanticWall;
+		mur = objBumberWall;
 		break;
-			
+		
 	default:
 		mur = objDestructibleWall;
 		break;
@@ -18,10 +18,12 @@ switch(ev)
 }
 	
 instance = instance_create_depth(x, y, 1, mur);
+instance.isMoving = true;
 time = 0
 
 dir = irandom(7);
 destination = {x : x, y:y}
+start = destination;
 strength = {x : instance.sprite_width*5, y : sprite_height*1.5}
 time = 0;
 switch(dir)

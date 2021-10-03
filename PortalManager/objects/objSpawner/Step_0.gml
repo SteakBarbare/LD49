@@ -4,14 +4,15 @@ instance.y = lerp(instance.y, destination.y, 0.03)
 var arrived = false;
 var d = dir;
 var dest = destination;
+var s = start;
 with(instance)
 {
-	if(point_distance(x, y, dest.x, dest.y) < 50 || x <= 0 + sprite_width/2 || x >= room_width - sprite_width/2 || y <= 0 + sprite_height/2 || y >= room_height -sprite_height/2)
+	if(x <= 0 + sprite_width/2 || x >= room_width - sprite_width/2 || y <= 0 + sprite_height/2 || y >= room_height -sprite_height/2)
 	{
-		if(x <= 0 + sprite_width/2 || x >= room_width - sprite_width/2 || y <= 0 + sprite_height/2 || y >= room_height -sprite_height/2)
-		{
-			arrived = true;
-		}
+		arrived = true;
+	}
+	if(point_distance(x, y, s.x, s.y) > sprite_get_height(sprMobRandomDir) || x <= 0 + sprite_width/2 || x >= room_width - sprite_width/2 || y <= 0 + sprite_height/2 || y >= room_height -sprite_height/2)
+	{
 		if(place_meeting(x, y, objSolidTemplate))
 		{
 			var dX, dY;
@@ -72,6 +73,7 @@ hasArrived = arrived;
 	
 if(hasArrived)
 {
+	instance.isMoving = false;
 	instance_destroy();
 }
 
