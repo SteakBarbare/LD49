@@ -474,10 +474,9 @@ if(dir >= directionId.RIGHT)
 
 if(etat == etatId.KICK)
 {
-	image_speed = 1.3;
 	if(image_index == 0)
 	{
-		image_speed = 1.3;
+		image_speed = 2;
 		
 	}
 	

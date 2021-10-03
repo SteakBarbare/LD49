@@ -1,3 +1,3 @@
 event_inherited();
 
-alarm[9] = room_speed * irandom(3);
+alarm[1] = room_speed * irandom(3);
