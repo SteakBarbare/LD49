@@ -16,7 +16,8 @@ enum etatId
 	IDLE = 0,
 	WALK = 1,
 	KICK = 2,
-	BUMP = 3
+	BUMP = 3,
+	PUSH = 4
 }
 
 thSpeed = -1;

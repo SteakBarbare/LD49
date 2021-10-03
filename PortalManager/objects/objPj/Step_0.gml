@@ -52,24 +52,12 @@ if(etat != etatId.BUMP)
 		hspeed *= 0.6;
 		vspeed *= 0.6;
 	}
-
 	if(objKeybind.keyLeft xor objKeybind.keyRight)
 	{
 	
 		if(objKeybind.keyLeft)
 		{
-			if(!place_meeting(x - collisionSpeed, y, objSolidTemplate))
-			{
-				isMoving = true;
-			}
-			else
-			{
-				while(!place_meeting(x - 1, y, objSolidTemplate))
-				{
-					x -= 1;
-				}
-				hspeed = 0;
-			}
+			isMoving = true;
 			hMove = directionId.LEFT;
 			isMovingS = true;
 		}
@@ -77,18 +65,7 @@ if(etat != etatId.BUMP)
 		{
 			hMove = directionId.RIGHT;
 			isMovingS = true;
-			if(!place_meeting(x + collisionSpeed, y, objSolidTemplate))
-			{
-				isMoving = true;
-			}
-			else
-			{
-				while(!place_meeting(x + 1, y, objSolidTemplate))
-				{
-					x += 1;
-				}
-				hspeed = 0;
-			}
+			isMoving = true;
 		}
 	}
 	if(objKeybind.keyUp xor objKeybind.keyDown)
@@ -97,44 +74,23 @@ if(etat != etatId.BUMP)
 		{
 			vMove = directionId.BACK;
 			isMovingV = true;
-			if(!place_meeting(x, y - collisionSpeed, objSolidTemplate))
-			{
-				isMoving = true;
-			}
-			else
-			{
-				while(!place_meeting(x, y + 1, objSolidTemplate))
-				{
-					y += 1;
-				}
-				vspeed = 0;
-			}
+			isMoving  = true;
 		}
 		else if(objKeybind.keyDown && !place_meeting(x, y + collisionSpeed, objSolidTemplate))
 		{
 			vMove = directionId.FRONT;
 			isMovingV = true;
-			if(!place_meeting(x, y + collisionSpeed, objSolidTemplate))
-			{
-				isMoving = true;
-			}
-			else
-			{
-				while(!place_meeting(x, y - 1, objSolidTemplate))
-				{
-					y -= 1;
-				}
-				vspeed = 0;
-			}
+			isMoving = true;
 		}
 	}
 	if(etat != etatId.KICK)
 	{
 		if(isMoving)
 		{
-	
-			etat = etatId.WALK;
-	
+			if(etat != etatId.PUSH)
+			{
+				etat = etatId.WALK;
+			}
 			if(isMovingV && isMovingS)
 			{
 				if(vMove == directionId.FRONT)
@@ -229,9 +185,6 @@ if(etat != etatId.BUMP)
 			vspeed = 0;
 		}
 	}
-
-	
-
 }
 else
 {
@@ -263,6 +216,90 @@ else
 			break;	
 	}
 }
+
+if(etat != etatId.KICK)
+{
+	var touch;
+	if(place_meeting(x + collisionSpeed, y, objPushingWall) && dir >= directionId.RIGHT)
+	{
+		
+		var pInstance = instance_place(x + collisionSpeed, y, objPushingWall);
+		touch = false;
+		with(pInstance)
+		{
+			if(!place_meeting(x + 0.5, y, objSolidTemplate))
+			{
+				x+=0.5
+			}
+			else touch = true;
+		}
+		if(!touch)
+		{
+			alarm[1] = room_speed / 8;
+			image_speed = 0.7;
+			etat = etatId.PUSH;
+		}
+	}
+	if(place_meeting(x - collisionSpeed, y, objPushingWall) && dir >= directionId.LEFT && dir < directionId.RIGHT)
+	{	
+		touch = false;
+		var pInstance = instance_place(x - collisionSpeed, y, objPushingWall);
+		with(pInstance)
+		{
+			if(!place_meeting(x - 0.5, y, objSolidTemplate))
+			{
+				x-=0.5
+			}
+			else touch = true;
+		}
+		if(!touch)
+		{
+			alarm[1] = room_speed / 8;
+			image_speed = 0.7;
+			etat = etatId.PUSH;
+		}
+	}
+	if(place_meeting(x, y + collisionSpeed, objPushingWall) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
+	{
+		var pInstance = instance_place(x, y + collisionSpeed, objPushingWall);
+		touch = false;
+		with(pInstance)
+		{
+			if(!place_meeting(x, y + 0.5, objSolidTemplate))
+			{
+				y+=0.5
+			}
+			else touch = true;
+		}
+		if(!touch)
+		{
+			alarm[1] = room_speed / 8;
+			image_speed = 0.7;
+			etat = etatId.PUSH;
+		}
+	}
+	if(place_meeting(x, y - collisionSpeed, objPushingWall) && (dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT))
+	{
+		touch = false;
+		var pInstance = instance_place(x, y - collisionSpeed, objPushingWall);
+		with(pInstance)
+		{
+			if(!place_meeting(x, y - 0.5, objSolidTemplate))
+			{
+				y-=0.5
+			}
+			else touch = true;
+		}
+		if(!touch)
+		{
+			alarm[1] = room_speed / 8;
+			image_speed = 0.7;
+			etat = etatId.PUSH;
+		}
+	}
+}
+
+
 if(place_meeting(x + collisionSpeed, y, objSolidTemplate) && dir >= directionId.RIGHT)
 {
 	hspeed = 0;
@@ -279,9 +316,18 @@ if(place_meeting(x, y - collisionSpeed, objSolidTemplate) && (dir == directionId
 {
 	vspeed = 0;
 }
+
 if(dir == directionId.FRONT)
 {
-	if(etat == etatId.IDLE || etat == etatId.BUMP)
+	if(etat == etatId.PUSH)
+	{
+		if(sprite_index != sprPushFront)
+		{
+			sprite_index = sprPushFront;
+			image_xscale = abs(image_xscale);		
+		}
+	}
+	else if(etat == etatId.IDLE || etat == etatId.BUMP)
 	{
 		if(image_xscale < 0) image_xscale = abs(image_xscale);
 		if(sprite_index != sprIdleFront)
@@ -312,7 +358,15 @@ if(dir == directionId.FRONT)
 
 if(dir == directionId.BACK)
 {
-	if(etat == etatId.IDLE || etat == etatId.BUMP)
+	if(etat == etatId.PUSH)
+	{
+		if(sprite_index != sprPushBack)
+		{
+			sprite_index = sprPushBack;
+			image_xscale = abs(image_xscale);		
+		}
+	}
+	else if(etat == etatId.IDLE || etat == etatId.BUMP)
 	{
 		if(sprite_index != sprIdleBack)
 		{
@@ -342,7 +396,15 @@ if(dir == directionId.BACK)
 
 if(dir >= directionId.LEFT && dir < directionId.RIGHT)
 {
-	if(etat == etatId.IDLE || etat == etatId.BUMP)
+	if(etat == etatId.PUSH)
+	{
+		if(sprite_index != sprPushSide || image_xscale >= 0)
+		{
+			sprite_index = sprPushSide;
+			image_xscale = -abs(image_xscale);		
+		}
+	}
+	else if(etat == etatId.IDLE || etat == etatId.BUMP)
 	{
 		if(sprite_index != sprIdleSide || image_xscale >= 0)
 		{
@@ -373,7 +435,15 @@ if(dir >= directionId.LEFT && dir < directionId.RIGHT)
 
 if(dir >= directionId.RIGHT)
 {
-	if(etat == etatId.IDLE || etat == etatId.BUMP)
+	if(etat == etatId.PUSH)
+	{
+		if(sprite_index != sprPushSide || image_xscale < 0)
+		{
+			sprite_index = sprPushSide;
+			image_xscale = abs(image_xscale);		
+		}
+	}
+	else if(etat == etatId.IDLE || etat == etatId.BUMP)
 	{
 		if(sprite_index != sprIdleSide || image_xscale < 0)
 		{
