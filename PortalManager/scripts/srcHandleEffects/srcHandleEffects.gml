@@ -4,6 +4,7 @@
 function srcHandleEffects() {
 	
 	var effect = argument[0];
+	var nearestTrashInstance;
 	switch(effect) {
 		case "slow":
 			hspeed *= 0.25;
@@ -58,6 +59,26 @@ function srcHandleEffects() {
 			
 		case "iceEffect":
 			
+			break;
+			
+		case "bonusSpeed":
+			hspeed *= 3.25;
+			vspeed *= 3.25;
+			break;
+			
+		case "clean":
+			nearestTrashInstance = collision_circle(x, y, 200, objShitTemplate, false , false);
+			with(nearestTrashInstance){
+				instance_destroy();
+			}
+			break;
+			
+		case "laser":
+			show_debug_message("lel");
+			break;
+			
+		case "valCall":
+			instance_create_depth(0, 0, -1, objVal);
 			break;
 	}
 }
