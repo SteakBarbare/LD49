@@ -229,6 +229,11 @@ else
 }
 #endregion
 
+if(iceCooldown) {
+	hspeed = newHspeed;
+	vspeed = newVspeed;
+}
+
 var csX = abs(hspeed) + 1;
 var csY = abs(vspeed) + 1;
 #region COLLISION PUSHING WALL
