@@ -10,7 +10,10 @@
     "path": "sprites/sprCollision/sprCollision.yy",
   },
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "objSolidTemplate",
+    "path": "objects/objSolidTemplate/objSolidTemplate.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
