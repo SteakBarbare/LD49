@@ -16,8 +16,6 @@ switch(ev)
 		break;
 	
 }
-
-show_debug_message(ev)
 	
 instance = instance_create_depth(x, y, 1, mur);
 time = 0
