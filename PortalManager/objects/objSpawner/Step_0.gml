@@ -1,6 +1,6 @@
 
-instance.x = lerp(instance.x, destination.x, 0.05)
-instance.y = lerp(instance.y, destination.y, 0.05)
+instance.x = lerp(instance.x, destination.x, 0.03)
+instance.y = lerp(instance.y, destination.y, 0.03)
 var arrived = false;
 var d = dir;
 var dest = destination;
