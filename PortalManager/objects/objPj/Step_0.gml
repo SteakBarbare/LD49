@@ -402,7 +402,7 @@ if(dir >= directionId.RIGHT)
 
 if(etat == etatId.KICK)
 {
-	if(image_index >= 5 && image_index <=8 && hit == 1)
+	if(image_index >= 5 && image_index <= 8 && hit == 1)
 	{
 		hit = 0;
 		var kickHitbox = instance_create_depth(x, y, 1, objAttackHitbox);
@@ -419,8 +419,18 @@ if(etat == etatId.KICK)
 
 if(inputPrevent >= 0) inputPrevent--;
 
-// Boucling on the tableau of effects
+show_debug_message(effectsActive)
+
+// Activate each effect on the array
 	for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
-		srcHandleEffects(effectsActive[currentEffect]);
+		srcHandleEffects(effectsActive[currentEffect][0]);
 	}
-	effectsActive = [];
+	
+// Checking timer of each effect => decrement or remove array
+	for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
+		if(effectsActive[currentEffect][1] > 0) {
+			effectsActive[currentEffect][1]--;
+		} else {
+			array_delete(effectsActive, currentEffect, 1);
+		}
+	}
