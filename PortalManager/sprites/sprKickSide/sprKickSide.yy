@@ -106,7 +106,7 @@
   "nineSlice": null,
   "parent": {
     "name": "kick",
-    "path": "folders/Sprites/pj/kick.yy",
+    "path": "folders/Sprites/pj/walk/kick.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprKickSide",

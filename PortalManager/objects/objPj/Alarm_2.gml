@@ -1,2 +1,2 @@
 /// @description Stun Cooldown
-effectCooldown = false;
+stunCooldown = false;

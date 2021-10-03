@@ -20,8 +20,6 @@ enum etatId
 	PUSH = 4
 }
 
-thSpeed = -1;
-tvSpeed = -1;
 bumpStart = false;
 
 dir = directionId.FRONT;
@@ -38,6 +36,8 @@ stunCooldown = false;
 iceCooldown = false;
 newHspeed = 0;
 newVspeed = 0;
+
+invertedControl = false;
 
 
 effectsActive = [];
