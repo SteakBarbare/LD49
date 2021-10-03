@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sprWallPlaceholder",
+    "path": "sprites/sprWallPlaceholder/sprWallPlaceholder.yy",
+  },
   "solid": false,
   "visible": false,
   "spriteMaskId": null,

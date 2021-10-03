@@ -1,6 +1,6 @@
-if(!roomHasPortal)
+if(nbPortal == 0)
 {
-	roomHasPortal = true;
+	nbPortal = 2;
 	var forbiddenRegion;
 	if(objPj.x < room_width/2)
 	{
@@ -26,7 +26,7 @@ if(!roomHasPortal)
 	}
 	
 	region0 = irandom(4);
-	rengion1 = irandom(4);
+	region1 = irandom(4);
 	
 	while(region0 == forbiddenRegion)
 	{
@@ -38,5 +38,6 @@ if(!roomHasPortal)
 		region1 = irandom(4);
 	}
 	
-	
+	srcSpawnPortal(region0);
+	srcSpawnPortal(region1);
 }
