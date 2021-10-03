@@ -49,6 +49,8 @@ if(etat != etatId.BUMP)
 				vspeed = -vSpeed;
 				break;
 		}
+		hspeed *= 0.6;
+		vspeed *= 0.6;
 	}
 
 	if(objKeybind.keyLeft xor objKeybind.keyRight)
@@ -402,16 +404,34 @@ if(dir >= directionId.RIGHT)
 
 if(etat == etatId.KICK)
 {
+	image_speed = 1.3;
+	if(image_index == 0)
+	{
+		image_speed = 1.3;
+		
+	}
+	
 	if(image_index >= 5 && image_index <=8 && hit == 1)
 	{
+		if(hspeed != 0)
+		{
+			hspeed *= 3;
+		}
+		if(vspeed != 0)
+		{
+			vspeed *= 3;
+		}
 		hit = 0;
 		var kickHitbox = instance_create_depth(x, y, 1, objAttackHitbox);
+		if(dir == directionId.FRONT) kickHitbox.sprite_index = sprKickFrontHitbox;
 		kickHitbox.image_xscale = image_xscale;
+		
 	}
 	else if (image_index >= 9)
 	{
 		etat = etatId.IDLE;
 		hit = 1;
+		image_speed = 1;
 	}
 	
 }

@@ -19,6 +19,8 @@ enum etatId
 	BUMP = 3
 }
 
+thSpeed = -1;
+tvSpeed = -1;
 bumpStart = false;
 
 dir = directionId.FRONT;
