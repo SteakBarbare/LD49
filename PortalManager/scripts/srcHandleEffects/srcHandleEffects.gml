@@ -19,7 +19,7 @@ function srcHandleEffects() {
 			if(!stunCooldown) {
 				isStun = true;
 				stunCooldown = true;
-				alarm[1] = 1.5 * room_speed;
+				alarm[3] = 1.5 * room_speed;
 				alarm[2] = 4 * room_speed;
 				
 				// Shaking screen
