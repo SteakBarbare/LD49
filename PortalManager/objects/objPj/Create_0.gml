@@ -33,7 +33,7 @@ hSpeed = 3;
 vSpeed = 3;
 
 isStun = false;
-stunCooldown = false;
+effectCooldown = false;
 
 effectsActive = [];
 
