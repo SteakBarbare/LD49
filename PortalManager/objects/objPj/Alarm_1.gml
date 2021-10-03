@@ -1,2 +1,2 @@
-/// @description Stun
-isStun = false;
+etat = etatId.IDLE;
+image_speed = 1;
