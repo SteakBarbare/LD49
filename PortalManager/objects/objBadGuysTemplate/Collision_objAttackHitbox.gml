@@ -1,5 +1,4 @@
 life--;
-
 if(life == 1)
 {
 	objShakeEffect.shake = true;
@@ -13,5 +12,7 @@ else
 	objShakeEffect.alarm[0] = room_speed/4;
 }
 
-
-srcBloodSplash(x, y, bloodType);
+etat = etatId.BUMP;
+dir = objPj.dir;
+bumpStart = false;
+bumpStrength = 10;

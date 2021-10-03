@@ -2,7 +2,7 @@ depth = -bbox_bottom;
 
 if(life == 0)
 {
-	instance_destroy();
+	alarm[8] = room_speed * 0.1;
 }
 
 collisionDir = -1;

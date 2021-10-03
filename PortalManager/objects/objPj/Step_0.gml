@@ -7,9 +7,11 @@ vMove = directionId.FRONT;
 hMove = directionId.RIGHT;
 
 collisionDir = -1;
-if(etat != etatId.BUMP)
+#region Déplacement
+if(etat != etatId.BUMP) // SI pas een bump
 {
-	if(objKeybind.clickLeft && inputPrevent <= 0 && etat != etatId.KICK)
+	#region Kick Starter
+	if(objKeybind.clickLeft && inputPrevent <= 0 && etat != etatId.KICK) 
 	{
 		inputPrevent = room_speed / 4;
 		etat = etatId.KICK;
@@ -52,9 +54,10 @@ if(etat != etatId.BUMP)
 		hspeed *= 0.6;
 		vspeed *= 0.6;
 	}
-	if(objKeybind.keyLeft xor objKeybind.keyRight)
+	#endregion
+	#region Moving Toward X Axis
+	if(objKeybind.keyLeft xor objKeybind.keyRight) // On regarde si le joueur bouge de côté
 	{
-	
 		if(objKeybind.keyLeft)
 		{
 			isMoving = true;
@@ -68,21 +71,26 @@ if(etat != etatId.BUMP)
 			isMoving = true;
 		}
 	}
-	if(objKeybind.keyUp xor objKeybind.keyDown)
+	#endregion
+	#region Moving Toward Y Axis
+	if(objKeybind.keyUp xor objKeybind.keyDown) // On regarde si le joueur bouge verticalement
 	{
-		if(objKeybind.keyUp && !place_meeting(x, y - collisionSpeed, objSolidTemplate))
+		if(objKeybind.keyUp)
 		{
 			vMove = directionId.BACK;
 			isMovingV = true;
 			isMoving  = true;
 		}
-		else if(objKeybind.keyDown && !place_meeting(x, y + collisionSpeed, objSolidTemplate))
+		else if(objKeybind.keyDown)
 		{
 			vMove = directionId.FRONT;
 			isMovingV = true;
 			isMoving = true;
 		}
 	}
+	#endregion
+	
+	#region SpeedHandler
 	if(etat != etatId.KICK)
 	{
 		if(isMoving)
@@ -185,9 +193,11 @@ if(etat != etatId.BUMP)
 			vspeed = 0;
 		}
 	}
+	#endregion
 }
 else
 {
+	#region Bumb Handler
 	if(!bumpStart)
 	{
 		bumpStart = true;
@@ -215,15 +225,20 @@ else
 			vspeed = 0;
 			break;	
 	}
+	#endregion
 }
+#endregion
 
-if(etat != etatId.KICK)
+var csX = abs(hspeed) + 1;
+var csY = abs(vspeed) + 1;
+#region COLLISION PUSHING WALL
+if(etat != etatId.KICK) // Si pas en Kick
 {
 	var touch;
-	if(place_meeting(x + collisionSpeed, y, objPushingWall) && dir >= directionId.RIGHT)
+	if(place_meeting(x + csX, y, objPushingWall) && dir >= directionId.RIGHT)
 	{
 		
-		var pInstance = instance_place(x + collisionSpeed, y, objPushingWall);
+		var pInstance = instance_place(x + csX, y, objPushingWall);
 		touch = false;
 		with(pInstance)
 		{
@@ -240,10 +255,10 @@ if(etat != etatId.KICK)
 			etat = etatId.PUSH;
 		}
 	}
-	if(place_meeting(x - collisionSpeed, y, objPushingWall) && dir >= directionId.LEFT && dir < directionId.RIGHT)
+	if(place_meeting(x - csX, y, objPushingWall) && dir >= directionId.LEFT && dir < directionId.RIGHT)
 	{	
 		touch = false;
-		var pInstance = instance_place(x - collisionSpeed, y, objPushingWall);
+		var pInstance = instance_place(x - csX, y, objPushingWall);
 		with(pInstance)
 		{
 			if(!place_meeting(x - 0.5, y, objSolidTemplate))
@@ -259,9 +274,9 @@ if(etat != etatId.KICK)
 			etat = etatId.PUSH;
 		}
 	}
-	if(place_meeting(x, y + collisionSpeed, objPushingWall) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
+	if(place_meeting(x, y + csY, objPushingWall) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
 	{
-		var pInstance = instance_place(x, y + collisionSpeed, objPushingWall);
+		var pInstance = instance_place(x, y + csY, objPushingWall);
 		touch = false;
 		with(pInstance)
 		{
@@ -278,10 +293,10 @@ if(etat != etatId.KICK)
 			etat = etatId.PUSH;
 		}
 	}
-	if(place_meeting(x, y - collisionSpeed, objPushingWall) && (dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT))
+	if(place_meeting(x, y - csY, objPushingWall) && (dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT))
 	{
 		touch = false;
-		var pInstance = instance_place(x, y - collisionSpeed, objPushingWall);
+		var pInstance = instance_place(x, y - csY, objPushingWall);
 		with(pInstance)
 		{
 			if(!place_meeting(x, y - 0.5, objSolidTemplate))
@@ -298,25 +313,28 @@ if(etat != etatId.KICK)
 		}
 	}
 }
+#endregion
 
-
-if(place_meeting(x + collisionSpeed, y, objSolidTemplate) && dir >= directionId.RIGHT)
+#region COLLISION
+if(place_meeting(x + csX, y, objSolidTemplate) && dir >= directionId.RIGHT)
 {
 	hspeed = 0;
 }
-if(place_meeting(x - collisionSpeed, y, objSolidTemplate) && dir >= directionId.LEFT && dir < directionId.RIGHT)
+if(place_meeting(x - csX, y, objSolidTemplate) && dir >= directionId.LEFT && dir < directionId.RIGHT)
 {
 	hspeed = 0;
 }
-if(place_meeting(x, y + collisionSpeed, objSolidTemplate) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
+if(place_meeting(x, y + csY, objSolidTemplate) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
 {
 	vspeed = 0;
 }
-if(place_meeting(x, y - collisionSpeed, objSolidTemplate) && (dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT))
+if(place_meeting(x, y - csY, objSolidTemplate) && (dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT))
 {
 	vspeed = 0;
 }
+#endregion
 
+#region Directional animation
 if(dir == directionId.FRONT)
 {
 	if(etat == etatId.PUSH)
@@ -471,13 +489,14 @@ if(dir >= directionId.RIGHT)
 		}
 	}
 }
+#endregion
 
+#region Kick Manager
 if(etat == etatId.KICK)
 {
-	image_speed = 1.3;
 	if(image_index == 0)
 	{
-		image_speed = 1.3;
+		image_speed = 2;
 		
 	}
 	
@@ -505,24 +524,22 @@ if(etat == etatId.KICK)
 	}
 	
 }
-
-
-
+#endregion
 
 if(inputPrevent >= 0) inputPrevent--;
 
+#region EffectManager
 // Activate each effect on the array
-	for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
-		srcHandleEffects(effectsActive[currentEffect][0]);
-	}
+for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
+	srcHandleEffects(effectsActive[currentEffect][0]);
+}
 	
 // Checking timer of each effect => decrement or remove array
-	for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
-		if(effectsActive[currentEffect][1] > 0) {
-			effectsActive[currentEffect][1]--;
-		} else {
-			array_delete(effectsActive, currentEffect, 1);
-		}
+for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
+	if(effectsActive[currentEffect][1] > 0) {
+		effectsActive[currentEffect][1]--;
+	} else {
+		array_delete(effectsActive, currentEffect, 1);
 	}
-	
-	show_debug_message(direction);
+}
+#endregion
