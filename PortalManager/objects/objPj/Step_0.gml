@@ -507,6 +507,8 @@ if(etat == etatId.KICK)
 }
 
 
+
+
 if(inputPrevent >= 0) inputPrevent--;
 
 // Activate each effect on the array
@@ -522,3 +524,5 @@ if(inputPrevent >= 0) inputPrevent--;
 			array_delete(effectsActive, currentEffect, 1);
 		}
 	}
+	
+	show_debug_message(direction);

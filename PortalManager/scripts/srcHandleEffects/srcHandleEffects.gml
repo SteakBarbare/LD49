@@ -4,6 +4,7 @@
 function srcHandleEffects() {
 	
 	var effect = argument[0];
+	
 	switch(effect) {
 		case "slow":
 			hspeed *= 0.25;
@@ -16,9 +17,9 @@ function srcHandleEffects() {
 			break;
 			
 		case "stun":
-			if(!stunCooldown) {
+			if(!effectCooldown) {
 				isStun = true;
-				stunCooldown = true;
+				effectCooldown = true;
 				alarm[3] = 1.5 * room_speed;
 				alarm[2] = 4 * room_speed;
 				
@@ -57,7 +58,10 @@ function srcHandleEffects() {
 			break;
 			
 		case "iceEffect":
-			
-			break;
+			if(!effectCooldown) {
+				effectCooldown = true;
+				
+				alarm[2] = 4 * room_speed;
+			}
 	}
 }
