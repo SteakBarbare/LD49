@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Mobs",
-    "path": "folders/Objets/Mobs.yy",
+    "name": "Obstacles",
+    "path": "folders/Objets/Obstacles.yy",
   },
   "resourceVersion": "1.0",
   "name": "objSpawner",

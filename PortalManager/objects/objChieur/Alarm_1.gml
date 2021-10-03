@@ -1,4 +1,4 @@
-alarm[9] = room_speed * irandom(5) + 4;
+alarm[1] = room_speed * irandom(5) + 4;
 
 if(!place_meeting(x, y, objSolidTemplate))
 {
