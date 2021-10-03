@@ -1,2 +1,2 @@
-triggeredKeyboard = objKeybind.keyLeft;
 event_inherited();
+triggeredKeyboard = objKeybind.keyLeft;
