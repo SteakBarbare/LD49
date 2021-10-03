@@ -16,7 +16,6 @@ function srcHandleEffects() {
 			break;
 			
 		case "stun":
-			show_debug_message("stun")
 			if(!stunCooldown) {
 				isStun = true;
 				stunCooldown = true;
@@ -43,7 +42,6 @@ function srcHandleEffects() {
 			break;
 			
 		case "disoriented":
-		show_debug_message("disoriented")
 			// Invert moving
 			if(hspeed > 0) {
 				hspeed = -hspeed;
@@ -56,6 +54,10 @@ function srcHandleEffects() {
 			} else {
 				vspeed = abs(vspeed);
 			}
+			break;
+			
+		case "iceEffect":
+			
 			break;
 	}
 }

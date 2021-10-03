@@ -419,8 +419,6 @@ if(etat == etatId.KICK)
 
 if(inputPrevent >= 0) inputPrevent--;
 
-show_debug_message(effectsActive)
-
 // Activate each effect on the array
 	for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
 		srcHandleEffects(effectsActive[currentEffect][0]);
