@@ -229,8 +229,8 @@ else
 }
 #endregion
 
-var csX = hspeed + 2;
-var csY = vspeed + 2;
+var csX = abs(hspeed) + 1;
+var csY = abs(vspeed) + 1;
 #region COLLISION PUSHING WALL
 if(etat != etatId.KICK) // Si pas en Kick
 {
