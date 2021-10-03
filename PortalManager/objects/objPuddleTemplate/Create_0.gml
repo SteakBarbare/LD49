@@ -1,1 +1,1 @@
-puddleEffect = "slow";
+puddleEffect = undefined;

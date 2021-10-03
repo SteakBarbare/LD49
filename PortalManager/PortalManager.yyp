@@ -15,6 +15,7 @@
     {"id":{"name":"sprFuufJeuJ","path":"sprites/sprFuufJeuJ/sprFuufJeuJ.yy",},"order":4,},
     {"id":{"name":"objBlood2","path":"objects/objBlood2/objBlood2.yy",},"order":1,},
     {"id":{"name":"sprCollision","path":"sprites/sprCollision/sprCollision.yy",},"order":1,},
+    {"id":{"name":"srcHandleEffects","path":"scripts/srcHandleEffects/srcHandleEffects.yy",},"order":4,},
     {"id":{"name":"objCharredDirtFx","path":"objects/objCharredDirtFx/objCharredDirtFx.yy",},"order":6,},
     {"id":{"name":"sprIdleFront","path":"sprites/sprIdleFront/sprIdleFront.yy",},"order":1,},
     {"id":{"name":"sprKickFrontHitbox","path":"sprites/sprKickFrontHitbox/sprKickFrontHitbox.yy",},"order":1,},
@@ -78,6 +79,7 @@
     {"id":{"name":"objPuddleTemplate","path":"objects/objPuddleTemplate/objPuddleTemplate.yy",},"order":6,},
     {"id":{"name":"sprBloodiedFootPrints2","path":"sprites/sprBloodiedFootPrints2/sprBloodiedFootPrints2.yy",},"order":10,},
     {"id":{"name":"objHitboxTemplate","path":"objects/objHitboxTemplate/objHitboxTemplate.yy",},"order":2,},
+    {"id":{"name":"Sprite33","path":"sprites/Sprite33/Sprite33.yy",},"order":16,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
