@@ -1,2 +1,2 @@
-visible = true;
+event_inherited();
 indestructible = true;

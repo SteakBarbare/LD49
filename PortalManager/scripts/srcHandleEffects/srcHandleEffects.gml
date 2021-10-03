@@ -70,9 +70,25 @@ function srcHandleEffects() {
 			break;
 			
 		case "clean":
-			nearestTrashInstance = collision_circle(x, y, 200, objShitTemplate, false , false);
-			with(nearestTrashInstance){
-				instance_destroy();
+			nearestTrashInstance = collision_circle(x, y, 400, objDestructibleWall, false , true);
+			with(nearestTrashInstance)
+			{
+				instance_destroy();	
+			}
+			nearestTrashInstance = collision_circle(x, y, 400, objQuanticWall, false , true);
+			with(nearestTrashInstance)
+			{
+				instance_destroy();	
+			}
+			nearestTrashInstance = collision_circle(x, y, 400, objPushingWall, false , true);
+			with(nearestTrashInstance)
+			{
+				instance_destroy();	
+			}
+			nearestTrashInstance = collision_circle(x, y, 400, objPuddleTemplate, false , true);
+			with(nearestTrashInstance)
+			{
+				instance_destroy();	
 			}
 			break;
 			
