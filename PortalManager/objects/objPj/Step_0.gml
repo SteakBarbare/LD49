@@ -509,8 +509,16 @@ if(etat == etatId.KICK)
 
 if(inputPrevent >= 0) inputPrevent--;
 
-// Boucling on the tableau of effects
+// Activate each effect on the array
 	for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
-		srcHandleEffects(effectsActive[currentEffect]);
+		srcHandleEffects(effectsActive[currentEffect][0]);
 	}
-	effectsActive = [];
+	
+// Checking timer of each effect => decrement or remove array
+	for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
+		if(effectsActive[currentEffect][1] > 0) {
+			effectsActive[currentEffect][1]--;
+		} else {
+			array_delete(effectsActive, currentEffect, 1);
+		}
+	}

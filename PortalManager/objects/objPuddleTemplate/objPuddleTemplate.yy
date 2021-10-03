@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sprFuufJeuJ",
-    "path": "sprites/sprFuufJeuJ/sprFuufJeuJ.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

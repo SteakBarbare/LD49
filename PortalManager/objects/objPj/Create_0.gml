@@ -32,6 +32,9 @@ etat = etatId.IDLE;
 hSpeed = 3;
 vSpeed = 3;
 
+isStun = false;
+stunCooldown = false;
+
 effectsActive = [];
 
 collisionSpeed = hSpeed + 2;

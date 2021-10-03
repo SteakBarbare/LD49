@@ -1,3 +1,3 @@
 event_inherited();
 
-puddleEffect = "slow";
+puddleEffect = [["slow", 0]];

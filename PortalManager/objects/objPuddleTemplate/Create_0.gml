@@ -1,1 +1,1 @@
-puddleEffect = undefined;
+puddleEffect = [[undefined, 0]];
