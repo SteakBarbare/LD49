@@ -1,32 +1,27 @@
-ev = irandom(4);
+ev = irandom(2);
 switch(ev)
 {
 	case 0:
-		mur = objQuanticWall;
+		mob = objFolloweur;
 		break;
 		
 	case 1:
-		mur = objBumberWall;
+		mob = objChieur;
 		break;
 	
 	case 2:
-		mur = objPushingWall;
+		mob = objBadGuyPaumer;
 		break;
-		
-	default:
-		mur = objDestructibleWall;
-		break;
-	
 }
 	
-instance = instance_create_depth(x, y, 1, mur);
+instance = instance_create_depth(x, y, 1, mob);
 
 time = 0
 
 dir = irandom(7);
 destination = {x : x, y:y}
 start = destination;
-strength = {x : 200, y : 100}
+strength = {x : 100, y : 50}
 time = 0;
 switch(dir)
 {
