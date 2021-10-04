@@ -104,6 +104,7 @@
     {"id":{"name":"objBonusSpeed","path":"objects/objBonusSpeed/objBonusSpeed.yy",},"order":7,},
     {"id":{"name":"sprBonusLaser","path":"sprites/sprBonusLaser/sprBonusLaser.yy",},"order":1,},
     {"id":{"name":"objMachina","path":"objects/objMachina/objMachina.yy",},"order":2,},
+    {"id":{"name":"pressEportal","path":"sprites/pressEportal/pressEportal.yy",},"order":15,},
     {"id":{"name":"objBonusClean","path":"objects/objBonusClean/objBonusClean.yy",},"order":4,},
     {"id":{"name":"sprElectric","path":"sprites/sprElectric/sprElectric.yy",},"order":3,},
     {"id":{"name":"objTrash","path":"objects/objTrash/objTrash.yy",},"order":1,},
