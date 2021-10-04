@@ -86,6 +86,9 @@ if(room == rm_gameover) {
 	if(audio_is_playing(snd_titlescreen)) {
 		audio_stop_sound(snd_titlescreen);	
 	}
+	if(audio_is_playing(snd_timer_goes_brr)) {
+		audio_stop_sound(snd_timer_goes_brr);	
+	}
 	musicSound[2][1] = musicOn;
 }
 
