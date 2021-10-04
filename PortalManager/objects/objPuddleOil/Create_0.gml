@@ -1,3 +1,3 @@
 event_inherited();
 
-puddleEffect = [["speedUp", (3 * room_speed)]];
+puddleEffect = [["speedUp", room_speed]];
