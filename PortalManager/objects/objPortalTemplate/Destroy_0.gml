@@ -17,10 +17,6 @@ else if(partType == "Debuff")
 	part_particles_create(global.particlesSys, x, y, global.debuffPortal, irandom_range(3, 8));
 }
 
-if(isActivated)
-{
-	instance_nearest(x, y, objLight).alarm[0] = 1;
-}
 
 if(!isActivated)
 {
