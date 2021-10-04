@@ -1,6 +1,6 @@
 instance = noone;
 //listOfBonnus = [objBonusClean, objBonusLaser, objBonusRepulse, objBonusSpeed, objBonusStar];
-listOfBonnus = [objBonusSpeed, objBonusLaser, objBonusStar, objBonusClean];
+listOfBonnus = [objBonusSpeed, objBonusLaser, objBonusClean];
 listOfMalus = [objDebuffVal];
 getNameBuff = 0;
 limitRangeBonus = array_length(listOfBonnus) - 1;

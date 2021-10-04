@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprMobRandomDir",
-    "path": "sprites/sprMobRandomDir/sprMobRandomDir.yy",
+    "name": "sprSlimeWalk",
+    "path": "sprites/sprSlimeWalk/sprSlimeWalk.yy",
   },
   "solid": false,
   "visible": true,

@@ -16,7 +16,8 @@ for(var effect = 0; effect < array_length(buffEffect); effect++)
 	}
 }
 
-if(!debuff) {
+if(!debuff) 
+{
 	objMusic.buffsSound[0][1] = 1;	
 } else {
 	objMusic.buffsSound[1][1] = 1;	
