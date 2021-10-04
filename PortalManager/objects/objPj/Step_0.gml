@@ -248,8 +248,8 @@ if(iceCooldown) {
 	vspeed = newVspeed;
 }
 
-var csX = abs(hspeed) + 1;
-var csY = abs(vspeed) + 1;
+var csX = abs(hspeed) + 2;
+var csY = abs(vspeed) + 2;
 #region COLLISION PUSHING WALL
 if(etat != etatId.KICK) // Si pas en Kick
 {
@@ -292,6 +292,7 @@ if(etat != etatId.KICK) // Si pas en Kick
 			image_speed = 0.7;
 			etat = etatId.PUSH;
 		}
+		show_debug_message(touch)
 	}
 	if(place_meeting(x, y + csY, objPushingWallTemplate) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
 	{

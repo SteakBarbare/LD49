@@ -36,7 +36,7 @@ function srcPartAmbient() {
 	part_type_alpha3(global.explosionParticle, 0.045, 0.50, 0.055);
 	part_type_color3(global.explosionParticle, c_gray, c_orange, c_red);
 
-	part_type_life(global.explosionParticle, room_speed, room_speed * 4);
+	part_type_life(global.explosionParticle, room_speed, room_speed * 6);
 #endregion
 
 #region Quantic Particles

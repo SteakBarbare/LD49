@@ -71,8 +71,16 @@ function srcHandleEffects() {
 			if(!iceCooldown) {
 				objMusic.puddleSounds[0][1] = 1;
 				iceCooldown = true;
-				objPj.newHspeed = hspeed;
-				objPj.newVspeed = vspeed;
+				var hx, hy;
+				hx = 0;
+				hy = 0;
+				if(dir >= directionId.RIGHT) hx = max(hSpeed, abs(hspeed));
+				else if(dir >= directionId.LEFT) hx = -(max(hSpeed, abs(hspeed)));
+				
+				if(dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT) hy = max(vSpeed, abs(vspeed));
+				else if(dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT) hy = -max(vSpeed, abs(vspeed));
+				objPj.newHspeed = hx;
+				objPj.newVspeed = hy;
 			}
 			break;
 			
