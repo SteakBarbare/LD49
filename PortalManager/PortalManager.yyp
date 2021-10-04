@@ -261,6 +261,7 @@
     {"id":{"name":"objPuddleTemplate","path":"objects/objPuddleTemplate/objPuddleTemplate.yy",},"order":8,},
     {"id":{"name":"sprBloodiedFootPrints2","path":"sprites/sprBloodiedFootPrints2/sprBloodiedFootPrints2.yy",},"order":10,},
     {"id":{"name":"objHitboxTemplate","path":"objects/objHitboxTemplate/objHitboxTemplate.yy",},"order":2,},
+    {"id":{"name":"Font3","path":"fonts/Font3/Font3.yy",},"order":2,},
     {"id":{"name":"objAKeboard","path":"objects/objAKeboard/objAKeboard.yy",},"order":3,},
     {"id":{"name":"sh_gaussian_blur_v","path":"shaders/sh_gaussian_blur_v/sh_gaussian_blur_v.yy",},"order":1,},
     {"id":{"name":"objSKeboard","path":"objects/objSKeboard/objSKeboard.yy",},"order":1,},
