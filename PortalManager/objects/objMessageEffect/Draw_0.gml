@@ -1,1 +1,0 @@
-draw_text(room_width/2, yDraw, msg);

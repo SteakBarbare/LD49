@@ -532,36 +532,22 @@ if(inputPrevent >= 0) inputPrevent--;
 
 #region EffectManager
 // Activate each effect on the array
+
+
 for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) 
 {
 	srcHandleEffects(effectsActive[currentEffect].name);
-	var isNewEffectMessage = true;
-	var yDrawEffect = 100;
-	for (var i = 0; i < instance_number(objMessageEffect); ++i)
-	{
-		yDrawEffect += currentEffect * 20;
-		allMessage[i] = instance_find(objMessageEffect, i);
-		if(allMessage[i].msg == effectsActive[currentEffect].name) 
-		{
-			allMessage[i].yDraw = yDrawEffect;
-			var test = allMessage[i];
-			isNewEffectMessage = false;
-			break;
-		}
-	}
+	var isNewEffectMessage = effectsActive[currentEffect].isNew;
+	effectsActive[currentEffect].isNew = false;
+	var yDrawEffect = 100 + 25 * instance_number(objMessageEffect);
 	if(isNewEffectMessage)
 	{
-		var test = instance_create_depth(x, y, -20, objMessageEffect);
+		var test = instance_create_depth((display_get_gui_width()/7)*6, yDrawEffect, -2000, objMessageEffect);
 		test.msg = effectsActive[currentEffect].name;
 		test.timer = 1;
 		test.yDraw = yDrawEffect;
-	
+		test.nbi = instance_number(objMessageEffect);
 	}
-	else
-	{
-		test.yDraw = yDrawEffect;
-	}
-	isNewEffectMessage = true;
 }
 	
 // Checking timer of each effect => decrement or remove array
