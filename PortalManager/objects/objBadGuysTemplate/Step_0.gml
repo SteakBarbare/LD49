@@ -13,7 +13,7 @@ if(life <= 0)
 }
 
 collisionDir = -1;
-if(etat != etatId.BUMP )
+if(etat != etatId.BUMP && life > 0)
 {
 	if(isMoving)
 	{
@@ -64,7 +64,7 @@ if(etat != etatId.BUMP )
 
 	}
 }
-else
+else if(etat == etatId.BUMP)
 {
 	if(!bumpStart)
 	{
@@ -135,22 +135,26 @@ if(place_meeting(x, y - collisionSpeed, objSolidTemplate) && (dir == directionId
 	actualDir = dir;
 }
 
-while(x > room_width - sprite_width/2)
+while(x > room_width)
 {
 	x--;
+	hspeed = 0;
 }
 
-while(x < 0 + sprite_width/2)
+while(x < 0)
 {
 	x++;
+	hspeed = 0;
 }
-while(y > room_height - sprite_height/2)
+while(y > room_height)
 {
 	y--;
+	vspeed = 0;
 }
-while(y < 0 + sprite_height/2)
+while(y < 0)
 {
 	y++;
+	vspeed = 0;
 }
 
 
