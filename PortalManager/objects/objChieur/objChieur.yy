@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "",
-    "path": "",
+    "name": "sprSlimeWalk",
+    "path": "sprites/sprSlimeWalk/sprSlimeWalk.yy",
   },
   "solid": false,
   "visible": true,
