@@ -1,1 +1,1 @@
-puddleEffect = [{name : undefined, time : 0}];
+puddleEffect = [{name : undefined, time : 0, isNew : true}];
