@@ -5,7 +5,8 @@ function srcHandleEffects() {
 	
 	var effect = argument[0];
 	var nearestTrashInstance;
-	switch(effect) {
+	switch(effect) 
+	{
 		case "slow":
 			if(!isSlowed)
 			{	
@@ -67,6 +68,7 @@ function srcHandleEffects() {
 			break;
 			
 		case "iceEffect":
+			show_debug_message("suus")
 			if(!iceCooldown) {
 				objMusic.puddleSounds[0][1] = 1;
 				iceCooldown = true;
