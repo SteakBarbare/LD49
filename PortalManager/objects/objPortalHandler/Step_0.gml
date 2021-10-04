@@ -37,7 +37,6 @@ if(nbPortal == 0)
 	{
 		region1 = irandom(3);
 	}
-	show_debug_message("r0 = " + string(region0) + " r1 = " + string(region1))
 	
 	srcSpawnPortal(region0);
 	srcSpawnPortal(region1);
