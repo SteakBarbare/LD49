@@ -6,13 +6,17 @@ if(nbInvoc > 0)
 }
 else
 {
-	if(randomSpanwerBonus <= 100){
-		if(randomSpanwerBonus <= 5){
+	if(randomSpanwerBonus <= 100)
+	{
+		if(randomSpanwerBonus <= 5)
+		{
 			malusBuffIncoming = true;
-		} else {
+		} 
+		else 
+		{
 			bonusBuffIncoming = true;
 		}
 		instance_create_depth(x, y, -20, objSpawnerBuffs);
-			instance_destroy();
+		hasEnded = true;
 	}
 }
