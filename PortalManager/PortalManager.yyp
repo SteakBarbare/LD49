@@ -53,6 +53,7 @@
     {"id":{"name":"objAcid2","path":"objects/objAcid2/objAcid2.yy",},"order":1,},
     {"id":{"name":"sprTilesetMoan","path":"sprites/sprTilesetMoan/sprTilesetMoan.yy",},"order":13,},
     {"id":{"name":"sprBlood","path":"sprites/sprBlood/sprBlood.yy",},"order":4,},
+    {"id":{"name":"sprSlimeWalk","path":"sprites/sprSlimeWalk/sprSlimeWalk.yy",},"order":0,},
     {"id":{"name":"scr_define_corners","path":"scripts/scr_define_corners/scr_define_corners.yy",},"order":3,},
     {"id":{"name":"sprDestructibleWall","path":"sprites/sprDestructibleWall/sprDestructibleWall.yy",},"order":12,},
     {"id":{"name":"objBlood2","path":"objects/objBlood2/objBlood2.yy",},"order":1,},
@@ -64,6 +65,7 @@
     {"id":{"name":"snd_attack","path":"sounds/snd_attack/snd_attack.yy",},"order":6,},
     {"id":{"name":"objObstaclePortal","path":"objects/objObstaclePortal/objObstaclePortal.yy",},"order":1,},
     {"id":{"name":"sprCrabWalk","path":"sprites/sprCrabWalk/sprCrabWalk.yy",},"order":1,},
+    {"id":{"name":"sprSlimeDead","path":"sprites/sprSlimeDead/sprSlimeDead.yy",},"order":1,},
     {"id":{"name":"objLaser","path":"objects/objLaser/objLaser.yy",},"order":4,},
     {"id":{"name":"objPushingWallTemplate","path":"objects/objPushingWallTemplate/objPushingWallTemplate.yy",},"order":13,},
     {"id":{"name":"sprBonusSpeed","path":"sprites/sprBonusSpeed/sprBonusSpeed.yy",},"order":4,},
@@ -374,6 +376,7 @@
     {"folderPath":"folders/Shaders/UltimateLightSystem.yy","order":1,"resourceVersion":"1.0","name":"UltimateLightSystem","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Shaders/UltimateLightSystem/GaussianBlur.yy","order":1,"resourceVersion":"1.0","name":"GaussianBlur","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objets/light.yy","order":12,"resourceVersion":"1.0","name":"light","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Mobs/Chieur.yy","order":4,"resourceVersion":"1.0","name":"Chieur","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
