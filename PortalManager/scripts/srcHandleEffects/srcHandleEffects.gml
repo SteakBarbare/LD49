@@ -10,6 +10,7 @@ function srcHandleEffects() {
 		case "slow":
 			if(!isSlowed)
 			{
+				objMusic.puddleSounds[3][1] = 1;
 				isSlowed = true;
 				hspeed *= 0.25;
 				vspeed *= 0.25;
@@ -19,14 +20,15 @@ function srcHandleEffects() {
 		case "speedUp":
 			if(!isSpeeded)
 			{
-				hspeed *= 1.5;
-				vspeed *= 1.5;
+				objMusic.puddleSounds[1][1] = 1;
+				hspeed *= 4;
+				vspeed *= 4;
 				isSpeeded = true
 			}
 			break;
 			
 		case "stun":
-			if(!stunCooldown) {
+			if(!stunCooldown) {			
 				isStun = true;
 				stunCooldown = true;
 				alarm[3] = 1.5 * room_speed;
@@ -36,6 +38,9 @@ function srcHandleEffects() {
 				objShakeEffect.shake = true;
 				objShakeEffect.range = 1;
 				objShakeEffect.alarm[0] = 1.5 * room_speed;
+				
+				
+				objMusic.puddleSounds[2][1] = 1;
 			}
 			
 			if(isStun) {
@@ -63,8 +68,7 @@ function srcHandleEffects() {
 			
 		case "iceEffect":
 			if(!iceCooldown) {
-				array_push(objMusic.puddleSounds, ["snd_ice", 1]);
-				show_debug_message(objMusic.puddleSounds);
+				objMusic.puddleSounds[0][1] = 1;
 				iceCooldown = true;
 				objPj.newHspeed = hspeed;
 				objPj.newVspeed = vspeed;

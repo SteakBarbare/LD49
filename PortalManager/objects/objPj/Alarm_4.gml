@@ -1,1 +1,2 @@
 invertedControl = false;
+electricCollision = false;

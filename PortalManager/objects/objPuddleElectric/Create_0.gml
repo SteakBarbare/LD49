@@ -1,3 +1,3 @@
 event_inherited();
 
-puddleEffect = [["stun", 1], ["disoriented", 6 * room_speed]];
+puddleEffect = [["stun", 1], ["disoriented", 5 * room_speed]];
