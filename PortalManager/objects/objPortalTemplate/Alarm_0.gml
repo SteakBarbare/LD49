@@ -6,7 +6,7 @@ if(nbInvoc > 0)
 else
 {
 	if(randomSpanwerBonus <= 100){
-		if(randomSpanwerBonus <= 90){
+		if(randomSpanwerBonus <= 5){
 			malusBuffIncoming = true;
 		} else {
 			bonusBuffIncoming = true;

@@ -121,10 +121,13 @@ function srcHandleEffects() {
 			
 			
 		case "laser":
+			objSlotLaser.inStock = true;
 			break;
 			
 		case "valCall":
+		if(!instance_exists(objVal)){
 			instance_create_depth(0, 0, -1, objVal);
+		}
 			break;
 	}
 }

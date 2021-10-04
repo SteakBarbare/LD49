@@ -20,5 +20,3 @@ canDelete = true;
 depth = -3000;
 
 switchIDClick = false;
-
-show_debug_message("??");

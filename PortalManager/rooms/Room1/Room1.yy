@@ -16,6 +16,7 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"objStarHitbox","path":"objects/objStarHitbox/objStarHitbox.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-106.0,"y":182.0,"resourceVersion":"1.0","name":"inst_3B2704E","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"objRepulsifHitbox","path":"objects/objRepulsifHitbox/objRepulsifHitbox.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-69.0,"y":189.0,"resourceVersion":"1.0","name":"inst_71981B32","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"objSlotLaser","path":"objects/objSlotLaser/objSlotLaser.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1152.0,"y":352.0,"resourceVersion":"1.0","name":"inst_4AEDBD3D","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances_1","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"objPj","path":"objects/objPj/objPj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":332.0,"y":128.0,"resourceVersion":"1.0","name":"inst_4B74A9AF","tags":[],"resourceType":"GMRInstance",},
@@ -204,6 +205,7 @@
     {"name":"inst_6AB7DD7C","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_483C7A34","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_5EFE98F2","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_4AEDBD3D","path":"rooms/Room1/Room1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
