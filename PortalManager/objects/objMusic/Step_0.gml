@@ -18,6 +18,7 @@ if(room == startMenu) {
 }
 
 if(room == Room1) {
+	audio_sound_gain(snd_loop_music, 1, room_speed);
 	musicSound[1][1] = 1;
 	musicOn = true;
 	
@@ -81,7 +82,7 @@ timerSound = loopingArraySound(timerSound);
 
 if(room == rm_gameover) {
 	if(audio_is_playing(snd_loop_music)) {
-		audio_stop_sound(snd_loop_music);	
+		audio_sound_gain(snd_loop_music, 0, room_speed);
 	}
 	if(audio_is_playing(snd_titlescreen)) {
 		audio_stop_sound(snd_titlescreen);	
@@ -89,7 +90,7 @@ if(room == rm_gameover) {
 	if(audio_is_playing(snd_timer_goes_brr)) {
 		audio_stop_sound(snd_timer_goes_brr);	
 	}
-	musicSound[2][1] = musicOn;
+	musicSound[2][1] = 1;
 }
 
 #region GUI Sounds
