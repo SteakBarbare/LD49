@@ -13,4 +13,4 @@ for(effect = 0; effect < array_length(buffEffect); effect++) {
 	}	
 }
 
-instance_destroy();
+//instance_destroy();
