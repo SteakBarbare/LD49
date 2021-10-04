@@ -51,6 +51,7 @@ timerSound = [
 	["snd_add_timer", 0],
 	["snd_timer_decount", 0],
 	["snd_timer_goes_brr", 0],
+	["snd_explosion", 0]
 ];
 
 // Click sound

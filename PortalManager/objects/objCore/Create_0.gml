@@ -1,6 +1,6 @@
 event_inherited();
 isExploding = false;
-timeBeforeExplosion = 90;
+timeBeforeExplosion = 5;
 alarm[0] = room_speed * timeBeforeExplosion;
 randomize();
 nbPortal = 0;
