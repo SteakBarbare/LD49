@@ -5,6 +5,8 @@ prevX = x;
 hSpeed = 2.5;
 vSpeed = 2.5;
 
+haveShadow = false;
+
 invulnerable = false;
 
 death = true;
