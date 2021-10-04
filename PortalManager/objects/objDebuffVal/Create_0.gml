@@ -1,2 +1,3 @@
 event_inherited();
-buffEffect = [["valCall", 0]];
+buffEffect = [{name: "valCall", time: 1}];
+

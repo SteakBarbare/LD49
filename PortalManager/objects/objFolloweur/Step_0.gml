@@ -7,24 +7,37 @@ else
 {
 	image_xscale = -1;
 }
-prevX = x;
-if(distance_to_object(objPj) < 100 && (etat == etatId.WALK || etat == etatId.KICK))
+if(life > 0)
 {
-	mp_potential_step_object(objPj.x, objPj.y, hSpeed, objSolidTemplate)
-}
-else
-{
-	if(sprite_index != sprCrabIdle)
+	prevX = x;
+	if(distance_to_object(objPj) < 100 && (etat == etatId.WALK || etat == etatId.KICK))
 	{
-		sprite_index = sprCrabIdle;
-		sprite_index = 0;
+		if(sprite_index != sprCrabWalk)
+		{
+			sprite_index = sprCrabWalk;
+			image_index = 0;
+		}
+		mp_potential_step_object(objPj.x, objPj.y, hSpeed, objSolidTemplate)
+	}
+	else
+	{
+		if(sprite_index != sprCrabIdle)
+		{
+			sprite_index = sprCrabIdle;
+			image_index = 0;
+		}
 	}
 }
 
 
-
-if(life == 0 && death)
+if(life <= 0)
 {
-	death = false;
-	alarm[0] = room_speed * 0.1;
+	if(sprite_index != sprCrabDed)
+	{
+		sprite_index = sprCrabDed;
+	}
+	else if(image_number - 1 <= image_index)
+	{
+		instance_destroy();
+	}
 }

@@ -1,2 +1,0 @@
-visible = true;
-indestructible = true;

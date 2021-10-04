@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprBonusSpeed",
-    "path": "sprites/sprBonusSpeed/sprBonusSpeed.yy",
+    "name": "sprGoodBuffIcon",
+    "path": "sprites/sprGoodBuffIcon/sprGoodBuffIcon.yy",
   },
   "solid": false,
   "visible": true,

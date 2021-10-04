@@ -1,2 +1,2 @@
 event_inherited();
-buffEffect = [[undefined, 0]];
+buffEffect = [{name: "bonusSpeed", time: 4*room_speed}];

@@ -1,2 +1,2 @@
 event_inherited();
-buffEffect = [["repulsif", 0]];
+buffEffect = [{name : "repulsif", time: 1}];

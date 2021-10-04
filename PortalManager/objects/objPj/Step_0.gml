@@ -254,10 +254,10 @@ var csY = abs(vspeed) + 1;
 if(etat != etatId.KICK) // Si pas en Kick
 {
 	var touch;
-	if(place_meeting(x + csX, y, objPushingWall) && dir >= directionId.RIGHT)
+	if(place_meeting(x + csX, y, objPushingWallTemplate) && dir >= directionId.RIGHT)
 	{
 		
-		var pInstance = instance_place(x + csX, y, objPushingWall);
+		var pInstance = instance_place(x + csX, y, objPushingWallTemplate);
 		touch = false;
 		with(pInstance)
 		{
@@ -274,10 +274,10 @@ if(etat != etatId.KICK) // Si pas en Kick
 			etat = etatId.PUSH;
 		}
 	}
-	if(place_meeting(x - csX, y, objPushingWall) && dir >= directionId.LEFT && dir < directionId.RIGHT)
+	if(place_meeting(x - csX, y, objPushingWallTemplate) && dir >= directionId.LEFT && dir < directionId.RIGHT)
 	{	
 		touch = false;
-		var pInstance = instance_place(x - csX, y, objPushingWall);
+		var pInstance = instance_place(x - csX, y, objPushingWallTemplate);
 		with(pInstance)
 		{
 			if(!place_meeting(x - 0.5, y, objSolidTemplate))
@@ -293,9 +293,9 @@ if(etat != etatId.KICK) // Si pas en Kick
 			etat = etatId.PUSH;
 		}
 	}
-	if(place_meeting(x, y + csY, objPushingWall) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
+	if(place_meeting(x, y + csY, objPushingWallTemplate) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
 	{
-		var pInstance = instance_place(x, y + csY, objPushingWall);
+		var pInstance = instance_place(x, y + csY, objPushingWallTemplate);
 		touch = false;
 		with(pInstance)
 		{
@@ -312,10 +312,10 @@ if(etat != etatId.KICK) // Si pas en Kick
 			etat = etatId.PUSH;
 		}
 	}
-	if(place_meeting(x, y - csY, objPushingWall) && (dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT))
+	if(place_meeting(x, y - csY, objPushingWallTemplate) && (dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT))
 	{
 		touch = false;
-		var pInstance = instance_place(x, y - csY, objPushingWall);
+		var pInstance = instance_place(x, y - csY, objPushingWallTemplate);
 		with(pInstance)
 		{
 			if(!place_meeting(x, y - 0.5, objSolidTemplate))
@@ -517,6 +517,7 @@ if(etat == etatId.KICK)
 		else if(dir == directionId.BACK) kickHitbox.sprite_index = sprKickBackHitbox;
 		kickHitbox.image_xscale = image_xscale;
 	}
+	
 	else if (image_index >= 9)
 	{
 		etat = etatId.IDLE;
@@ -531,16 +532,53 @@ if(inputPrevent >= 0) inputPrevent--;
 
 #region EffectManager
 // Activate each effect on the array
-for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
-	srcHandleEffects(effectsActive[currentEffect][0]);
+for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) 
+{
+	srcHandleEffects(effectsActive[currentEffect].name);
+	var isNewEffectMessage = true;
+	var yDrawEffect = 100;
+	for (var i = 0; i < instance_number(objMessageEffect); ++i)
+	{
+		yDrawEffect += currentEffect * 20;
+		allMessage[i] = instance_find(objMessageEffect, i);
+		if(allMessage[i].msg == effectsActive[currentEffect].name) 
+		{
+			allMessage[i].yDraw = yDrawEffect;
+			var test = allMessage[i];
+			isNewEffectMessage = false;
+			break;
+		}
+	}
+	if(isNewEffectMessage)
+	{
+		var test = instance_create_depth(x, y, -20, objMessageEffect);
+		test.msg = effectsActive[currentEffect].name;
+		test.timer = 1;
+		test.yDraw = yDrawEffect;
+	
+	}
+	else
+	{
+		test.yDraw = yDrawEffect;
+	}
+	isNewEffectMessage = true;
 }
 	
 // Checking timer of each effect => decrement or remove array
-for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
-	if(effectsActive[currentEffect][1] > 0) {
-		effectsActive[currentEffect][1]--;
-	} else {
-		array_delete(effectsActive, currentEffect, 1);
+var cE = 0;
+while(cE < array_length(effectsActive))
+{
+	if(effectsActive[cE].time > 0) 
+	{
+		effectsActive[cE].time--;
 	}
+	else
+	{
+		array_delete(effectsActive, cE, 1);
+		cE--;
+	}
+	
+	cE++;
 }
+
 #endregion

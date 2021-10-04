@@ -1,16 +1,18 @@
-for(effect = 0; effect < array_length(buffEffect); effect++) {
-	if(array_length(objPj.effectsActive) != 0) {
-		for(elementIndex = 0; elementIndex < array_length(objPj.effectsActive); elementIndex++) {
-			if(objPj.effectsActive[elementIndex][0] == buffEffect[effect][0]) {
-				objPj.effectsActive[elementIndex][1] = buffEffect[effect][1];
-				exit;
-			} else {
-				array_push(objPj.effectsActive, buffEffect[effect]);
-			}	
+for(var effect = 0; effect < array_length(buffEffect); effect++)
+{
+	var isAdded = false;
+	for(var pjEffect = 0; pjEffect < array_length(objPj.effectsActive); pjEffect++)
+	{
+		if(objPj.effectsActive[pjEffect].name == buffEffect[effect].name)
+		{
+			objPj.effectsActive[pjEffect].time =  buffEffect[effect].time;
+			isAdded = true;
 		}
-	} else {
+	}
+	if(!isAdded)
+	{
 		array_push(objPj.effectsActive, buffEffect[effect]);
-	}	
+	}
 }
 
 instance_destroy();

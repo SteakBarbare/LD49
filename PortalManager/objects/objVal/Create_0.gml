@@ -1,5 +1,6 @@
-xPosDrawVal = window_get_width() - sprite_get_width(sprVal);
-yPosDrawVal = window_get_height() - sprite_get_height(sprVal);
+xPosDrawVal =0 
+yPosDrawVal = room_height - sprite_get_height(sprVal);
+xGoal = room_width - sprite_get_width(sprVal);
 
 image_speed = 0;
 border = 20;
@@ -16,7 +17,7 @@ alarm[1] = 0.9*room_speed;
 alarm[2] = 1*room_speed;
 counterMessageDeleted = 0;
 canDelete = true; 
-
+depth = -3000;
 
 
 

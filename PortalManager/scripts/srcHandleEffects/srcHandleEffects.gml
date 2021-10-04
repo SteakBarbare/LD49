@@ -5,29 +5,31 @@ function srcHandleEffects() {
 	
 	var effect = argument[0];
 	var nearestTrashInstance;
-	switch(effect) {
+	switch(effect) 
+	{
 		case "slow":
 			if(!isSlowed)
-			{
+			{	
 				objMusic.puddleSounds[3][1] = 1;
 				isSlowed = true;
 				hspeed *= 0.25;
 				vspeed *= 0.25;
 			}
+			
 			break;
 			
 		case "speedUp":
 			if(!isSpeeded)
 			{
 				objMusic.puddleSounds[1][1] = 1;
-				hspeed *= 4;
-				vspeed *= 4;
+				hspeed *= 2.5;
+				vspeed *= 2.5;
 				isSpeeded = true
 			}
 			break;
 			
 		case "stun":
-			if(!stunCooldown) {			
+			if(!stunCooldown) {	
 				isStun = true;
 				stunCooldown = true;
 				alarm[3] = 1.5 * room_speed;
@@ -75,12 +77,12 @@ function srcHandleEffects() {
 			break;
 			
 		case "bonusSpeed":
-			hspeed *= 3.25;
-			vspeed *= 3.25;
+			hspeed *= 1.5;
+			vspeed *= 1.5;
 			break;
 			
 		case "clean":
-			nearestTrashInstance = collision_circle(x, y, 400, objDestructibleWall, false , true);
+			nearestTrashInstance = collision_circle(x, y, 400, objDestructibleWallTemplate, false , true);
 			with(nearestTrashInstance)
 			{
 				instance_destroy();	
@@ -90,7 +92,7 @@ function srcHandleEffects() {
 			{
 				instance_destroy();	
 			}
-			nearestTrashInstance = collision_circle(x, y, 400, objPushingWall, false , true);
+			nearestTrashInstance = collision_circle(x, y, 400, objPushingWallTemplate, false , true);
 			with(nearestTrashInstance)
 			{
 				instance_destroy();	
@@ -106,8 +108,9 @@ function srcHandleEffects() {
 			objStarHitbox.isActive = true;
 			if(objStarHitbox.alarm[0] == -1)
 			{
-				objStarHitbox.alarm[0] = room_speed * 8;
+				objStarHitbox.alarm[0] = room_speed * 5;
 			}
+			instance_destroy(objBonusStar);
 			
 		case "repulsif":
 			objRepulsifHitbox.isActive = true;
