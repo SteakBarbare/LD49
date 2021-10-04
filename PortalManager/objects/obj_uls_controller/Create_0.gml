@@ -1,5 +1,6 @@
 /// @description Initializing Values
 
+	reverse = false;
 	//Circle Precision
 	draw_set_circle_precision(128);
 	

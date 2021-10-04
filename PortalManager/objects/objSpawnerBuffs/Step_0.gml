@@ -5,7 +5,6 @@ if(instance == noone)
 }
 else
 {
-	instance.isMoving = true;
 	var arrived = false;
 	var d = dir;
 	var dest = destination;
@@ -86,7 +85,6 @@ else
 	
 	if(hasArrived)
 	{
-		instance.isMoving = false;
 		instance_destroy();
 	}
 

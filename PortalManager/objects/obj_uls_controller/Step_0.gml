@@ -11,9 +11,13 @@
 	
 		part_particles_create(part_sys, cam_x + random(cam_w), cam_y + random(cam_h*0.75), part_dust_light, choose(2,3));
 	}
-	if(factor < 0.8)
+	if(!reverse && factor < 0.8)
 	{
 		factor += room_speed * 0.000005;
 	}
-	
+	if(reverse && factor > 0)
+	{
+		factor -= room_speed * 0.00001;
+	}
+
 	uls_set_shadow_color(factor, c_black);

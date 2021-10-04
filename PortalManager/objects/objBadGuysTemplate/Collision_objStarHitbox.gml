@@ -1,1 +1,1 @@
-if(objStarHitbox.isActive) instance_destroy();
+if(objStarHitbox.isActive) life = 0;

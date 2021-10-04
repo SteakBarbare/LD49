@@ -34,11 +34,11 @@ if(!hasEncouterObstacle)
 	
 	if(place_meeting(x, y, objBadGuysTemplate))
 	{
-		instance_place(x, y, objBadGuysTemplate).alarm[8] = room_speed * 0.1;
+		instance_place(x, y, objBadGuysTemplate).life = 0;
 	}
 	if(place_meeting(x, y, objFolloweur))
 	{
-		instance_place(x, y, objFolloweur).alarm[0] = room_speed * 0.1;
+		instance_place(x, y, objFolloweur).life = 0;
 	}
 	if(place_meeting(x, y, objZaWalldoTemplate))
 	{

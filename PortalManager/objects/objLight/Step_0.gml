@@ -7,4 +7,9 @@ if(factor < 0.25)
 	factor += room_speed / 1000000;
 }
 
+if(reverse && factor > 0)
+{
+	factor -= room_speed / 100000;
+}
+
 
