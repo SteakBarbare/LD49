@@ -1,4 +1,3 @@
-x = window_get_width()/2;
 margin = 70;
 middle_button = window_get_height()/2;
 
