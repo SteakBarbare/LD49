@@ -44,7 +44,6 @@ function srcSpawnPortal()
 	{
 		while(place_meeting(x, y, objSolidTemplate) || distance_to_object(objPj) < 800 || distance_to_object(instance_nearest(x, y, objPortalTemplate)) < 800)
 		{
-			show_debug_message("boucle portail")
 			portal.x = irandom_range(0, room_width)
 			portal.y = irandom_range(0, room_height)
 		}

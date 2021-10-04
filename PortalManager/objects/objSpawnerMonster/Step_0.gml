@@ -132,7 +132,6 @@ else
 			var nb = 250;
 			while(place_meeting(x-dX, y-dY, objSolidTemplate))
 			{
-				show_debug_message("boucle monstre")
 				x = x+dX;
 				y = y+dY;
 				nb--;

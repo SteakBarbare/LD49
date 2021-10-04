@@ -66,7 +66,6 @@ else
 			}
 			while(place_meeting(x+dX, y+dY, objSolidTemplate))
 			{
-				show_debug_message("boucle Obstacle")
 				x = x-dX;
 				y = y-dY;
 			}
