@@ -7,7 +7,7 @@ if(image_index >= 18 && !hasEnded)
 
 }
 
-else if(hasEnded && image_index >= image_number - 1)
+else if(hasEnded && image_index >= image_number - 2)
 {
 	instance_destroy()
 }

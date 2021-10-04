@@ -32,15 +32,7 @@ if(!isActivated)
 	}
 	
 	if(delta < 0.3) delta = 0.3;
-	objCore.alarm[0] += room_speed * 15 * delta;
-	with(objLight)
-	{
-		reverse = true;
-		alarm[1] += room_speed*2;
-	}
-	obj_uls_controller.reverse = true;
-	obj_uls_controller.alarm[1] += room_speed *2;
-	objCore.nbPortal++;
+	objCore.alarm[0] += room_speed * 10 * delta;
 }
 
 objMusic.portalsSound[1][1] = 1;
