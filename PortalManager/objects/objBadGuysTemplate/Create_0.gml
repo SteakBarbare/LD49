@@ -27,4 +27,6 @@ hMove = directionId.RIGHT;
 
 isSet = false;
 
+deathSprite = sprMobRandomDeath;
+
 collisionSpeed = hSpeed + 2;

@@ -1,1 +1,1 @@
-indestructible = true
+indestructible = 1;

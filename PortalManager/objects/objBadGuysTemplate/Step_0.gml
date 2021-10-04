@@ -1,7 +1,15 @@
 depth = -bbox_bottom;
-if(life <= 0 && alarm[8] < 0)
+if(life <= 0)
 {
-	alarm[8] = room_speed * 0.1;
+	if(sprite_index != deathSprite)
+	{
+		image_index = 0;
+		sprite_index = deathSprite;
+	}
+	else if(image_index >= image_number - 1)
+	{
+		instance_destroy();
+	}
 }
 
 collisionDir = -1;
@@ -88,11 +96,13 @@ else
 }
 
 
-if(place_meeting(x + collisionSpeed, y, objSolidTemplate)&& dir >= directionId.RIGHT)
+if(place_meeting(x + collisionSpeed, y, objSolidTemplate) && dir >= directionId.RIGHT)
 {
 	if(dir == directionId.RIGHT) dir = directionId.LEFT;
 	else if(dir == directionId.BACK_RIGHT) dir = directionId.BACK_LEFT;
 	else if(dir == directionId.FRONT_RIGHT) dir = directionId.FRONT_LEFT;
+	hspeed = -hSpeed;
+	x-=1
 	actualDir = dir;
 }
 if(place_meeting(x - collisionSpeed, y, objSolidTemplate)&& dir >= directionId.LEFT && dir < directionId.RIGHT)
@@ -101,6 +111,7 @@ if(place_meeting(x - collisionSpeed, y, objSolidTemplate)&& dir >= directionId.L
 	else if(dir == directionId.BACK_LEFT) dir = directionId.BACK_RIGHT;
 	else if(dir == directionId.FRONT_LEFT) dir = directionId.FRONT_RIGHT;
 	hspeed = hSpeed;
+	x+=1
 	actualDir = dir;
 }
 
@@ -110,6 +121,7 @@ if(place_meeting(x, y + collisionSpeed, objSolidTemplate)&& (dir == directionId.
 	if(dir == directionId.FRONT) dir = directionId.BACK;
 	else if(dir == directionId.FRONT_LEFT) dir = directionId.BACK_RIGHT;
 	else if(dir == directionId.FRONT_RIGHT) dir = directionId.BACK_LEFT;
+	y-=1
 	vspeed = -vSpeed;
 	actualDir = dir;
 }
@@ -118,8 +130,27 @@ if(place_meeting(x, y - collisionSpeed, objSolidTemplate) && (dir == directionId
 	if(dir == directionId.BACK) dir = directionId.FRONT;
 	else if(dir == directionId.BACK_RIGHT) dir = directionId.FRONT_RIGHT;
 	else if(dir == directionId.BACK_LEFT) dir = directionId.FRONT_LEFT;
+	y+=1
 	vspeed = vSpeed;
 	actualDir = dir;
+}
+
+while(x > room_width - sprite_width/2)
+{
+	x--;
+}
+
+while(x < 0 + sprite_width/2)
+{
+	x++;
+}
+while(y > room_height - sprite_height/2)
+{
+	y--;
+}
+while(y < 0 + sprite_height/2)
+{
+	y++;
 }
 
 

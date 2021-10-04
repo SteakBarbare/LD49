@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprMobRandomDir",
-    "path": "sprites/sprMobRandomDir/sprMobRandomDir.yy",
+    "name": "sprCrabIdle",
+    "path": "sprites/sprCrabIdle/sprCrabIdle.yy",
   },
   "solid": false,
   "visible": true,
