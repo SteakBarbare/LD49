@@ -30,15 +30,15 @@ if(!objPj.isStun) {
 	audio_stop_sound(snd_electric);
 }
 
-if(!objPj.iceCooldown) {
+if(!objPj.iceCooldown || objPj.hspeed == 0 && objPj.vspeed == 0) {
 	audio_stop_sound(snd_ice);		
 }
 
-if(!objPj.isSlowed) {
+if(!objPj.isSlowed || objPj.hspeed == 0 && objPj.vspeed == 0) {
 	audio_stop_sound(snd_puke);
 }
 
-if(!objPj.isSpeeded) {
+if(!objPj.isSpeeded || objPj.hspeed == 0 && objPj.vspeed == 0) {
 	audio_stop_sound(snd_oil);
 }
 
