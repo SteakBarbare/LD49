@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprBonusClean",
-    "path": "sprites/sprBonusClean/sprBonusClean.yy",
+    "name": "sprGoodBuffIcon",
+    "path": "sprites/sprGoodBuffIcon/sprGoodBuffIcon.yy",
   },
   "solid": false,
   "visible": true,
