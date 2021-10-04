@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "sprGoodBuffIcon",
-    "path": "sprites/sprGoodBuffIcon/sprGoodBuffIcon.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "objBuffTemplate",
-    "path": "objects/objBuffTemplate/objBuffTemplate.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -25,15 +19,17 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Buffs",
-    "path": "folders/Objets/Buffs.yy",
+    "name": "Goodtest",
+    "path": "folders/Objets/PJ/Goodtest.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objBonusStar",
+  "name": "objMessageEffect",
   "tags": [],
   "resourceType": "GMObject",
 }
