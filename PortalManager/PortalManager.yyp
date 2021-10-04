@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"snd_cervelleAlair","path":"sounds/snd_cervelleAlair/snd_cervelleAlair.yy",},"order":1,},
     {"id":{"name":"sprAdvanced_tutorial","path":"sprites/sprAdvanced_tutorial/sprAdvanced_tutorial.yy",},"order":2,},
     {"id":{"name":"objSpaceKeboard","path":"objects/objSpaceKeboard/objSpaceKeboard.yy",},"order":6,},
     {"id":{"name":"snd_wall_takingDamage","path":"sounds/snd_wall_takingDamage/snd_wall_takingDamage.yy",},"order":2,},
@@ -16,6 +17,7 @@
     {"id":{"name":"objMessageVal","path":"objects/objMessageVal/objMessageVal.yy",},"order":7,},
     {"id":{"name":"objBaveur","path":"objects/objBaveur/objBaveur.yy",},"order":3,},
     {"id":{"name":"sprWallPlaceholder","path":"sprites/sprWallPlaceholder/sprWallPlaceholder.yy",},"order":8,},
+    {"id":{"name":"snd_oeil","path":"sounds/snd_oeil/snd_oeil.yy",},"order":4,},
     {"id":{"name":"objSpawnerFlaques","path":"objects/objSpawnerFlaques/objSpawnerFlaques.yy",},"order":4,},
     {"id":{"name":"sprBloodSplatFx","path":"sprites/sprBloodSplatFx/sprBloodSplatFx.yy",},"order":8,},
     {"id":{"name":"objPuddleIce","path":"objects/objPuddleIce/objPuddleIce.yy",},"order":1,},
@@ -69,6 +71,7 @@
     {"id":{"name":"sprWalkFront","path":"sprites/sprWalkFront/sprWalkFront.yy",},"order":1,},
     {"id":{"name":"objShitTemplate","path":"objects/objShitTemplate/objShitTemplate.yy",},"order":10,},
     {"id":{"name":"objSpawnerObstacle","path":"objects/objSpawnerObstacle/objSpawnerObstacle.yy",},"order":0,},
+    {"id":{"name":"snd_crabe","path":"sounds/snd_crabe/snd_crabe.yy",},"order":2,},
     {"id":{"name":"srcBloodSplash","path":"scripts/srcBloodSplash/srcBloodSplash.yy",},"order":2,},
     {"id":{"name":"sprMessageVal","path":"sprites/sprMessageVal/sprMessageVal.yy",},"order":2,},
     {"id":{"name":"objParticleController","path":"objects/objParticleController/objParticleController.yy",},"order":0,},
@@ -76,6 +79,7 @@
     {"id":{"name":"objSolidTemplate","path":"objects/objSolidTemplate/objSolidTemplate.yy",},"order":0,},
     {"id":{"name":"snd_puke","path":"sounds/snd_puke/snd_puke.yy",},"order":5,},
     {"id":{"name":"sprCollisionStar","path":"sprites/sprCollisionStar/sprCollisionStar.yy",},"order":10,},
+    {"id":{"name":"snd_baveur","path":"sounds/snd_baveur/snd_baveur.yy",},"order":0,},
     {"id":{"name":"objBloodFx","path":"objects/objBloodFx/objBloodFx.yy",},"order":2,},
     {"id":{"name":"sprHorloge","path":"sprites/sprHorloge/sprHorloge.yy",},"order":2,},
     {"id":{"name":"objCorpse","path":"objects/objCorpse/objCorpse.yy",},"order":5,},
@@ -89,6 +93,7 @@
     {"id":{"name":"objPotteryShard","path":"objects/objPotteryShard/objPotteryShard.yy",},"order":2,},
     {"id":{"name":"objMusic","path":"objects/objMusic/objMusic.yy",},"order":10,},
     {"id":{"name":"objPuddleElectric","path":"objects/objPuddleElectric/objPuddleElectric.yy",},"order":2,},
+    {"id":{"name":"snd_gueuleViolette","path":"sounds/snd_gueuleViolette/snd_gueuleViolette.yy",},"order":3,},
     {"id":{"name":"snd_click","path":"sounds/snd_click/snd_click.yy",},"order":0,},
     {"id":{"name":"objBonusStar","path":"objects/objBonusStar/objBonusStar.yy",},"order":1,},
     {"id":{"name":"objBloodSplatFx","path":"objects/objBloodSplatFx/objBloodSplatFx.yy",},"order":5,},
