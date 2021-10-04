@@ -87,15 +87,15 @@ else
 	}
 }
 
-if(place_meeting(x + collisionSpeed, y, objSolidTemplate) && dir >= directionId.RIGHT)
+
+if(place_meeting(x + collisionSpeed, y, objSolidTemplate)&& dir >= directionId.RIGHT)
 {
 	if(dir == directionId.RIGHT) dir = directionId.LEFT;
 	else if(dir == directionId.BACK_RIGHT) dir = directionId.BACK_LEFT;
 	else if(dir == directionId.FRONT_RIGHT) dir = directionId.FRONT_LEFT;
-	hspeed = -hSpeed;
 	actualDir = dir;
 }
-if(place_meeting(x - collisionSpeed, y, objSolidTemplate) && dir >= directionId.LEFT && dir < directionId.RIGHT)
+if(place_meeting(x - collisionSpeed, y, objSolidTemplate)&& dir >= directionId.LEFT && dir < directionId.RIGHT)
 {
 	if(dir == directionId.LEFT) dir = directionId.RIGHT;
 	else if(dir == directionId.BACK_LEFT) dir = directionId.BACK_RIGHT;
@@ -104,8 +104,9 @@ if(place_meeting(x - collisionSpeed, y, objSolidTemplate) && dir >= directionId.
 	actualDir = dir;
 }
 
-if(place_meeting(x, y + collisionSpeed, objSolidTemplate) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
+if(place_meeting(x, y + collisionSpeed, objSolidTemplate)&& (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
 {
+	
 	if(dir == directionId.FRONT) dir = directionId.BACK;
 	else if(dir == directionId.FRONT_LEFT) dir = directionId.BACK_RIGHT;
 	else if(dir == directionId.FRONT_RIGHT) dir = directionId.BACK_LEFT;
@@ -121,90 +122,14 @@ if(place_meeting(x, y - collisionSpeed, objSolidTemplate) && (dir == directionId
 	actualDir = dir;
 }
 
-if(dir == directionId.FRONT)
-{
-	if(etat == etatId.IDLE || etat == etatId.BUMP)
-	{
-		if(image_xscale < 0) image_xscale = abs(image_xscale);
-		if(sprite_index != spriteIdleFront)
-		{
-			sprite_index = spriteIdleFront;
-			image_index = 0;
-		}
-	}
-	else if(etat == etatId.WALK)
-	{
-		if(image_xscale < 0) image_xscale = abs(image_xscale);
-		if(sprite_index != spriteWalkFront)
-		{
-			sprite_index = spriteWalkFront;
-			image_index = 0;
-		}
-	}
-}
 
-if(dir == directionId.BACK)
-{
-	if(etat == etatId.IDLE || etat == etatId.BUMP)
-	{
-		if(sprite_index != spriteIdleBack)
-		{
-			sprite_index = spriteIdleBack;
-			image_index = 0;
-			image_xscale = abs(image_xscale);		
-		}
-	}
-	else if(etat == etatId.WALK)
-	{
-		if(sprite_index != spriteWalkBack)
-		{
-			sprite_index = spriteWalkBack;
-			image_index = 0;
-			image_xscale = abs(image_xscale);
-		}
-	}
-}
 
 if(dir >= directionId.LEFT && dir < directionId.RIGHT)
 {
-	if(etat == etatId.IDLE || etat == etatId.BUMP)
-	{
-		if(sprite_index != spriteIdleSide || image_xscale >= 0)
-		{
-			sprite_index = spriteIdleSide;
-			image_index = 0;
-			image_xscale = -abs(image_xscale);
-		}
-	}
-	else if(etat == etatId.WALK)
-	{
-		if(sprite_index != spriteWalkSide  || image_xscale >= 0)
-		{
-			sprite_index = spriteWalkSide;
-			image_index = 0;
-			image_xscale = -abs(image_xscale);
-		}
-	}
+	image_xscale = -1;
 }
 
 if(dir >= directionId.RIGHT)
 {
-	if(etat == etatId.IDLE || etat == etatId.BUMP)
-	{
-		if(sprite_index != spriteIdleSide || image_xscale < 0)
-		{
-			sprite_index = spriteIdleSide;
-			image_index = 0;
-			image_xscale = abs(image_xscale);	
-		}
-	}
-	else if(etat == etatId.WALK)
-	{
-		if(sprite_index != spriteWalkSide || image_xscale < 0)
-		{
-			sprite_index = spriteWalkSide;
-			image_index = 0;
-			image_xscale = abs(image_xscale);	
-		}
-	}
+	image_xscale = 1;
 }

@@ -1,3 +1,4 @@
+event_inherited()
 enum directionId
 {
 	FRONT = 0,
@@ -19,6 +20,8 @@ enum etatId
 	BUMP = 3,
 	PUSH = 4
 }
+
+laserCount = 0;
 
 isSlowed = false;
 isSpeeded = false;

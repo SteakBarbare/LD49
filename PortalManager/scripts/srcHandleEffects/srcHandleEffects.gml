@@ -4,9 +4,8 @@
 function srcHandleEffects() {
 	
 	var effect = argument[0];
-	
-	switch(effect) 
-	{
+	var nearestTrashInstance;
+	switch(effect) {
 		case "slow":
 			if(!isSlowed)
 			{
@@ -62,6 +61,59 @@ function srcHandleEffects() {
 			break;
 			
 		case "iceEffect":
+			
+			break;
+			
+		case "bonusSpeed":
+			hspeed *= 3.25;
+			vspeed *= 3.25;
+			break;
+			
+		case "clean":
+			nearestTrashInstance = collision_circle(x, y, 400, objDestructibleWall, false , true);
+			with(nearestTrashInstance)
+			{
+				instance_destroy();	
+			}
+			nearestTrashInstance = collision_circle(x, y, 400, objQuanticWall, false , true);
+			with(nearestTrashInstance)
+			{
+				instance_destroy();	
+			}
+			nearestTrashInstance = collision_circle(x, y, 400, objPushingWall, false , true);
+			with(nearestTrashInstance)
+			{
+				instance_destroy();	
+			}
+			nearestTrashInstance = collision_circle(x, y, 400, objPuddleTemplate, false , true);
+			with(nearestTrashInstance)
+			{
+				instance_destroy();	
+			}
+			break;
+			
+		case "star":
+			objStarHitbox.isActive = true;
+			if(objStarHitbox.alarm[0] == -1)
+			{
+				objStarHitbox.alarm[0] = room_speed * 8;
+			}
+			
+		case "repulsif":
+			objRepulsifHitbox.isActive = true;
+			if(objRepulsifHitbox.alarm[0] == -1)
+			{
+				objRepulsifHitbox.alarm[0] = room_speed * 8;
+			}
+			
+			
+		case "laser":
+			break;
+			
+		case "valCall":
+			instance_create_depth(0, 0, -1, objVal);
+			break;
+			
 			if(!iceCooldown) {
 				iceCooldown = true;
 				objPj.newHspeed = hspeed;

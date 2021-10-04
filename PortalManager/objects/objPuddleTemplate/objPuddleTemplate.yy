@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "objShitTemplate",
+    "path": "objects/objShitTemplate/objShitTemplate.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

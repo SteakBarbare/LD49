@@ -66,7 +66,6 @@ else
 			}
 			while(place_meeting(x+dX, y+dY, objSolidTemplate))
 			{
-				
 				x = x-dX;
 				y = y-dY;
 			}

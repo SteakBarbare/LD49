@@ -23,13 +23,7 @@ isMovingS = false;
 vMove = directionId.FRONT;
 hMove = directionId.RIGHT;
 
-spriteIdleBack = sprMobRandomDir;
-spriteIdleFront = sprMobRandomDir;
-spriteIdleSide = sprMobRandomDir;
 
-spriteWalkBack = sprMobRandomDir;
-spriteWalkFront = sprMobRandomDir;
-spriteWalkSide = sprMobRandomDir;
 
 isSet = false;
 

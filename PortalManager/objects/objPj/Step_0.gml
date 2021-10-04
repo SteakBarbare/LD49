@@ -9,6 +9,12 @@ isSlowed = false;
 isSpeeded = false;
 
 collisionDir = -1;
+if(!isStun && objKeybind.keySpaceBar && laserCount >= 1)
+{
+	laserCount--;
+	var laser = instance_create_depth(x, y, 1, objLaser);
+	laser.dir = dir;
+}
 #region Déplacement
 if(etat != etatId.BUMP) // SI pas een bump
 {
