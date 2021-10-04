@@ -68,7 +68,6 @@ function srcHandleEffects() {
 			break;
 			
 		case "iceEffect":
-			show_debug_message("suus")
 			if(!iceCooldown) {
 				objMusic.puddleSounds[0][1] = 1;
 				iceCooldown = true;
