@@ -202,6 +202,7 @@
     {"id":{"name":"sprAcid2","path":"sprites/sprAcid2/sprAcid2.yy",},"order":1,},
     {"id":{"name":"objDebuffVal","path":"objects/objDebuffVal/objDebuffVal.yy",},"order":6,},
     {"id":{"name":"tileSetObstacle","path":"tilesets/tileSetObstacle/tileSetObstacle.yy",},"order":3,},
+    {"id":{"name":"objMessageEffect","path":"objects/objMessageEffect/objMessageEffect.yy",},"order":0,},
     {"id":{"name":"sprBonusStar","path":"sprites/sprBonusStar/sprBonusStar.yy",},"order":3,},
     {"id":{"name":"objAttackHitbox","path":"objects/objAttackHitbox/objAttackHitbox.yy",},"order":1,},
     {"id":{"name":"sprBloodSplash","path":"sprites/sprBloodSplash/sprBloodSplash.yy",},"order":7,},
@@ -307,6 +308,7 @@
     {"folderPath":"folders/Sprites/LIBRE DE DROIT/assets.yy","order":11,"resourceVersion":"1.0","name":"assets","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objets/Obstacles/Mur/Destructible.yy","order":9,"resourceVersion":"1.0","name":"Destructible","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objets/Obstacles/Mur/Pushing.yy","order":10,"resourceVersion":"1.0","name":"Pushing","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objets/PJ/Goodtest.yy","order":8,"resourceVersion":"1.0","name":"Goodtest","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

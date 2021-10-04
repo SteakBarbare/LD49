@@ -517,6 +517,7 @@ if(etat == etatId.KICK)
 		else if(dir == directionId.BACK) kickHitbox.sprite_index = sprKickBackHitbox;
 		kickHitbox.image_xscale = image_xscale;
 	}
+	
 	else if (image_index >= 9)
 	{
 		etat = etatId.IDLE;
@@ -531,12 +532,33 @@ if(inputPrevent >= 0) inputPrevent--;
 
 #region EffectManager
 // Activate each effect on the array
-for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) 
-{
-	if(effectsActive[currentEffect][0] != [])
-	{
-		srcHandleEffects(effectsActive[currentEffect][0]);
+for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
+	srcHandleEffects(effectsActive[currentEffect][0]);
+
+	
+	var isNewEffectMessage = true;
+	var yDrawEffect = 100;
+	for (var i = 0; i < instance_number(objMessageEffect); ++i){
+		yDrawEffect += currentEffect * 20;
+		allMessage[i] = instance_find(objMessageEffect, i);
+		if(allMessage[i].msg == effectsActive[currentEffect][0]) {
+			allMessage[i].yDraw = yDrawEffect;
+			var test = allMessage[i];
+			isNewEffectMessage = false;
+			break;
+		}
 	}
+	if(isNewEffectMessage){
+		var test = instance_create_depth(x, y, -20, objMessageEffect);
+		test.msg = effectsActive[currentEffect][0];
+		test.timer = 1;
+		test.yDraw = yDrawEffect;
+	
+	}else{
+		test.yDraw = yDrawEffect;
+
+	}
+	isNewEffectMessage = true;
 }
 	
 // Checking timer of each effect => decrement or remove array
