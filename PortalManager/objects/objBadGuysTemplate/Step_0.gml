@@ -1,11 +1,21 @@
 depth = -bbox_bottom;
-if(life <= 0 && alarm[8] < 0)
+if(life <= 0)
 {
-	alarm[8] = room_speed * 0.1;
+	if(sprite_index != deathSprite)
+	{
+		image_index = 0;
+		sprite_index = deathSprite;
+		if(dir >= directionId.RIGHT || dir == directionId.FRONT || dir == directionId.BACK) image_xscale = 1;
+		else if(dir >= directionId.LEFT) image_xscale = -1;
+	}
+	else if(image_index >= image_number - 1)
+	{
+		instance_destroy();
+	}
 }
 
 collisionDir = -1;
-if(etat != etatId.BUMP )
+if(etat != etatId.BUMP && life > 0)
 {
 	if(isMoving)
 	{
@@ -56,7 +66,7 @@ if(etat != etatId.BUMP )
 
 	}
 }
-else
+else if(etat == etatId.BUMP)
 {
 	if(!bumpStart)
 	{
@@ -88,11 +98,12 @@ else
 }
 
 
-if(place_meeting(x + collisionSpeed, y, objSolidTemplate)&& dir >= directionId.RIGHT)
+if(place_meeting(x + collisionSpeed, y, objSolidTemplate) && dir >= directionId.RIGHT)
 {
 	if(dir == directionId.RIGHT) dir = directionId.LEFT;
 	else if(dir == directionId.BACK_RIGHT) dir = directionId.BACK_LEFT;
 	else if(dir == directionId.FRONT_RIGHT) dir = directionId.FRONT_LEFT;
+	hspeed = -hSpeed;
 	actualDir = dir;
 }
 if(place_meeting(x - collisionSpeed, y, objSolidTemplate)&& dir >= directionId.LEFT && dir < directionId.RIGHT)
@@ -120,6 +131,28 @@ if(place_meeting(x, y - collisionSpeed, objSolidTemplate) && (dir == directionId
 	else if(dir == directionId.BACK_LEFT) dir = directionId.FRONT_LEFT;
 	vspeed = vSpeed;
 	actualDir = dir;
+}
+
+while(x > room_width)
+{
+	x--;
+	hspeed = 0;
+}
+
+while(x < 0)
+{
+	x++;
+	hspeed = 0;
+}
+while(y > room_height)
+{
+	y--;
+	vspeed = 0;
+}
+while(y < 0)
+{
+	y++;
+	vspeed = 0;
 }
 
 

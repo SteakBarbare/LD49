@@ -25,17 +25,17 @@ if(nbPortal == 0)
 		}
 	}
 	
-	region0 = irandom(4);
-	region1 = irandom(4);
+	region0 = irandom(3);
+	region1 = irandom(3);
 	
 	while(region0 == forbiddenRegion)
 	{
-		region0 = irandom(4);
+		region0 = irandom(3);
 	}
 	
-	while(region1 == forbiddenRegion)
+	while(region1 == forbiddenRegion || region1 == region0)
 	{
-		region1 = irandom(4);
+		region1 = irandom(3);
 	}
 	
 	srcSpawnPortal(region0);

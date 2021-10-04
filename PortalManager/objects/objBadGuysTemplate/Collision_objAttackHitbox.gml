@@ -18,6 +18,6 @@ if(!invulnerable)
 	dir = objPj.dir;
 	bumpStart = false;
 	bumpStrength = 10;
-	alarm[7] = room_speed * 0.11;
+	alarm[7] = room_speed * 0.2;
 	invulnerable = true;
 }

@@ -19,4 +19,4 @@ switch(ev)
 	
 }
 	
-instance = instance_create_depth(x, y, 1, flaque);
+instance = instance_create_depth(x, y, 10, flaque);
