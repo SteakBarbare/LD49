@@ -292,7 +292,6 @@ if(etat != etatId.KICK) // Si pas en Kick
 			image_speed = 0.7;
 			etat = etatId.PUSH;
 		}
-		show_debug_message(touch)
 	}
 	if(place_meeting(x, y + csY, objPushingWallTemplate) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
 	{
