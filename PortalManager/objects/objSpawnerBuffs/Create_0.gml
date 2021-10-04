@@ -1,4 +1,4 @@
-
+instance = noone;
 listOfBonnus = [objBonusClean, objBonusLaser, objBonusRepulse, objBonusSpeed, objBonusStar];
 listOfMalus = [objDebuffVal];
 getNameBuff = 0;
