@@ -6,6 +6,6 @@ with(objPortalTemplate)
 {
 	if(!isActivated)
 	{
-		instance_destroy();
+		hasEnded = true;
 	}
 }

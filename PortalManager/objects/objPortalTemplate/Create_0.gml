@@ -8,4 +8,9 @@ bonusBuffIncoming = false;
 malusBuffIncoming = false;
 
 flipEspritePortal = false;
+
+hasEnded = false;
+
+light = noone;
+
 alarm[2] = random_range(0.1, 1.4) * room_speed;
