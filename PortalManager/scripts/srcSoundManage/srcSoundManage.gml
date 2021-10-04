@@ -1,12 +1,12 @@
 /// @function                            srcSoundManage();
-/// @param  {string}        theSound		 Sound to play
+/// @param  {string}        theSound	 Sound to play
 function srcSoundManage(){
 
 	var theSound = argument[0];
 	var theSoundIndex = asset_get_index(theSound);
 
 #region SFX
-	if(!audio_is_playing(theSoundIndex) && theSound != "snd_loop_music") {
+	if(!audio_is_playing(theSoundIndex)) {
 		audio_play_sound(theSoundIndex, 1, false);
 	}
 #endregion

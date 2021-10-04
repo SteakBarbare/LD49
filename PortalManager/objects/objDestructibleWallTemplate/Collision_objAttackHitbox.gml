@@ -3,6 +3,7 @@ if(!invulnerable)
 	life--;
 	if(life == 1)
 	{
+		objMusic.wallsSound[2][1] = 1;
 		objShakeEffect.shake = true;
 		objShakeEffect.range = 2;
 		objShakeEffect.alarm[0] = room_speed/4;

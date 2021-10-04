@@ -1,18 +1,17 @@
 function loopingArraySound () {
-	var soundsArray = argument[0]
+	var soundsArray = argument[0];
 	
 	for(var currentSound = 0; currentSound < array_length(soundsArray); currentSound++) {
-		for(var iterationPlaying = 0; iterationPlaying < soundsArray[currentSound][1]; iterationPlaying++) {
-			if(soundsArray[currentSound][1] > 0) {
-				srcSoundManage(soundsArray[currentSound][0]);
-				soundsArray[currentSound][1]--;	
-			}
+		while(soundsArray[currentSound][1] >= 1) {
+			srcSoundManage(soundsArray[currentSound][0]);
+			soundsArray[currentSound][1]--;
 		}
 	}
+	return soundsArray;
 }
 
 
-loopingArraySound(musicSound)
+musicSound = loopingArraySound(musicSound)
 if(room == startMenu) {
 	musicSound[0][1] = 1;
 	musicOn = true;
@@ -24,16 +23,14 @@ if(room == Room1) {
 	
 #region Puddles Sounds
 // Manage Puddles Sounds
-loopingArraySound(puddleSounds);
-
-
-// Sound stop when going out of ice
+puddleSounds = loopingArraySound(puddleSounds);
+// When going out of puddles
 if(!objPj.isStun) {
 	audio_stop_sound(snd_electric);
 }
 
 if(!objPj.iceCooldown || objPj.hspeed == 0 && objPj.vspeed == 0) {
-	audio_stop_sound(snd_ice);		
+	audio_stop_sound(snd_ice);	
 }
 
 if(!objPj.isSlowed || objPj.hspeed == 0 && objPj.vspeed == 0) {
@@ -42,43 +39,43 @@ if(!objPj.isSlowed || objPj.hspeed == 0 && objPj.vspeed == 0) {
 
 if(!objPj.isSpeeded || objPj.hspeed == 0 && objPj.vspeed == 0) {
 	audio_stop_sound(snd_oil);
-}
+} 
 
 #endregion
 
 #region Mobs Sounds
 // Manage Mobs Sounds
-loopingArraySound(mobsSound);
+mobsSound = loopingArraySound(mobsSound);
 
 #endregion
 
 #region Walls Sounds
 // Manage Walls Sounds
-loopingArraySound(wallsSound);
+wallsSound = loopingArraySound(wallsSound);
 
 #endregion
 
 #region Portals Sounds
 // Manage Portals Sounds
-loopingArraySound(portalsSound);
+portalsSound = loopingArraySound(portalsSound);
 
 #endregion
 
 #region Buffs / Debuffs Sounds
 // Manage Buffs / Debuffs Sounds
-loopingArraySound(buffsSound);
+buffsSound = loopingArraySound(buffsSound);
 
 #endregion
 
 #region Player Sounds
 // Manage Player Sounds
-loopingArraySound(playerSound);
+playerSound = loopingArraySound(playerSound);
 
 #endregion
 
 #region Timer Sounds
 // Manage Timer Sounds
-loopingArraySound(timerSound);
+timerSound = loopingArraySound(timerSound);
 #endregion
 }
 
@@ -93,5 +90,5 @@ if(room == rm_gameover) {
 }
 
 #region GUI Sounds
-loopingArraySound(guiSound);
+guiSound = loopingArraySound(guiSound);
 #endregion

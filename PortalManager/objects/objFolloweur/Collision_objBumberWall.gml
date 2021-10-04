@@ -1,5 +1,8 @@
 var bumper = instance_nearest(x, y, objBumberWall)
 
+
+objMusic.wallsSound[4][1] = 1;
+
 etat = etatId.BUMP;
 dir = bumper.dir;
 if(dir == 3) dir = 5;

@@ -1,5 +1,6 @@
 if(!invulnerable)
 {
+	objMusic.mobsSound[2][1]++; 
 	invulnerable = true;
 	life--;
 	if(life == 1)
