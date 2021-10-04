@@ -1,5 +1,5 @@
 
-if(!instance_exists(instance))
+if(instance == noone)
 {
 	instance_destroy();
 }
