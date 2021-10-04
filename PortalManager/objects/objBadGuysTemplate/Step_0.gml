@@ -14,6 +14,8 @@ if(life <= 0)
 	}
 }
 
+
+
 collisionDir = -1;
 if(etat != etatId.BUMP && life > 0)
 {
