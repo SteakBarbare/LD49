@@ -6,6 +6,7 @@ for(var effect = 0; effect < array_length(buffEffect); effect++)
 		if(objPj.effectsActive[pjEffect].name == buffEffect[effect].name)
 		{
 			objPj.effectsActive[pjEffect].time =  buffEffect[effect].time;
+			objPj.effectsActive[pjEffect].isNew =  buffEffect[effect].isNew;
 			isAdded = true;
 		}
 	}

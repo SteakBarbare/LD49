@@ -1,4 +1,4 @@
-event_inherited()
+haveShadow = false;
 enum directionId
 {
 	FRONT = 0,

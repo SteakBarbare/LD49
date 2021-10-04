@@ -1,4 +1,5 @@
 event_inherited()
+haveShadow = false;
 
 life = 2;
 invulnerable = false;
