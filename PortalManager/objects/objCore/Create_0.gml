@@ -1,3 +1,4 @@
+event_inherited();
 isExploding = false;
 timeBeforeExplosion = 70;
 alarm[0] = room_speed * timeBeforeExplosion;
