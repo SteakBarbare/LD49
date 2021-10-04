@@ -33,3 +33,5 @@ if(!isActivated)
 	objCore.alarm[0] += room_speed * 15 * delta;
 	objCore.nbPortal++;
 }
+
+objMusic.portalsSound[1][1] = 1;

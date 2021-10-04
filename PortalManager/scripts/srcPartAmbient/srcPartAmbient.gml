@@ -24,6 +24,22 @@ function srcPartAmbient() {
 #endregion
 
 #region Quantic Particles
+	global.explosionParticle = part_type_create();
+
+	part_type_shape(global.explosionParticle, pt_shape_explosion);
+	part_type_size(global.explosionParticle, 2, 10, 0.02, 0);
+	part_type_orientation(global.explosionParticle, 0, 359, 0, 0, 0);
+	part_type_speed(global.explosionParticle,-0.1,0.1,0,0);
+	part_type_direction(global.explosionParticle,0,359,0,0);
+	
+	part_type_blend(global.explosionParticle, 1);
+	part_type_alpha3(global.explosionParticle, 0.045, 0.50, 0.055);
+	part_type_color3(global.explosionParticle, c_gray, c_orange, c_red);
+
+	part_type_life(global.explosionParticle, room_speed, room_speed * 6);
+#endregion
+
+#region Quantic Particles
 	global.quanticParticle = part_type_create();
 
 	part_type_shape(global.quanticParticle, pt_shape_smoke);

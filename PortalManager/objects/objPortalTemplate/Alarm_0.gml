@@ -1,3 +1,4 @@
+objMusic.portalsSound[2][1] = nbInvoc;
 nbInvoc--;
 if(nbInvoc > 0)
 {

@@ -1,4 +1,4 @@
-depth = -bbox_bottom;
+event_inherited();
 var isMoving, isMovingV, isMovingS, vMove, hMove;
 isMoving = false;
 isMovingV = false;
@@ -15,6 +15,7 @@ if(!isStun && objKeybind.keySpaceBar && laserCount >= 1)
 	laserCount--;
 	var laser = instance_create_depth(x, y, 1, objLaser);
 	laser.dir = dir;
+	objMusic.buffsSound[2][1] = 1;
 }
 #region Déplacement
 if(etat != etatId.BUMP) // SI pas een bump
@@ -25,6 +26,7 @@ if(etat != etatId.BUMP) // SI pas een bump
 		inputPrevent = room_speed / 4;
 		etat = etatId.KICK;
 		image_index = 0;
+		objMusic.playerSound[0][1] = 1;
 	}
 	#endregion
 	#region Moving Toward X Axis
@@ -249,15 +251,14 @@ if(iceCooldown) {
 	vspeed = newVspeed;
 }
 
-var csX = abs(hspeed) + 1;
-var csY = abs(vspeed) + 1;
+var csX = abs(hspeed) + 2;
+var csY = abs(vspeed) + 2;
 #region COLLISION PUSHING WALL
 if(etat != etatId.KICK) // Si pas en Kick
 {
 	var touch;
 	if(place_meeting(x + csX, y, objPushingWallTemplate) && dir >= directionId.RIGHT)
 	{
-		
 		var pInstance = instance_place(x + csX, y, objPushingWallTemplate);
 		touch = false;
 		with(pInstance)
@@ -334,6 +335,14 @@ if(etat != etatId.KICK) // Si pas en Kick
 	}
 }
 #endregion
+
+if(etat = etatId.PUSH) {
+	objMusic.playerSound[1][1] = 1;	
+}
+
+if(etat = etatId.BUMP) {
+	objMusic.wallsSound[4][1] = 1;	
+}
 
 #region COLLISION
 if(place_meeting(x + csX, y, objSolidTemplate) && dir >= directionId.RIGHT)

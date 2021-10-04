@@ -1,1 +1,2 @@
-buffEffect = [{name: "laser", time: 0, isNew : true}];
+buffEffect = [{name: "laser", time: 1, isNew : true}];
+debuff = false;

@@ -34,7 +34,8 @@ portalsSound = [
 // Buffs sound
 buffsSound = [
 	["snd_buff", 0],
-	["snd_debuff", 0]
+	["snd_debuff", 0],
+	["snd_laser", 0]
 ];
 
 // Player sound
@@ -50,6 +51,7 @@ timerSound = [
 	["snd_add_timer", 0],
 	["snd_timer_decount", 0],
 	["snd_timer_goes_brr", 0],
+	["snd_explosion", 0]
 ];
 
 // Click sound
