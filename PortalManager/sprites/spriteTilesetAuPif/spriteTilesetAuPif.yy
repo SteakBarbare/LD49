@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "gratuitDuCul",
-    "path": "folders/Sprites/gratuitDuCul.yy",
+    "name": "LIBRE DE DROIT",
+    "path": "folders/Sprites/LIBRE DE DROIT.yy",
   },
   "resourceVersion": "1.0",
   "name": "spriteTilesetAuPif",
