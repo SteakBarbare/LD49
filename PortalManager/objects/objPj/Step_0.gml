@@ -9,6 +9,13 @@ isSlowed = false;
 isSpeeded = false;
 
 collisionDir = -1;
+if(objKeybind.escapeKey)
+{	
+	if(show_question("Do you want to quit the game ?"))
+	{
+		game_end();
+	}
+}
 if(!isStun && objKeybind.keySpaceBar && laserCount >= 1)
 {	
 	

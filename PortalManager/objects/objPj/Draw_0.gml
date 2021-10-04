@@ -1,11 +1,9 @@
-
-
-if(objStarHitbox.isActive)
+if(isStun && irandom(100) < 20)
 {
-	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 0, c_yellow, 1)
-}
-else
-{
+	gpu_set_fog(true, c_white, 0, 0);
 	draw_self();
+	gpu_set_fog(false, c_white, 0, 0);
 }
+else draw_self()
+
 

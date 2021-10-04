@@ -26,9 +26,9 @@ if(objKeybind.eKey && !isActivated)
 		pColor = c_green;
 	}
 	
-	light = instance_create_depth(x, y, depth, objLight);
-	light.finalColor = pColor;
-	light.initialColor = pColor;
-	light.factor = 0.1;
-	light.alarm[0] = room_speed * (nbInvoc + 1);
+	//light = instance_create_depth(x, y, depth, objLight);
+	//light.finalColor = pColor;
+	//light.initialColor = pColor;
+	//light.factor = 0.1;
+	//light.alarm[0] = room_speed * (nbInvoc + 1);
 }
