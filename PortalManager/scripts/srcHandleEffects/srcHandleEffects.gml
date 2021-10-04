@@ -5,7 +5,8 @@ function srcHandleEffects() {
 	
 	var effect = argument[0];
 	var nearestTrashInstance;
-	switch(effect) {
+	switch(effect) 
+	{
 		case "slow":
 			if(!isSlowed)
 			{	

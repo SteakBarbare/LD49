@@ -6,5 +6,3 @@ is_in = false;
 in_transition = false;
 can_down = false;
 can_up = false;
-
-buttonClicked = false;

@@ -1,19 +1,18 @@
 /// @description Interaction PJ
 
-for(effect = 0; effect < array_length(puddleEffect); effect++) 
+for(var effect = 0; effect < array_length(puddleEffect); effect++)
 {
-	if(array_length(objPj.effectsActive) != 0) 
+	var isAdded = false;
+	for(var pjEffect = 0; pjEffect < array_length(objPj.effectsActive); pjEffect++)
 	{
-		for(elementIndex = 0; elementIndex < array_length(objPj.effectsActive); elementIndex++) {
-			if(objPj.effectsActive[elementIndex][0] == puddleEffect[0][0]) 
-			{
-				objPj.effectsActive[elementIndex][1] = puddleEffect[effect][1];
-				exit;
-			} else {
-				array_push(objPj.effectsActive, puddleEffect[effect]);
-			}	
+		if(objPj.effectsActive[pjEffect].name == puddleEffect[effect].name)
+		{
+			objPj.effectsActive[pjEffect].time =  puddleEffect[effect].time;
+			isAdded = true;
 		}
-	} else {
+	}
+	if(!isAdded)
+	{
 		array_push(objPj.effectsActive, puddleEffect[effect]);
-	}	
+	}
 }
