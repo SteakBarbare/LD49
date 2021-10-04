@@ -1,7 +1,7 @@
 xPosDrawVal =0 
 yPosDrawVal = room_height - sprite_get_height(sprVal);
 xGoal = room_width - sprite_get_width(sprVal);
-
+originalSpeed = 0.8;
 image_speed = 0;
 border = 20;
 
@@ -19,5 +19,4 @@ counterMessageDeleted = 0;
 canDelete = true; 
 depth = -3000;
 
-
-
+switchIDClick = false;

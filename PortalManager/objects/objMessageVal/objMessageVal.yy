@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprMessageVal",
-    "path": "sprites/sprMessageVal/sprMessageVal.yy",
+    "name": "sprMessageVal2",
+    "path": "sprites/sprMessageVal2/sprMessageVal2.yy",
   },
   "solid": false,
   "visible": true,

@@ -10,7 +10,8 @@ isSpeeded = false;
 
 collisionDir = -1;
 if(!isStun && objKeybind.keySpaceBar && laserCount >= 1)
-{
+{	
+	objSlotLaser.inStock = false;
 	laserCount--;
 	var laser = instance_create_depth(x, y, 1, objLaser);
 	laser.dir = dir;

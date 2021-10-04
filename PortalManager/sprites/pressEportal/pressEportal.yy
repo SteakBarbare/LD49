@@ -25,14 +25,12 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"bdd8312e-5603-4444-8865-88fa8ad6788d","path":"sprites/pressEportal/pressEportal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bdd8312e-5603-4444-8865-88fa8ad6788d","path":"sprites/pressEportal/pressEportal.yy",},"LayerId":{"name":"f8427528-3bc9-4c39-94ca-913ce2075bdb","path":"sprites/pressEportal/pressEportal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"bdd8312e-5603-4444-8865-88fa8ad6788d","path":"sprites/pressEportal/pressEportal.yy",},"LayerId":{"name":"697c9b61-98c9-4d29-aee2-8e34024ac7c2","path":"sprites/pressEportal/pressEportal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"bdd8312e-5603-4444-8865-88fa8ad6788d","path":"sprites/pressEportal/pressEportal.yy",},"LayerId":{"name":"2d174cbc-1a55-41fb-b481-7405f63c41e1","path":"sprites/pressEportal/pressEportal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"bdd8312e-5603-4444-8865-88fa8ad6788d","path":"sprites/pressEportal/pressEportal.yy",},"LayerId":{"name":"f8427528-3bc9-4c39-94ca-913ce2075bdb","path":"sprites/pressEportal/pressEportal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"pressEportal","path":"sprites/pressEportal/pressEportal.yy",},"resourceVersion":"1.0","name":"bdd8312e-5603-4444-8865-88fa8ad6788d","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"b25321a8-171f-4ebb-8adb-26358c81bf88","path":"sprites/pressEportal/pressEportal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b25321a8-171f-4ebb-8adb-26358c81bf88","path":"sprites/pressEportal/pressEportal.yy",},"LayerId":{"name":"f8427528-3bc9-4c39-94ca-913ce2075bdb","path":"sprites/pressEportal/pressEportal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"b25321a8-171f-4ebb-8adb-26358c81bf88","path":"sprites/pressEportal/pressEportal.yy",},"LayerId":{"name":"697c9b61-98c9-4d29-aee2-8e34024ac7c2","path":"sprites/pressEportal/pressEportal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"b25321a8-171f-4ebb-8adb-26358c81bf88","path":"sprites/pressEportal/pressEportal.yy",},"LayerId":{"name":"2d174cbc-1a55-41fb-b481-7405f63c41e1","path":"sprites/pressEportal/pressEportal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"b25321a8-171f-4ebb-8adb-26358c81bf88","path":"sprites/pressEportal/pressEportal.yy",},"LayerId":{"name":"f8427528-3bc9-4c39-94ca-913ce2075bdb","path":"sprites/pressEportal/pressEportal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"pressEportal","path":"sprites/pressEportal/pressEportal.yy",},"resourceVersion":"1.0","name":"b25321a8-171f-4ebb-8adb-26358c81bf88","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -78,8 +76,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "UI_UX",
+    "path": "folders/Sprites/UI_UX.yy",
   },
   "resourceVersion": "1.0",
   "name": "pressEportal",
