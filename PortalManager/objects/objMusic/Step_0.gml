@@ -15,10 +15,12 @@ function loopingArraySound () {
 loopingArraySound(musicSound)
 if(room == startMenu) {
 	musicSound[0][1] = 1;
+	musicOn = true;
 }
 
 if(room == Room1) {
 	musicSound[1][1] = 1;
+	musicOn = true;
 	
 #region Puddles Sounds
 // Manage Puddles Sounds
@@ -78,6 +80,16 @@ loopingArraySound(playerSound);
 // Manage Timer Sounds
 loopingArraySound(timerSound);
 #endregion
+}
+
+if(room == rm_gameover) {
+	if(audio_is_playing(snd_loop_music)) {
+		audio_stop_sound(snd_loop_music);	
+	}
+	if(audio_is_playing(snd_titlescreen)) {
+		audio_stop_sound(snd_titlescreen);	
+	}
+	musicSound[2][1] = musicOn;
 }
 
 #region GUI Sounds

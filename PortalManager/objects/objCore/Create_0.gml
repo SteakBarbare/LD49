@@ -1,5 +1,5 @@
 isExploding = false;
-timeBeforeExplosion = 70;
+timeBeforeExplosion = 2;
 alarm[0] = room_speed * timeBeforeExplosion;
 randomize();
 nbPortal = 0;
