@@ -5,5 +5,13 @@ if(nbInvoc > 0)
 }
 else
 {
-	instance_destroy();
+	if(randomSpanwerBonus <= 100){
+		if(randomSpanwerBonus <= 5){
+			malusBuffIncoming = true;
+		} else {
+			bonusBuffIncoming = true;
+		}
+		instance_create_depth(x, y, -20, objSpawnerBuffs);
+			instance_destroy();
+	}
 }
