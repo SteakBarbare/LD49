@@ -22,8 +22,6 @@ if(!invulnerable)
 		objShakeEffect.range = 10;
 		objShakeEffect.alarm[0] = room_speed/4;
 	}
-
-	
-	alarm[0] = room_speed * 0.1;
+	alarm[0] = room_speed * 0.2;
 	invulnerable = true;
 }

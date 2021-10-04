@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sprMobRandomDir",
-    "path": "sprites/sprMobRandomDir/sprMobRandomDir.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

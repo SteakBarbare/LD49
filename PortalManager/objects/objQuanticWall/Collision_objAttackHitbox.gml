@@ -10,3 +10,5 @@ lastPoint = {x: x, y: y};
 y = 10000;
 
 alarm[0] = room_speed;
+
+show_debug_message("teleportation")
