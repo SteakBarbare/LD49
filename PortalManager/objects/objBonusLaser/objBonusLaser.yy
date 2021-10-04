@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Bonus",
-    "path": "folders/Objets/Buffs/Bonus.yy",
+    "name": "Buffs",
+    "path": "folders/Objets/Buffs.yy",
   },
   "resourceVersion": "1.0",
   "name": "objBonusLaser",

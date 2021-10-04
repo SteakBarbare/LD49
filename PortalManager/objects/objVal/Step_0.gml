@@ -1,5 +1,3 @@
-
-
 if(counterMessageDeleted >= 10){
 	alarm[0] = 1;
 }
