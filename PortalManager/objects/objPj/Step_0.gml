@@ -1,4 +1,4 @@
-depth = -bbox_bottom;
+event_inherited();
 var isMoving, isMovingV, isMovingS, vMove, hMove;
 isMoving = false;
 isMovingV = false;

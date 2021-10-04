@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "objShitTemplate",
-    "path": "objects/objShitTemplate/objShitTemplate.yy",
+    "name": "obj_uls_collider",
+    "path": "objects/obj_uls_collider/obj_uls_collider.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
