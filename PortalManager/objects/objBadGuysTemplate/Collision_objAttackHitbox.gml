@@ -20,4 +20,7 @@ if(!invulnerable)
 	bumpStrength = 10;
 	alarm[7] = room_speed * 0.2;
 	invulnerable = true;
+	isHit = 1;
+	alarm[6] = room_speed * 0.1;
+	
 }

@@ -21,6 +21,7 @@ enum etatId
 	PUSH = 4
 }
 
+
 laserCount = 0;
 
 isSlowed = false;

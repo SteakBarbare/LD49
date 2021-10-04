@@ -15,6 +15,7 @@ bumpStrength = 0;
 superBump = false;
 
 bloodType = "blood";
+isHit = false;
 
 
 isMoving = false;
