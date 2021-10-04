@@ -90,22 +90,22 @@ function srcHandleEffects() {
 			break;
 			
 		case "clean":
-			nearestTrashInstance = collision_circle(x, y, 400, objDestructibleWallTemplate, false , true);
+			nearestTrashInstance = collision_circle(x, y, 200, objDestructibleWallTemplate, false , true);
 			with(nearestTrashInstance)
 			{
 				instance_destroy();	
 			}
-			nearestTrashInstance = collision_circle(x, y, 400, objQuanticWall, false , true);
+			nearestTrashInstance = collision_circle(x, y, 200, objQuanticWall, false , true);
 			with(nearestTrashInstance)
 			{
 				instance_destroy();	
 			}
-			nearestTrashInstance = collision_circle(x, y, 400, objPushingWallTemplate, false , true);
+			nearestTrashInstance = collision_circle(x, y, 200, objPushingWallTemplate, false , true);
 			with(nearestTrashInstance)
 			{
 				instance_destroy();	
 			}
-			nearestTrashInstance = collision_circle(x, y, 400, objPuddleTemplate, false , true);
+			nearestTrashInstance = collision_circle(x, y, 200, objPuddleTemplate, false , true);
 			with(nearestTrashInstance)
 			{
 				instance_destroy();	
@@ -129,7 +129,6 @@ function srcHandleEffects() {
 			
 			
 		case "laser":
-			objSlotLaser.inStock = true;
 			break;
 			
 		case "valCall":

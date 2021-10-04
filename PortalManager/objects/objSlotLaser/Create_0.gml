@@ -3,4 +3,4 @@ y = room_height / 2;
 image_speed = 0;
 alarm[0] = 1;
 switchIDSprite = false;
-inStock = false;
+inStock = 0;
