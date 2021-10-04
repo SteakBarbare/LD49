@@ -20,20 +20,7 @@ else if(partType == "Debuff")
 
 if(!isActivated)
 {
-	
-	var delta;
-	if(objCore.nbPortal < 10)
-	{
-		delta = objCore.nbPortal/10 
-	}
-	else
-	{
-		delta = 1 - (objCore.nbPortal/10 - 1)
-	}
-	
-	if(delta < 0.3) delta = 0.3;
-	objCore.alarm[0] += room_speed * 10 * delta
-	objCore.alarm[0] += room_speed * 15 * delta;
+	objCore.alarm[0] += room_speed * 5;
 	with(objLight)
 	{
 		reverse = true;
