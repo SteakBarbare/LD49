@@ -8,12 +8,13 @@ function srcHandleEffects() {
 	switch(effect) {
 		case "slow":
 			if(!isSlowed)
-			{
+			{	
 				objMusic.puddleSounds[3][1] = 1;
 				isSlowed = true;
 				hspeed *= 0.25;
 				vspeed *= 0.25;
 			}
+			
 			break;
 			
 		case "speedUp":
@@ -27,7 +28,7 @@ function srcHandleEffects() {
 			break;
 			
 		case "stun":
-			if(!stunCooldown) {			
+			if(!stunCooldown) {	
 				isStun = true;
 				stunCooldown = true;
 				alarm[3] = 1.5 * room_speed;
@@ -106,7 +107,7 @@ function srcHandleEffects() {
 			objStarHitbox.isActive = true;
 			if(objStarHitbox.alarm[0] == -1)
 			{
-				objStarHitbox.alarm[0] = room_speed * 8;
+				objStarHitbox.alarm[0] = room_speed * 5;
 			}
 			instance_destroy(objBonusStar);
 			
