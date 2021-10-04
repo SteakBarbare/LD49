@@ -27,7 +27,7 @@ if(!isActivated)
 		alarm[1] += room_speed*2;
 	}
 	obj_uls_controller.reverse = true;
-	obj_uls_controller.alarm[1] += room_speed *2;
+	obj_uls_controller.alarm[1] += room_speed * irandom(4);
 	objCore.nbPortal++;
 }
 
