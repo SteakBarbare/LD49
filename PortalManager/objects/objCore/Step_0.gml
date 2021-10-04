@@ -1,3 +1,7 @@
+if(alarm[0] <= 0) {
+	alarm[0] = 0;
+}
+
 if(alarm[0] < room_speed * 60 && irandom(100) < 2 && !objShakeEffect.shake)
 {
 	objShakeEffect.shake = true;
