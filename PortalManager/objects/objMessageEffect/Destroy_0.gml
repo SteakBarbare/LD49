@@ -1,0 +1,4 @@
+with(objMessageEffect)
+{
+	nbi--;
+}

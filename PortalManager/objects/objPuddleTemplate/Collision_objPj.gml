@@ -8,6 +8,7 @@ for(var effect = 0; effect < array_length(puddleEffect); effect++)
 		if(objPj.effectsActive[pjEffect].name == puddleEffect[effect].name)
 		{
 			objPj.effectsActive[pjEffect].time =  puddleEffect[effect].time;
+			objPj.effectsActive[pjEffect].isNew =  puddleEffect[effect].isNew;
 			isAdded = true;
 		}
 	}

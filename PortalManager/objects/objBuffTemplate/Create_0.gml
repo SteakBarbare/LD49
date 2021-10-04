@@ -1,1 +1,1 @@
-buffEffect = [{name: undefined, time: 0}];
+buffEffect = [{name: undefined, time: 0, isNew : true}];
