@@ -29,7 +29,6 @@ if(!isActivated)
 	obj_uls_controller.reverse = true;
 	obj_uls_controller.alarm[1] += room_speed *2;
 	objCore.nbPortal++;
-	
 }
 
 objMusic.portalsSound[1][1] = 1;
