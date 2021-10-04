@@ -254,10 +254,10 @@ var csY = abs(vspeed) + 1;
 if(etat != etatId.KICK) // Si pas en Kick
 {
 	var touch;
-	if(place_meeting(x + csX, y, objPushingWall) && dir >= directionId.RIGHT)
+	if(place_meeting(x + csX, y, objPushingWallTemplate) && dir >= directionId.RIGHT)
 	{
 		
-		var pInstance = instance_place(x + csX, y, objPushingWall);
+		var pInstance = instance_place(x + csX, y, objPushingWallTemplate);
 		touch = false;
 		with(pInstance)
 		{
@@ -274,10 +274,10 @@ if(etat != etatId.KICK) // Si pas en Kick
 			etat = etatId.PUSH;
 		}
 	}
-	if(place_meeting(x - csX, y, objPushingWall) && dir >= directionId.LEFT && dir < directionId.RIGHT)
+	if(place_meeting(x - csX, y, objPushingWallTemplate) && dir >= directionId.LEFT && dir < directionId.RIGHT)
 	{	
 		touch = false;
-		var pInstance = instance_place(x - csX, y, objPushingWall);
+		var pInstance = instance_place(x - csX, y, objPushingWallTemplate);
 		with(pInstance)
 		{
 			if(!place_meeting(x - 0.5, y, objSolidTemplate))
@@ -293,9 +293,9 @@ if(etat != etatId.KICK) // Si pas en Kick
 			etat = etatId.PUSH;
 		}
 	}
-	if(place_meeting(x, y + csY, objPushingWall) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
+	if(place_meeting(x, y + csY, objPushingWallTemplate) && (dir == directionId.FRONT || dir == directionId.FRONT_LEFT || dir == directionId.FRONT_RIGHT))
 	{
-		var pInstance = instance_place(x, y + csY, objPushingWall);
+		var pInstance = instance_place(x, y + csY, objPushingWallTemplate);
 		touch = false;
 		with(pInstance)
 		{
@@ -312,10 +312,10 @@ if(etat != etatId.KICK) // Si pas en Kick
 			etat = etatId.PUSH;
 		}
 	}
-	if(place_meeting(x, y - csY, objPushingWall) && (dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT))
+	if(place_meeting(x, y - csY, objPushingWallTemplate) && (dir == directionId.BACK || dir == directionId.BACK_LEFT || dir == directionId.BACK_RIGHT))
 	{
 		touch = false;
-		var pInstance = instance_place(x, y - csY, objPushingWall);
+		var pInstance = instance_place(x, y - csY, objPushingWallTemplate);
 		with(pInstance)
 		{
 			if(!place_meeting(x, y - 0.5, objSolidTemplate))
@@ -531,8 +531,12 @@ if(inputPrevent >= 0) inputPrevent--;
 
 #region EffectManager
 // Activate each effect on the array
-for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) {
-	srcHandleEffects(effectsActive[currentEffect][0]);
+for(currentEffect = 0; currentEffect < array_length(effectsActive); currentEffect++) 
+{
+	if(effectsActive[currentEffect][0] != [])
+	{
+		srcHandleEffects(effectsActive[currentEffect][0]);
+	}
 }
 	
 // Checking timer of each effect => decrement or remove array

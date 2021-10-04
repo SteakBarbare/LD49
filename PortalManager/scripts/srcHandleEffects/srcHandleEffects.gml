@@ -20,8 +20,8 @@ function srcHandleEffects() {
 			if(!isSpeeded)
 			{
 				objMusic.puddleSounds[1][1] = 1;
-				hspeed *= 4;
-				vspeed *= 4;
+				hspeed *= 2.5;
+				vspeed *= 2.5;
 				isSpeeded = true
 			}
 			break;
@@ -80,7 +80,7 @@ function srcHandleEffects() {
 			break;
 			
 		case "clean":
-			nearestTrashInstance = collision_circle(x, y, 400, objDestructibleWall, false , true);
+			nearestTrashInstance = collision_circle(x, y, 400, objDestructibleWallTemplate, false , true);
 			with(nearestTrashInstance)
 			{
 				instance_destroy();	
@@ -90,7 +90,7 @@ function srcHandleEffects() {
 			{
 				instance_destroy();	
 			}
-			nearestTrashInstance = collision_circle(x, y, 400, objPushingWall, false , true);
+			nearestTrashInstance = collision_circle(x, y, 400, objPushingWallTemplate, false , true);
 			with(nearestTrashInstance)
 			{
 				instance_destroy();	
