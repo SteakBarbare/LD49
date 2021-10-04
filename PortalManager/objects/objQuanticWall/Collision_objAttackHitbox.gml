@@ -10,3 +10,4 @@ lastPoint = {x: x, y: y};
 y = 10000;
 
 alarm[0] = room_speed;
+objMusic.wallsSound[3][1] = 1;

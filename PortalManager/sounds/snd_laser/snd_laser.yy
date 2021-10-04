@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.6,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_bump.wav",
-  "duration": 0.203175,
+  "soundFile": "snd_laser.mp3",
+  "duration": 1.697959,
   "parent": {
-    "name": "Walls",
-    "path": "folders/Sons/Walls.yy",
+    "name": "Player",
+    "path": "folders/Sons/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_bump",
+  "name": "snd_laser",
   "tags": [],
   "resourceType": "GMSound",
 }
