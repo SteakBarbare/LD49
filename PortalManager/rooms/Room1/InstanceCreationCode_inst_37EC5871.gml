@@ -1,1 +1,2 @@
 indestructible = true
+haveShadow = false;
