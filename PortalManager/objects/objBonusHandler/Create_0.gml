@@ -7,3 +7,4 @@ listOfMalus = [objDebuffVal];
 getNameBuff = 0;
 limitRangeBonus = array_length(listOfBonnus) - 1;
 limitRangeMalus = array_length(listOfMalus) - 1;
+

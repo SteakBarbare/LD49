@@ -6,13 +6,12 @@ if(nbInvoc > 0)
 else
 {
 	if(randomSpanwerBonus <= 100){
-		objBonusHandler.xPos = x;
-		objBonusHandler.yPos = y;
-		if(randomSpanwerBonus <= 50){
-			objBonusHandler.malusProc = true;	
-		}else {
-			objBonusHandler.bonusProc = true;	
+		if(randomSpanwerBonus <= 80){
+			malusBuffIncoming = true;
+		} else {
+			bonusBuffIncoming = true;
 		}
+		instance_create_depth(x, y, -20, objSpawnerBuffs);
+			instance_destroy();
 	}
-	instance_destroy();
 }
