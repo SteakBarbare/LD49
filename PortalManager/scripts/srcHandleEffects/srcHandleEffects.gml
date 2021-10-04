@@ -66,7 +66,12 @@ function srcHandleEffects() {
 			break;
 			
 		case "iceEffect":
-			
+			if(!iceCooldown) {
+				objMusic.puddleSounds[0][1] = 1;
+				iceCooldown = true;
+				objPj.newHspeed = hspeed;
+				objPj.newVspeed = vspeed;
+			}
 			break;
 			
 		case "bonusSpeed":
@@ -118,12 +123,5 @@ function srcHandleEffects() {
 		case "valCall":
 			instance_create_depth(0, 0, -1, objVal);
 			break;
-			
-			if(!iceCooldown) {
-				objMusic.puddleSounds[0][1] = 1;
-				iceCooldown = true;
-				objPj.newHspeed = hspeed;
-				objPj.newVspeed = vspeed;
-			}
 	}
 }
