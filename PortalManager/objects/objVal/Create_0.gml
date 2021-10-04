@@ -1,5 +1,6 @@
-xPosDrawVal = window_get_width() - sprite_get_width(sprVal);
+xPosDrawVal =0 
 yPosDrawVal = window_get_height() - sprite_get_height(sprVal);
+xGoal = window_get_width() - sprite_get_width(sprVal);
 
 image_speed = 0;
 border = 20;

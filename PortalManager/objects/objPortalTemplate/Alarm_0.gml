@@ -5,10 +5,10 @@ if(nbInvoc > 0)
 }
 else
 {
-	if(randomSpanwerBonus <= 80){
+	if(randomSpanwerBonus <= 100){
 		objBonusHandler.xPos = x;
 		objBonusHandler.yPos = y;
-		if(randomSpanwerBonus <=8){
+		if(randomSpanwerBonus <= 50){
 			objBonusHandler.malusProc = true;	
 		}else {
 			objBonusHandler.bonusProc = true;	

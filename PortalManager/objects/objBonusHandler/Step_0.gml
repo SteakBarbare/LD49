@@ -1,6 +1,5 @@
 if(bonusProc){
 	alarm[0] = 1;
-}
-if(malusProc){
+} else if (malusProc){
 	alarm[1] = 1;
 }

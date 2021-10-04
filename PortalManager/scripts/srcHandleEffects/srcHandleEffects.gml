@@ -65,8 +65,8 @@ function srcHandleEffects() {
 			break;
 			
 		case "bonusSpeed":
-			hspeed *= 3.25;
-			vspeed *= 3.25;
+			hspeed *= 1.5;
+			vspeed *= 1.5;
 			break;
 			
 		case "clean":
@@ -98,6 +98,7 @@ function srcHandleEffects() {
 			{
 				objStarHitbox.alarm[0] = room_speed * 8;
 			}
+			instance_destroy(objBonusStar);
 			
 		case "repulsif":
 			objRepulsifHitbox.isActive = true;
