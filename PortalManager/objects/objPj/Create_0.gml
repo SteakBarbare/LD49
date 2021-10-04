@@ -26,7 +26,7 @@ laserCount = 0;
 isSlowed = false;
 isSpeeded = false;
 
-bumpStart = false;
+bumpStart = false; 
 
 dir = directionId.FRONT;
 superBump = false;
