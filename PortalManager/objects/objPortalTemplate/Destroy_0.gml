@@ -20,14 +20,14 @@ else if(partType == "Debuff")
 
 if(!isActivated)
 {
-	objCore.alarm[0] += room_speed * 5;
+	objCore.alarm[0] += room_speed * irandom(4);
 	with(objLight)
 	{
 		reverse = true;
 		alarm[1] += room_speed*2;
 	}
 	obj_uls_controller.reverse = true;
-	obj_uls_controller.alarm[1] += room_speed * irandom(4);
+	obj_uls_controller.alarm[1] += room_speed *2;
 	objCore.nbPortal++;
 }
 
