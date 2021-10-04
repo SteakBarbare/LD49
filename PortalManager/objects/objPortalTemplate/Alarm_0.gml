@@ -17,6 +17,6 @@ else
 			bonusBuffIncoming = true;
 		}
 		instance_create_depth(x, y, -20, objSpawnerBuffs);
-		hasEnded = true;
 	}
+	hasEnded = true;
 }
