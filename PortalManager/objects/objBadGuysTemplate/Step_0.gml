@@ -5,6 +5,8 @@ if(life <= 0)
 	{
 		image_index = 0;
 		sprite_index = deathSprite;
+		if(dir >= directionId.RIGHT || dir == directionId.FRONT || dir == directionId.BACK) image_xscale = 1;
+		else if(dir >= directionId.LEFT) image_xscale = -1;
 	}
 	else if(image_index >= image_number - 1)
 	{
@@ -102,7 +104,6 @@ if(place_meeting(x + collisionSpeed, y, objSolidTemplate) && dir >= directionId.
 	else if(dir == directionId.BACK_RIGHT) dir = directionId.BACK_LEFT;
 	else if(dir == directionId.FRONT_RIGHT) dir = directionId.FRONT_LEFT;
 	hspeed = -hSpeed;
-	x-=1
 	actualDir = dir;
 }
 if(place_meeting(x - collisionSpeed, y, objSolidTemplate)&& dir >= directionId.LEFT && dir < directionId.RIGHT)
@@ -111,7 +112,6 @@ if(place_meeting(x - collisionSpeed, y, objSolidTemplate)&& dir >= directionId.L
 	else if(dir == directionId.BACK_LEFT) dir = directionId.BACK_RIGHT;
 	else if(dir == directionId.FRONT_LEFT) dir = directionId.FRONT_RIGHT;
 	hspeed = hSpeed;
-	x+=1
 	actualDir = dir;
 }
 
@@ -121,7 +121,6 @@ if(place_meeting(x, y + collisionSpeed, objSolidTemplate)&& (dir == directionId.
 	if(dir == directionId.FRONT) dir = directionId.BACK;
 	else if(dir == directionId.FRONT_LEFT) dir = directionId.BACK_RIGHT;
 	else if(dir == directionId.FRONT_RIGHT) dir = directionId.BACK_LEFT;
-	y-=1
 	vspeed = -vSpeed;
 	actualDir = dir;
 }
@@ -130,7 +129,6 @@ if(place_meeting(x, y - collisionSpeed, objSolidTemplate) && (dir == directionId
 	if(dir == directionId.BACK) dir = directionId.FRONT;
 	else if(dir == directionId.BACK_RIGHT) dir = directionId.FRONT_RIGHT;
 	else if(dir == directionId.BACK_LEFT) dir = directionId.FRONT_LEFT;
-	y+=1
 	vspeed = vSpeed;
 	actualDir = dir;
 }
