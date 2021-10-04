@@ -1,0 +1,1 @@
+if(objStarHitbox.isActive) instance_destroy();

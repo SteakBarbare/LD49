@@ -1,1 +1,2 @@
 visible = true;
+indestructible = true;

@@ -1,0 +1,1 @@
+draw_sprite(sprVal, -1, xPosDrawVal, yPosDrawVal);
